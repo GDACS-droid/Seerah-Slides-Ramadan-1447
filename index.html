@@ -1,64 +1,253 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Seerah Slides</title>
+
   <style>
-    html, body { height: 100%; margin: 0; background: #111; }
-    #frame { width: 100%; height: 100%; border: 0; background: #111; }
+    :root {
+      --baseW: 1280;
+      --baseH: 720;
+      --scale: 1;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      overflow: hidden;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+    }
+
+    /* Use dynamic viewport height on mobile browsers */
+    body { height: 100dvh; }
+
+    #app {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:
+        max(env(safe-area-inset-top), 10px)
+        max(env(safe-area-inset-right), 10px)
+        max(env(safe-area-inset-bottom), 14px)
+        max(env(safe-area-inset-left), 10px);
+      box-sizing: border-box;
+    }
+
+    #stage {
+      width: calc(var(--baseW) * 1px);
+      height: calc(var(--baseH) * 1px);
+      transform: scale(var(--scale));
+      transform-origin: center;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+    }
+
+    #frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #FDFBF7;
+    }
+
     #hud {
-      position: fixed; left: 12px; bottom: 12px;
-      padding: 6px 10px; border-radius: 8px;
-      background: rgba(0,0,0,.55); color: #fff;
-      font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
       z-index: 9999;
+      font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: #fff;
+      pointer-events: none; /* buttons will re-enable */
+    }
+
+    #hud .pill {
+      background: rgba(0,0,0,0.55);
+      padding: 8px 10px;
+      border-radius: 12px;
+      pointer-events: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 55vw;
+    }
+
+    #hud .btns {
+      display: flex;
+      gap: 8px;
+      pointer-events: auto;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:active { transform: translateY(1px); }
+
+    /* Small phones: keep HUD readable */
+    @media (max-width: 420px) {
+      #hud { font-size: 13px; }
+      button { padding: 10px 10px; }
     }
   </style>
 </head>
+
 <body>
-  <iframe id="frame"></iframe>
-  <div id="hud">Loading…</div>
+  <div id="app">
+    <div id="stage">
+      <iframe id="frame" loading="eager" referrerpolicy="no-referrer"></iframe>
+    </div>
+  </div>
+
+  <div id="hud">
+    <div class="pill" id="status">Loading…</div>
+    <div class="btns">
+      <button id="prev" aria-label="Previous">◀</button>
+      <button id="jump" aria-label="Jump">#</button>
+      <button id="next" aria-label="Next">▶</button>
+    </div>
+  </div>
 
   <script>
     const frame = document.getElementById('frame');
-    const hud = document.getElementById('hud');
+    const statusEl = document.getElementById('status');
 
-    let files = [];
+    const baseW = 1280;
+    const baseH = 720;
+
+    let slides = [];
     let i = 0;
 
-    function setIndex(newIndex) {
-      i = Math.max(0, Math.min(files.length - 1, newIndex));
-      const file = files[i];
-      frame.src = file;
-      hud.textContent = `${i + 1} / ${files.length} — ${file}`;
+    function setScale() {
+      const vv = window.visualViewport;
+      const vw = vv ? vv.width : window.innerWidth;
+      const vh = vv ? vv.height : window.innerHeight;
+
+      // Reserve space for HUD + padding
+      const usableW = Math.max(200, vw - 20);
+      const usableH = Math.max(200, vh - 90);
+
+      const s = Math.min(usableW / baseW, usableH / baseH);
+      const clamped = Math.max(0.10, Math.min(2.0, s));
+      document.documentElement.style.setProperty('--scale', clamped.toFixed(4));
+    }
+
+    function updateURL() {
       const url = new URL(location.href);
-      url.searchParams.set('s', file);
+      url.searchParams.set('s', slides[i]);
       history.replaceState(null, '', url.toString());
     }
 
-    function next() { setIndex(i + 1); }
-    function prev() { setIndex(i - 1); }
+    function show(idx) {
+      if (!slides.length) return;
+      i = Math.max(0, Math.min(slides.length - 1, idx));
+      const file = slides[i];
+      frame.src = file;
+      statusEl.textContent = `${i + 1} / ${slides.length} — ${file}`;
+      updateURL();
+    }
+
+    function next() { show(i + 1); }
+    function prev() { show(i - 1); }
+
+    // Tap zones + swipe
+    let sx = null, sy = null, st = null;
+
+    function onTapOrSwipe(e) {
+      // Ignore clicks on buttons
+      if (e.target && e.target.tagName === 'BUTTON') return;
+
+      const x = e.clientX ?? (e.changedTouches && e.changedTouches[0]?.clientX);
+      if (x == null) return;
+
+      const w = window.innerWidth;
+      if (x < w * 0.33) prev();
+      else next();
+    }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') next();
       if (e.key === 'ArrowLeft'  || e.key === 'PageUp') prev();
-      if (e.key === 'Home') setIndex(0);
-      if (e.key === 'End') setIndex(files.length - 1);
+      if (e.key === 'Home') show(0);
+      if (e.key === 'End') show(slides.length - 1);
+    });
+
+    document.addEventListener('click', onTapOrSwipe);
+
+    document.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      sx = e.touches[0].clientX;
+      sy = e.touches[0].clientY;
+      st = Date.now();
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      if (sx == null || sy == null) return;
+
+      const ex = e.changedTouches[0].clientX;
+      const ey = e.changedTouches[0].clientY;
+      const dx = ex - sx;
+      const dy = ey - sy;
+      const dt = Date.now() - st;
+
+      // Horizontal swipe
+      if (Math.abs(dx) > 45 && Math.abs(dy) < 60 && dt < 600) {
+        if (dx < 0) next(); else prev();
+      } else {
+        // Treat as tap
+        onTapOrSwipe(e);
+      }
+
+      sx = sy = st = null;
+    }, { passive: true });
+
+    document.getElementById('prev').addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+    document.getElementById('next').addEventListener('click', (e) => { e.stopPropagation(); next(); });
+
+    document.getElementById('jump').addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const raw = prompt(`Jump to slide (1–${slides.length})`);
+      if (!raw) return;
+      const n = parseInt(raw, 10);
+      if (!Number.isFinite(n)) return;
+      show(n - 1);
     });
 
     async function init() {
-      const state = await (await fetch('./slide_state.json')).json();
-      files = state.slides.map(s => `${s.id}.html`);
+      setScale();
+      window.addEventListener('resize', setScale);
+      window.addEventListener('orientationchange', setScale);
+      if (window.visualViewport) window.visualViewport.addEventListener('resize', setScale);
+
+      const state = await (await fetch('./slide_state.json', { cache: 'no-store' })).json();
+      slides = state.slides.map(s => `${s.id}.html`);
 
       const wanted = new URL(location.href).searchParams.get('s');
-      const startAt = wanted ? files.indexOf(wanted) : 0;
-      setIndex(startAt >= 0 ? startAt : 0);
+      const startAt = wanted ? slides.indexOf(wanted) : 0;
+      show(startAt >= 0 ? startAt : 0);
     }
 
     init().catch(err => {
-      hud.textContent = 'Failed to load slide_state.json';
       console.error(err);
+      statusEl.textContent = 'Failed to load slide_state.json';
     });
   </script>
 </body>
