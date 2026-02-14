@@ -2,93 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- IMPORTANT: real mobile viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Seerah Slides</title>
 
   <style>
-    :root {
-      --baseW: 1280;
-      --baseH: 720;
-      --scale: 1;
-    }
+    :root { --pad: 10px; }
 
     html, body {
       margin: 0;
-      width: 100%;
       height: 100%;
       background: #111;
       overflow: hidden;
       -webkit-text-size-adjust: 100%;
-      touch-action: manipulation;
     }
 
-    /* Use dynamic viewport height on mobile browsers */
     body { height: 100dvh; }
 
     #app {
       position: fixed;
       inset: 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding:
+        max(env(safe-area-inset-top), var(--pad))
+        max(env(safe-area-inset-right), var(--pad))
+        max(env(safe-area-inset-bottom), var(--pad))
+        max(env(safe-area-inset-left), var(--pad));
+      box-sizing: border-box;
+      gap: 10px;
+    }
+
+    #stageArea {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding:
-        max(env(safe-area-inset-top), 10px)
-        max(env(safe-area-inset-right), 10px)
-        max(env(safe-area-inset-bottom), 14px)
-        max(env(safe-area-inset-left), 10px);
-      box-sizing: border-box;
+      min-height: 0;
     }
 
-    #stage {
-      width: calc(var(--baseW) * 1px);
-      height: calc(var(--baseH) * 1px);
-      transform: scale(var(--scale));
-      transform-origin: center;
+    /* This wrapper will be sized by JS to the *scaled* width/height */
+    #stageWrap {
       background: #000;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+      position: relative;
     }
 
+    /* We keep iframe at 1280x720, then scale it via transform */
     #frame {
-      width: 100%;
-      height: 100%;
+      width: 1280px;
+      height: 720px;
       border: 0;
       display: block;
+      transform-origin: top left;
       background: #FDFBF7;
     }
 
     #hud {
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
       display: flex;
       gap: 10px;
       align-items: center;
       justify-content: space-between;
-      z-index: 9999;
       font: 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color: #fff;
-      pointer-events: none; /* buttons will re-enable */
+      user-select: none;
     }
 
     #hud .pill {
       background: rgba(0,0,0,0.55);
       padding: 8px 10px;
       border-radius: 12px;
-      pointer-events: none;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 55vw;
+      max-width: 62vw;
     }
 
-    #hud .btns {
-      display: flex;
-      gap: 8px;
-      pointer-events: auto;
-    }
+    #hud .btns { display: flex; gap: 8px; }
 
     button {
       appearance: none;
@@ -97,57 +88,98 @@
       padding: 10px 12px;
       background: rgba(255,255,255,0.12);
       color: #fff;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
     }
     button:active { transform: translateY(1px); }
 
-    /* Small phones: keep HUD readable */
-    @media (max-width: 420px) {
-      #hud { font-size: 13px; }
-      button { padding: 10px 10px; }
+    #hint {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: none;
+      z-index: 2;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font: 13px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
     }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <div id="stage">
-      <iframe id="frame" loading="eager" referrerpolicy="no-referrer"></iframe>
+    <div id="stageArea">
+      <div id="stageWrap">
+        <div id="hint">Tip: rotate to landscape for best readability.</div>
+        <iframe id="frame" loading="eager"></iframe>
+      </div>
     </div>
-  </div>
 
-  <div id="hud">
-    <div class="pill" id="status">Loading…</div>
-    <div class="btns">
-      <button id="prev" aria-label="Previous">◀</button>
-      <button id="jump" aria-label="Jump">#</button>
-      <button id="next" aria-label="Next">▶</button>
+    <div id="hud">
+      <div class="pill" id="status">Loading…</div>
+      <div class="btns">
+        <button id="prev" aria-label="Previous">◀</button>
+        <button id="mode" aria-label="Fit/Fill">FIT</button>
+        <button id="jump" aria-label="Jump">#</button>
+        <button id="next" aria-label="Next">▶</button>
+      </div>
     </div>
   </div>
 
   <script>
-    const frame = document.getElementById('frame');
-    const statusEl = document.getElementById('status');
+    const baseW = 1280, baseH = 720;
 
-    const baseW = 1280;
-    const baseH = 720;
+    const frame = document.getElementById('frame');
+    const wrap  = document.getElementById('stageWrap');
+    const statusEl = document.getElementById('status');
+    const hint = document.getElementById('hint');
+    const modeBtn = document.getElementById('mode');
 
     let slides = [];
     let i = 0;
 
-    function setScale() {
-      const vv = window.visualViewport;
-      const vw = vv ? vv.width : window.innerWidth;
-      const vh = vv ? vv.height : window.innerHeight;
+    // "contain" = FIT (no cropping), "cover" = FILL (bigger but may crop)
+    let mode = localStorage.getItem('deckMode') || 'contain';
 
-      // Reserve space for HUD + padding
-      const usableW = Math.max(200, vw - 20);
-      const usableH = Math.max(200, vh - 90);
+    function setModeLabel() {
+      modeBtn.textContent = (mode === 'contain') ? 'FIT' : 'FILL';
+    }
 
-      const s = Math.min(usableW / baseW, usableH / baseH);
-      const clamped = Math.max(0.10, Math.min(2.0, s));
-      document.documentElement.style.setProperty('--scale', clamped.toFixed(4));
+    function computeScale() {
+      // Use layout viewport (more stable on iOS Safari than visualViewport in practice)
+      const vw = document.documentElement.clientWidth;
+      const vh = document.documentElement.clientHeight;
+
+      const hudH = document.getElementById('hud').offsetHeight || 56;
+      const pad = 8;
+
+      const usableW = Math.max(200, vw - pad*2);
+      const usableH = Math.max(200, vh - hudH - pad*2);
+
+      const sContain = Math.min(usableW / baseW, usableH / baseH);
+      const sCover   = Math.max(usableW / baseW, usableH / baseH);
+
+      const s = (mode === 'contain') ? sContain : sCover;
+
+      // Clamp just in case
+      return Math.max(0.10, Math.min(2.0, s));
+    }
+
+    function applyScale() {
+      const s = computeScale();
+
+      // Size wrapper to the *visual* size so Safari layout matches (no weird clipping)
+      wrap.style.width  = (baseW * s) + 'px';
+      wrap.style.height = (baseH * s) + 'px';
+
+      // Scale the iframe contents
+      frame.style.transform = `scale(${s})`;
+
+      // Hint only in portrait
+      hint.style.display = (window.innerHeight > window.innerWidth) ? 'block' : 'none';
     }
 
     function updateURL() {
@@ -168,21 +200,33 @@
     function next() { show(i + 1); }
     function prev() { show(i - 1); }
 
-    // Tap zones + swipe
-    let sx = null, sy = null, st = null;
-
-    function onTapOrSwipe(e) {
-      // Ignore clicks on buttons
+    // Tap left third = prev, right two-thirds = next
+    document.addEventListener('click', (e) => {
       if (e.target && e.target.tagName === 'BUTTON') return;
+      const x = e.clientX;
+      if (x < window.innerWidth * 0.33) prev(); else next();
+    });
 
-      const x = e.clientX ?? (e.changedTouches && e.changedTouches[0]?.clientX);
-      if (x == null) return;
+    // Swipe
+    let sx = null, sy = null, st = null;
+    document.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      sx = e.touches[0].clientX; sy = e.touches[0].clientY; st = Date.now();
+    }, { passive: true });
 
-      const w = window.innerWidth;
-      if (x < w * 0.33) prev();
-      else next();
-    }
+    document.addEventListener('touchend', (e) => {
+      if (sx == null) return;
+      const ex = e.changedTouches[0].clientX;
+      const ey = e.changedTouches[0].clientY;
+      const dx = ex - sx, dy = ey - sy, dt = Date.now() - st;
 
+      if (Math.abs(dx) > 45 && Math.abs(dy) < 60 && dt < 600) {
+        if (dx < 0) next(); else prev();
+      }
+      sx = sy = st = null;
+    }, { passive: true });
+
+    // Keys
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') next();
       if (e.key === 'ArrowLeft'  || e.key === 'PageUp') prev();
@@ -190,39 +234,10 @@
       if (e.key === 'End') show(slides.length - 1);
     });
 
-    document.addEventListener('click', onTapOrSwipe);
-
-    document.addEventListener('touchstart', (e) => {
-      if (e.touches.length !== 1) return;
-      sx = e.touches[0].clientX;
-      sy = e.touches[0].clientY;
-      st = Date.now();
-    }, { passive: true });
-
-    document.addEventListener('touchend', (e) => {
-      if (sx == null || sy == null) return;
-
-      const ex = e.changedTouches[0].clientX;
-      const ey = e.changedTouches[0].clientY;
-      const dx = ex - sx;
-      const dy = ey - sy;
-      const dt = Date.now() - st;
-
-      // Horizontal swipe
-      if (Math.abs(dx) > 45 && Math.abs(dy) < 60 && dt < 600) {
-        if (dx < 0) next(); else prev();
-      } else {
-        // Treat as tap
-        onTapOrSwipe(e);
-      }
-
-      sx = sy = st = null;
-    }, { passive: true });
-
     document.getElementById('prev').addEventListener('click', (e) => { e.stopPropagation(); prev(); });
     document.getElementById('next').addEventListener('click', (e) => { e.stopPropagation(); next(); });
 
-    document.getElementById('jump').addEventListener('click', async (e) => {
+    document.getElementById('jump').addEventListener('click', (e) => {
       e.stopPropagation();
       const raw = prompt(`Jump to slide (1–${slides.length})`);
       if (!raw) return;
@@ -231,17 +246,27 @@
       show(n - 1);
     });
 
+    modeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mode = (mode === 'contain') ? 'cover' : 'contain';
+      localStorage.setItem('deckMode', mode);
+      setModeLabel();
+      applyScale();
+    });
+
     async function init() {
-      setScale();
-      window.addEventListener('resize', setScale);
-      window.addEventListener('orientationchange', setScale);
-      if (window.visualViewport) window.visualViewport.addEventListener('resize', setScale);
+      setModeLabel();
 
       const state = await (await fetch('./slide_state.json', { cache: 'no-store' })).json();
       slides = state.slides.map(s => `${s.id}.html`);
 
       const wanted = new URL(location.href).searchParams.get('s');
       const startAt = wanted ? slides.indexOf(wanted) : 0;
+
+      applyScale();
+      window.addEventListener('resize', applyScale);
+      window.addEventListener('orientationchange', applyScale);
+
       show(startAt >= 0 ? startAt : 0);
     }
 
