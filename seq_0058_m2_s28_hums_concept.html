@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            /* keep upper padding (important) */
+            padding: 50px 60px 8px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 80px 20px;
+            gap: 12px;
+            /* remove flex-grow to avoid forced stretching */
+            z-index: 5;
+        }
+
+        .definition-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .english-term {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .def-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.4;
+            color: #E0F2F1;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            /* avoid growing to fill extra space */
+        }
+
+        .rule-card {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .rule-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(26, 60, 64, 0.1);
+            color: #1A3C40;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            border: 2px solid #C5A059;
+        }
+
+        .rule-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .rule-desc {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .highlight-text {
+            color: #C62828; /* Red for the shocking detail */
+            font-weight: 700;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 60px 10px;
+            font-size: 1rem;
+            color: #5D4037;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Concept of Ḥums</h1>
+            <div class="subtitle">Religious Exceptionalism &amp; Innovation</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="definition-box">
+                <div class="arabic-term">الحُمْس</div>
+                <div class="english-term">Al-Ḥums (The Zealous Ones)</div>
+                <div class="def-text">
+                    "We are the People of Allah (Ahl Allāh) and the neighbors of His House. We do not leave the Sanctuary to honor it."
+                </div>
+            </div>
+
+            <div class="rules-grid">
+                <!-- Rule 1: Geography -->
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-map-signs"></i></div>
+                    <div class="rule-title">The Boundary</div>
+                    <p class="rule-desc">
+                        While all Arabs went to <strong>'Arafāt</strong> (outside the Ḥaram) for Hajj, the Ḥums stopped at <strong>Muzdalifah</strong> (inside the Ḥaram), claiming superiority.
+                    </p>
+                </div>
+
+                <!-- Rule 2: Clothing -->
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-tshirt"></i></div>
+                    <div class="rule-title">The Dress Code</div>
+                    <p class="rule-desc">
+                        Pilgrims could not perform Ṭawāf in their own "sinful" clothes. They had to buy garments from the Ḥums or perform Ṭawāf <span class="highlight-text">naked</span>.
+                    </p>
+                </div>
+
+                <!-- Rule 3: Lifestyle -->
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="rule-title">The Restrictions</div>
+                    <p class="rule-desc">
+                        They imposed arbitrary rules on themselves and others, such as not entering tents of hair or eating clarified butter (ghee) during rites.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "This created a spiritual caste system that the Prophet ﷺ later abolished during the Farewell Pilgrimage."
+        </div>
+    </div>
+</body>
+</html>

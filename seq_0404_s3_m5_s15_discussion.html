@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .discussion-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #C5A059;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #3E2723;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .footer-quote {
+            margin: 0 80px 40px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            border-top: 1px solid #C5A059;
+            padding-top: 20px;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Discussion & Reflection</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Question 1 -->
+            <div class="discussion-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-handshake-slash"></i></div>
+                    <h3 class="card-title">Trust & Treachery</h3>
+                </div>
+                <div class="card-body">
+                    <p class="question-text">
+                        How does the betrayal of Banū Qurayẓah inform our understanding of treaties and national security? At what point does a "neutral" party become an active threat?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="discussion-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                    <h3 class="card-title">The Ethics of War</h3>
+                </div>
+                <div class="card-body">
+                    <p class="question-text">
+                        Was the judgment of Sa'd ibn Mu'ādh harsh? Discuss the context of treason in ancient warfare versus modern standards, and the significance of judging them by their own law.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="discussion-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-praying-hands"></i></div>
+                    <h3 class="card-title">Effort & Divine Aid</h3>
+                </div>
+                <div class="card-body">
+                    <p class="question-text">
+                        The Trench represented maximum human effort, while the Wind represented divine intervention. How do these two concepts (Asbāb and Tawakkul) interact in the believer's life?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            "They plotted and Allāh planned, and Allāh is the best of planners."
+        </div>
+    </div>
+</body>
+</html>

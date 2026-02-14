@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 10px solid #FDFBF7; /* reduced border to help overall height */
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px; /* match reduced border */
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 10px; /* keep top padding (50px) for title consistency */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 10px; /* reduced vertical padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 15px; /* reduced gap between blocks */
+            justify-content: center;
+        }
+
+        /* Catalyst Box */
+        .catalyst-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid #1A3C40;
+            padding: 12px; /* reduced padding */
+            display: flex;
+            align-items: center;
+        }
+
+        .catalyst-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-right: 15px;
+        }
+
+        .catalyst-text {
+            font-size: 1.2rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        /* Escalation Section (Bowl of Blood) */
+        .escalation-container {
+            background-color: rgba(141, 110, 99, 0.1);
+            border: 2px solid #8D6E63;
+            padding: 15px; /* reduced padding */
+            text-align: center;
+            position: relative;
+        }
+
+        .blood-icon {
+            font-size: 3rem;
+            color: #8D6E63;
+            margin-bottom: 10px; /* slightly reduced */
+        }
+
+        .escalation-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #8D6E63;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .escalation-text {
+            font-size: 1.15rem;
+            color: #3E2723;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Stalemate Box */
+        .stalemate-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 10px; /* reduced padding */
+            text-align: center;
+            border: 2px solid #C5A059;
+        }
+
+        .stalemate-text {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: 10px; /* reduced bottom margin */
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Black Stone Dispute</h1>
+            <div class="subtitle">A Crisis of Honor</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Catalyst -->
+            <div class="catalyst-box">
+                <i class="fas fa-cube catalyst-icon"></i>
+                <div class="catalyst-text">
+                    When construction reached the corner of the Black Stone (Al-Ḥajar al-Aswad), a fierce dispute erupted. Every clan wanted the eternal honor of placing the sacred stone in its final position.
+                </div>
+            </div>
+
+            <!-- Escalation -->
+            <div class="escalation-container">
+                <i class="fas fa-tint blood-icon"></i>
+                <div class="escalation-title">The Bowl of Blood Pact</div>
+                <div class="escalation-text">
+                    Banū 'Abd al-Dār brought a bowl filled with blood. They and Banū 'Adī dipped their hands into it—a solemn pre-Islamic ritual (<em>La'qat al-Dam</em>) signifying a pledge to fight to the death rather than yield the honor.
+                </div>
+            </div>
+
+            <!-- Stalemate -->
+            <div class="stalemate-box">
+                <div class="stalemate-text">
+                    "Work halted for four or five days. Swords were sharpened, and Makkah stood on the brink of a devastating civil war."
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">لَعْقَةُ الدَّم</span>
+            <span class="term-english">La'qat al-Dam (The Licking of Blood Pact)</span>
+        </div>
+    </div>
+</body>
+</html>

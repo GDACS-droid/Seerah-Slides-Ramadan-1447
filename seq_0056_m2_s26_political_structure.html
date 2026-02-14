@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{overflow:hidden}
+        .slide-container{width:1280px;min-height:720px;background-color:#FDFBF7;background-image:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");position:relative;font-family:'Lato',sans-serif;color:#3E2723;display:flex;flex-direction:column;border:20px solid #FDFBF7}
+        .border-frame{position:absolute;top:20px;left:20px;right:20px;bottom:20px;border:2px solid #C5A059;pointer-events:none;z-index:10}
+        .header-section{padding:50px 60px 12px;text-align:center;z-index:5}
+        .main-title{font-family:'Playfair Display',serif;font-size:2.8rem;color:#1A3C40;margin-bottom:0.5rem}
+        .subtitle{font-size:1.4rem;color:#8D6E63;font-weight:300}
+        .comparison-container{display:flex;padding:12px 60px 18px;gap:24px;flex-grow:1;z-index:5;align-items:stretch}
+        .panel{flex:1;padding:18px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+        .panel-rejected{background-color:rgba(141,110,99,0.05);border:1px dashed #8D6E63}
+        .panel-icon-rejected{font-size:3rem;color:#8D6E63;margin-bottom:12px;opacity:0.7;position:relative}
+        .cross-out{position:absolute;top:50%;left:50%;width:120%;height:4px;background-color:#8D6E63;transform:translate(-50%,-50%) rotate(-45deg)}
+        .panel-title-rejected{font-family:'Playfair Display',serif;font-size:1.8rem;color:#8D6E63;margin-bottom:10px;text-decoration:line-through}
+        .panel-accepted{background-color:rgba(26,60,64,0.05);border:2px solid #1A3C40;box-shadow:0 10px 20px rgba(26,60,64,0.05)}
+        .panel-icon-accepted{font-size:3rem;color:#1A3C40;margin-bottom:12px}
+        .panel-title-accepted{font-family:'Playfair Display',serif;font-size:1.8rem;color:#1A3C40;margin-bottom:10px}
+        .desc-text{font-size:1.1rem;line-height:1.5;color:#3E2723;margin-bottom:12px}
+        .term-box{background-color:#1A3C40;color:#FDFBF7;padding:10px 20px;margin-top:auto;width:100%}
+        .term-arabic{font-family:'Playfair Display',serif;font-size:1.6rem;color:#C5A059;margin-bottom:4px}
+        .term-english{font-size:1rem;text-transform:uppercase;letter-spacing:1px}
+        .center-divider{width:2px;background-color:#C5A059;position:relative}
+        .vs-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#C5A059;color:#1A3C40;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;border:4px solid #FDFBF7;z-index:2}
+        .footer-note{text-align:center;padding:0 60px 10px;font-size:1.1rem;color:#5D4037;font-style:italic;z-index:5}
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">Makkah's Unique Political Structure</h1>
+            <div class="subtitle">An Oligarchy of Free Tribes</div>
+        </div>
+        <div class="comparison-container">
+            <div class="panel panel-rejected">
+                <div class="panel-icon-rejected">
+                    <i class="fas fa-crown"></i>
+                    <div class="cross-out"></div>
+                </div>
+                <h2 class="panel-title-rejected">Monarchy (Mulk)</h2>
+                <p class="desc-text">The standard model of the time (Rome, Persia, Yemen). A single King rules by decree and force.</p>
+                <p class="desc-text" style="font-style:italic;color:#8D6E63">"We will not bow to any man."<br>— The Arab Ethos</p>
+            </div>
+            <div class="center-divider">
+                <div class="vs-badge">VS</div>
+            </div>
+            <div class="panel panel-accepted">
+                <div class="panel-icon-accepted"><i class="fas fa-users"></i></div>
+                <h2 class="panel-title-accepted">Tribal Oligarchy</h2>
+                <p class="desc-text">A decentralized confederation of equal clans. Power relied on prestige, wealth, and lineage, not executive force.</p>
+                <div class="term-box">
+                    <div class="term-arabic">الملأ</div>
+                    <div class="term-english">Al-Malā' (The Council)</div>
+                    <div style="font-size:0.9rem;margin-top:8px;color:#B2DFDB">The assembly of chiefs at Dār al-Nadwah. Decisions required consensus.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">"A city-state without a police force, held together by tradition and mutual interest."</div>
+    </div>
+</body>
+</html>

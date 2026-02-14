@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep this */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 0; /* reduced from 20px to avoid extra outer height */
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 10px; /* keep top padding 50px */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 20px; /* reduced paddings */
+            gap: 18px;
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        .narrative-container {
+            display: flex;
+            gap: 20px; /* smaller gap */
+            width: 100%;
+        }
+
+        .narrative-box {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 18px; /* slightly smaller padding */
+            position: relative;
+        }
+
+        .box-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+            text-align: center;
+            display: block;
+        }
+
+        .box-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .box-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .term-section {
+            text-align: center;
+            margin-top: 8px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 12px 30px; /* reduced */
+            border: 2px solid #C5A059;
+            box-shadow: 0 0 14px rgba(197, 160, 89, 0.18);
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .english-term {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .academic-note {
+            width: 100%;
+            background-color: rgba(141, 110, 99, 0.08);
+            border-left: 4px solid #8D6E63;
+            padding: 12px 16px; /* reduced */
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .note-icon {
+            color: #8D6E63;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .note-content h4 {
+            font-family: 'Playfair Display', serif;
+            color: #5D4037;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .note-content p {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 60px 18px; /* reduced bottom padding */
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Nūr Narrative</h1>
+            <div class="subtitle">The Light That Passed to Āminah</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="narrative-container">
+                <!-- Before -->
+                <div class="narrative-box">
+                    <i class="fas fa-sun box-icon"></i>
+                    <div class="box-title">The Sign on the Forehead</div>
+                    <p class="box-text">
+                        Traditions state that 'Abdullāh possessed a visible radiance (Nūr) on his forehead, recognized by those versed in scriptural signs.
+                    </p>
+                </div>
+
+                <!-- After -->
+                <div class="narrative-box">
+                    <i class="fas fa-exchange-alt box-icon"></i>
+                    <div class="box-title">The Transfer</div>
+                    <p class="box-text">
+                        After his marriage to Āminah was consummated, the light disappeared from him and was said to be transferred to the womb that bore the Prophet ﷺ.
+                    </p>
+                </div>
+            </div>
+
+            <div class="term-section">
+                <div class="arabic-term">النُّور المُحَمَّدِي</div>
+                <div class="english-term">Al-Nūr al-Muḥammadī (The Muhammadan Light)</div>
+            </div>
+
+            <div class="academic-note">
+                <i class="fas fa-book-open note-icon"></i>
+                <div class="note-content">
+                    <h4>Academic Context</h4>
+                    <p>
+                        This narrative appears in the genre of <em>Dalā'il al-Nubuwwah</em>. It is treated in classical Sīrah but often transmitted with weak chains; presented more as theological tradition than established history.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "A theological concept emphasizing the purity and selection of the lineage."
+        </div>
+    </div>
+</body>
+</html>

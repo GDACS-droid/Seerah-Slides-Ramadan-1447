@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../session2_styles.css">
+    <title>The Mount Safa Declaration</title>
+    <style>
+        /* Compact layout: two-column flow to reduce vertical height */
+        .narrative-flow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 18px;
+            margin-top: 30px; /* keep title spacing consistent */
+        }
+        .step-box {
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(253, 251, 247, 0.9);
+            padding: 12px; /* reduced inner padding */
+            border-left: 4px solid #1A3C40;
+            gap: 12px;
+        }
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem; /* keep font sizes unchanged */
+            color: #C5A059;
+            font-weight: 700;
+            margin-right: 16px; /* slightly reduced spacing */
+            line-height: 1;
+            flex: 0 0 auto;
+        }
+        .step-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin: 0 0 6px 0;
+        }
+        .step-content p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.3rem;
+            color: #5D4037;
+            line-height: 1.4;
+            margin: 0;
+        }
+        .quote-highlight {
+            font-style: italic;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+        /* Make the Arabic term area more compact */
+        .arabic-term-container {
+            margin-top: 18px; /* reduced from 40 */
+            text-align: center;
+            border-top: 1px solid #C5A059;
+            padding-top: 12px;
+        }
+        /* Ensure the third step has a distinct accent but stays compact */
+        .step-box.accent { border-left-color: #C5A059; }
+        .step-box.accent .step-number { color: #1A3C40; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="content-wrapper">
+            <h2 class="slide-title">The Mount Ṣafā Declaration</h2>
+            <h3 class="slide-subtitle">Establishing Credibility Before Warning</h3>
+
+            <div class="narrative-flow">
+                <div class="step-box">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>The Alarm Cry</h4>
+                        <p>The Prophet ﷺ climbed Mount Ṣafā and called out <span class="quote-highlight">"Yā Ṣabāḥāh!"</span> — the traditional Arab warning used only for imminent attacks.</p>
+                    </div>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>The Hypothetical Question</h4>
+                        <p>When clans gathered, he asked: <span class="quote-highlight">"If I told you there was an army behind this mountain about to attack, would you believe me?"</span></p>
+                    </div>
+                </div>
+
+                <div class="step-box accent" style="grid-column: 1 / span 2;">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>The Unanimous Verdict</h4>
+                        <p>They replied without hesitation: <span class="quote-highlight">"Yes, we have never experienced a lie from you."</span> This admission sealed the argument.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arabic-term-container">
+                <h1 class="arabic-title">يَا صَبَاحَاه</h1>
+                <div style="font-family: 'Lato', sans-serif; font-size: 1.6rem; color: #8D6E63;">Yā Ṣabāḥāh — The Morning Alarm</div>
+            </div>
+        </div>
+
+        <div class="slide-footer">Session II | Module 3 | Slide 5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .pillar-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #C5A059;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header {
+            width: 100%;
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 3px solid #C5A059;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .highlight-num {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #8D6E63;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .strategic-banner {
+            margin: 0 80px 40px;
+            background: rgba(62, 39, 35, 0.05);
+            border-left: 5px solid #1A3C40;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 5;
+        }
+
+        .banner-icon {
+            font-size: 2rem;
+            color: #1A3C40;
+            margin-right: 20px;
+        }
+
+        .banner-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Peaceful March</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Pillar 1: The People -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="card-title">The Pilgrims</h3>
+                </div>
+                <div class="card-body">
+                    <span class="highlight-num">1,400</span>
+                    <p class="card-text">
+                        Companions marched out, including the Prophet's wife Umm Salamah. Their sheer number showed strength, but their attire showed peace.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pillar 2: The State -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3 class="card-title">The State of Iḥrām</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        They wore the two white sheets of Iḥrām. No armor. No shields. No spears. They carried only "Traveler's Swords" which remained sheathed in their scabbards.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pillar 3: The Symbol -->
+            <div class="pillar-card">
+                <div class="card-header">
+                    <div class="card-icon"><i class="fas fa-camel"></i></div>
+                    <h3 class="card-title">The Symbol</h3>
+                </div>
+                <div class="card-body">
+                    <span class="highlight-num">70</span>
+                    <p class="card-text">
+                        Camels (Hady) were garlanded (Qalā'id). In Arab custom, this was an inviolable sign that these people were guests of God, not invaders.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="strategic-banner">
+            <div class="banner-icon"><i class="fas fa-chess-king"></i></div>
+            <div class="banner-text">
+                <strong>Strategic Masterstroke:</strong> By entering in this state, the Prophet ﷺ trapped Quraysh. If they attacked pilgrims, they would violate the sanctity of the Haram and lose their legitimacy as Custodians of the House.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

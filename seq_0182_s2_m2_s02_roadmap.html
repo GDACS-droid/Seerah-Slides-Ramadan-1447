@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../session2_styles.css">
+    <title>Module Roadmap</title>
+    <style>
+        .roadmap-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 40px;
+            margin-left: 50px;
+            position: relative;
+        }
+        .roadmap-line {
+            position: absolute;
+            left: 24px;
+            top: 20px;
+            bottom: 20px;
+            width: 4px;
+            background-color: #C5A059;
+            z-index: 0;
+        }
+        .roadmap-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        .roadmap-marker {
+            width: 50px;
+            height: 50px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border: 3px solid #FDFBF7;
+            box-shadow: 0 0 0 2px #C5A059;
+            margin-right: 30px;
+        }
+        .roadmap-content {
+            background-color: rgba(253, 251, 247, 0.8);
+            border: 1px solid #C5A059;
+            padding: 20px 30px;
+            flex: 1;
+            max-width: 800px;
+        }
+        .roadmap-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .roadmap-range {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Border Elements -->
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="content-wrapper">
+            <h2 class="slide-title">Module Roadmap</h2>
+            <h3 class="slide-subtitle">Structure of Module 2</h3>
+
+            <div class="roadmap-container">
+                <div class="roadmap-line"></div>
+                
+                <!-- Section 1 -->
+                <div class="roadmap-item">
+                    <div class="roadmap-marker">1</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">The First Converts (Al-Sābiqūn al-Awwalūn)</div>
+                        <div class="roadmap-range">Slides 3–14</div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="roadmap-item">
+                    <div class="roadmap-marker">2</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">The Structure of the Secret Phase</div>
+                        <div class="roadmap-range">Slides 15–22</div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="roadmap-item">
+                    <div class="roadmap-marker">3</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">Analytical Pause & Takeaways</div>
+                        <div class="roadmap-range">Slides 23–30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">Session II | Module 2 | Slide 2</div>
+    </div>
+</body>
+</html>

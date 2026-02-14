@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .timeline-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 60px 40px;
+            gap: 15px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .timeline-node {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        /* Highlight the Start and End to show the connection */
+        .node-foundation, .node-restoration {
+            background-color: rgba(26, 60, 64, 0.08);
+            border-top: 4px solid #1A3C40;
+        }
+
+        .node-corruption, .node-jahiliyyah {
+            background-color: rgba(141, 110, 99, 0.08);
+            border-top: 4px solid #8D6E63;
+        }
+
+        .node-hunafa {
+            background-color: rgba(197, 160, 89, 0.1);
+            border-top: 4px solid #C5A059;
+        }
+
+        .node-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1A3C40;
+            background-color: #FDFBF7;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #C5A059;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 10px;
+            height: 50px; /* Fixed height for alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .node-desc {
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #3E2723;
+        }
+
+        .arrow-connector {
+            color: #C5A059;
+            font-size: 1.5rem;
+            opacity: 0.6;
+        }
+
+        .footer-insight {
+            text-align: center;
+            padding: 20px;
+            margin: 0 80px 40px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            z-index: 5;
+        }
+
+        .insight-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Theological Trajectory</h1>
+            <div class="subtitle">From Monotheism to Corruption and Restoration</div>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Node 1: Foundation -->
+            <div class="timeline-node node-foundation">
+                <div class="node-icon"><i class="fas fa-kaaba"></i></div>
+                <h3 class="node-title">Foundation</h3>
+                <p class="node-desc">
+                    <strong>Ibrāhīm & Ismā'īl</strong><br>
+                    Establishment of pure Tawḥīd and the rites of Hajj.
+                </p>
+            </div>
+
+            <div class="arrow-connector"><i class="fas fa-chevron-right"></i></div>
+
+            <!-- Node 2: Corruption -->
+            <div class="timeline-node node-corruption">
+                <div class="node-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3 class="node-title">Corruption</h3>
+                <p class="node-desc">
+                    <strong>'Amr ibn Luḥay</strong><br>
+                    Introduction of the first idol (Hubal) and alteration of the Talbiyah.
+                </p>
+            </div>
+
+            <div class="arrow-connector"><i class="fas fa-chevron-right"></i></div>
+
+            <!-- Node 3: Jahiliyyah -->
+            <div class="timeline-node node-jahiliyyah">
+                <div class="node-icon"><i class="fas fa-moon"></i></div>
+                <h3 class="node-title">Jāhiliyyah</h3>
+                <p class="node-desc">
+                    <strong>The Dark Era</strong><br>
+                    360 idols, superstition, and loss of the Abrahamic creed.
+                </p>
+            </div>
+
+            <div class="arrow-connector"><i class="fas fa-chevron-right"></i></div>
+
+            <!-- Node 4: Hunafa -->
+            <div class="timeline-node node-hunafa">
+                <div class="node-icon"><i class="fas fa-user-secret"></i></div>
+                <h3 class="node-title">Remnants</h3>
+                <p class="node-desc">
+                    <strong>The Ḥunafā'</strong><br>
+                    Isolated individuals seeking the lost truth amidst the chaos.
+                </p>
+            </div>
+
+            <div class="arrow-connector"><i class="fas fa-chevron-right"></i></div>
+
+            <!-- Node 5: Restoration -->
+            <div class="timeline-node node-restoration">
+                <div class="node-icon"><i class="fas fa-sun"></i></div>
+                <h3 class="node-title">Restoration</h3>
+                <p class="node-desc">
+                    <strong>Muḥammad ﷺ</strong><br>
+                    The final messenger sent to restore the Millah of Ibrāhīm.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-insight">
+            <p class="insight-text">
+                Islam did not bring a "new" religion, but restored the original monotheism of the land.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* do NOT change top-padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Content now laid out in a single row to save vertical space */
+        .content-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 10px 60px 20px; /* reduced vertical padding */
+            z-index: 5;
+        }
+
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px; /* reduced gap between steps */
+            width: 100%;
+            max-width: 740px; /* allow room for classification at right */
+            position: relative;
+        }
+
+        /* Connecting line */
+        .flow-container::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 18px;
+            bottom: 18px;
+            width: 2px;
+            background-color: #C5A059;
+            opacity: 0.5;
+        }
+
+        .step-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 12px; /* reduced padding */
+            border-left: 4px solid transparent;
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #C5A059;
+            font-weight: 700;
+            line-height: 1;
+            background-color: #FDFBF7;
+            padding: 6px; /* reduced */
+            border: 1px solid #C5A059;
+            z-index: 2;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .step-desc {
+            font-size: 1.3rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            color: #8D6E63;
+            font-size: 1.4rem;
+            margin-left: 10px;
+        }
+
+        /* Quotes removed to save vertical space (sub-level detail) */
+
+        .classification-box {
+            margin-top: 0; /* moved to side so no extra top margin */
+            border: 1px solid #1A3C40;
+            padding: 12px 20px; /* reduced padding */
+            text-align: center;
+            background-color: rgba(26, 60, 64, 0.05);
+            width: 320px; /* fixed right column width */
+            flex-shrink: 0;
+            align-self: flex-start;
+        }
+
+        .class-title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8D6E63;
+            margin-bottom: 5px;
+        }
+
+        .class-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .class-def {
+            font-size: 1.2rem;
+            color: #3E2723;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Mechanism of Theological Corruption</h1>
+            <div class="subtitle">Shirk Did Not Replace Tawḥīd Overnight — It Infiltrated Gradually</div>
+        </div>
+
+        <div class="content-section">
+            <div class="flow-container">
+                <!-- Step 1 (shortened: removed quote to save vertical space) -->
+                <div class="step-box">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-title">The Foundation Remains</div>
+                        <div class="step-desc">
+                            Pre-Islamic Arabs never denied Allah's existence. They acknowledged Him as the Supreme Creator and Sustainer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 (shortened: removed quote to save vertical space) -->
+                <div class="step-box">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-title">The Deviation: Intermediaries <span class="arabic-term">(Shufa' / شفعاء)</span></div>
+                        <div class="step-desc">
+                            The corruption began by seeking "closeness" (Zulfa) to Allah through created beings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="classification-box">
+                <div class="class-title">Theological Classification</div>
+                <div class="class-term">Shirk fī al-'ibādah (شرك في العبادة)</div>
+                <div class="class-def">Associating partners in acts of worship, while retaining belief in Allah's Lordship.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 80px 10px; /* reduced bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 10px; /* reduced gaps between blocks */
+            justify-content: center;
+        }
+
+        /* The Sign Section */
+        .sign-box {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 18px; /* slightly reduced */
+            position: relative;
+        }
+
+        .sign-icon {
+            font-size: 3rem;
+            color: #C5A059;
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 2px solid #1A3C40;
+        }
+
+        .sign-content {
+            flex: 1;
+        }
+
+        .sign-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .sign-text {
+            font-size: 1.2rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        /* The Warning Section */
+        .warning-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px; /* reduced */
+            border-left: 6px solid #C5A059;
+            position: relative;
+        }
+
+        .warning-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .warning-attribution {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C5A059;
+            text-align: right;
+        }
+
+        /* Academic Note */
+        .academic-note {
+            background-color: rgba(197, 160, 89, 0.1);
+            border: 1px dashed #8D6E63;
+            padding: 10px 15px; /* reduced */
+            font-size: 1rem;
+            color: #5D4037;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .note-icon {
+            color: #8D6E63;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .footer-term {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Baḥīrā Incident: The Recognition</h1>
+            <div class="subtitle">The Seal and the Warning</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- The Sign -->
+            <div class="sign-box">
+                <div class="sign-icon"><i class="fas fa-certificate"></i></div>
+                <div class="sign-content">
+                    <div class="sign-title">The Seal of Prophethood</div>
+                    <div class="sign-text">
+                        Baḥīrā discovered a physical mark (Khātam) between the boy's shoulders, described in narrations as resembling a "pigeon's egg" or a raised piece of flesh—a sign found in previous scriptures.
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Warning -->
+            <div class="warning-box">
+                <div class="warning-quote">
+                    "Take your nephew back to his country and guard him carefully against the Jews, for by Allah, if they see him and know what I know, they will surely harm him."
+                </div>
+                <div class="warning-attribution">— Baḥīrā's Advice to Abū Ṭālib</div>
+            </div>
+
+            <!-- Academic Note -->
+            <div class="academic-note">
+                <i class="fas fa-book-open note-icon"></i>
+                <div>
+                    <strong>Academic Note:</strong> While the core event is widely transmitted, the specific details (like the exact wording of the warning or the cloud) vary across narrations. Ibn Kathīr and others note weaknesses in some chains (isnād), but the story remains a staple of Seerah literature.
+                </div>
+            </div>
+
+            <div class="footer-term">
+                <span class="term-arabic">خَاتَمُ النُّبُوَّة</span>
+                <span class="term-english">Khātam al-Nubuwwah (Seal of Prophethood)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

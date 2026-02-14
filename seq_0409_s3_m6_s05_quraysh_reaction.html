@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .panic-box {
+            background: #3E2723;
+            color: #FDFBF7;
+            padding: 25px 40px;
+            text-align: center;
+            border: 2px solid #C5A059;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .panic-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .panic-source {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C5A059;
+        }
+
+        .split-container {
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            flex-grow: 1;
+        }
+
+        .action-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #C5A059;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .khalid-card .card-icon { color: #8D6E63; }
+        .prophet-card .card-icon { color: #1A3C40; }
+
+        .outcome-banner {
+            width: 100%;
+            background: rgba(26, 60, 64, 0.1);
+            border-left: 5px solid #1A3C40;
+            padding: 15px 20px;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .outcome-text {
+            font-size: 1.05rem;
+            color: #3E2723;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Quraysh's Panic</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Vow -->
+            <div class="panic-box">
+                <p class="panic-quote">
+                    "By Allāh, he shall never enter it upon us by force."
+                </p>
+                <div class="panic-source">The Vow of Quraysh</div>
+            </div>
+
+            <div class="split-container">
+                <!-- Left: The Interception -->
+                <div class="action-card khalid-card">
+                    <div class="card-header">
+                        <i class="fas fa-horse-head card-icon"></i>
+                        <h3 class="card-title">The Interception</h3>
+                    </div>
+                    <p class="card-text">
+                        Quraysh dispatched their best general, <strong>Khālid ibn al-Walīd</strong>, with 200 elite horsemen to Ghamīm to block the main road to Makkah. Their intent was to provoke a battle or force a retreat.
+                    </p>
+                </div>
+
+                <!-- Right: The Evasion -->
+                <div class="action-card prophet-card">
+                    <div class="card-header">
+                        <i class="fas fa-route card-icon"></i>
+                        <h3 class="card-title">The Evasion</h3>
+                    </div>
+                    <p class="card-text">
+                        Upon hearing of Khālid's position, the Prophet ﷺ said: <em>"Who can lead us by a path other than the one they are on?"</em>
+                    </p>
+                    <p class="card-text" style="margin-top: 10px;">
+                        He chose a rugged, difficult detour through the rocky terrain to bypass the cavalry and avoid bloodshed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Outcome -->
+            <div class="outcome-banner">
+                <i class="fas fa-check-circle" style="color: #1A3C40; font-size: 1.5rem; margin-right: 15px;"></i>
+                <p class="outcome-text">
+                    <strong>Strategic Success:</strong> The Muslims successfully bypassed the interception and descended into the plain of Ḥudaybiyyah, catching Quraysh off guard.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

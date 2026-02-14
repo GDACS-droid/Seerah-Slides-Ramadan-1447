@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 400;
+        }
+
+        .content-container {
+            display: flex;
+            padding: 0 80px 60px;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .location-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #3E2723;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arabic-loc {
+            font-size: 1.6rem;
+            color: #1A3C40;
+        }
+
+        .narrative-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #3E2723;
+            margin-bottom: 20px;
+        }
+
+        .dialogue-box {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-left: 4px solid #1A3C40;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .dialogue-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .dialogue-content {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #1A3C40;
+        }
+
+        .hubal-card {
+            background-color: #3E2723;
+            color: #FDFBF7;
+            padding: 30px;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+        }
+
+        .hubal-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+        }
+
+        .hubal-desc {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .arrow-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            align-self: center;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Journey to Syria and the Amalekites</h1>
+            <div class="subtitle">How Idolatry Was Imported to Makkah</div>
+        </div>
+
+        <div class="content-container">
+            <!-- Left Column: The Encounter -->
+            <div class="column">
+                <div class="location-header">
+                    <span>Al-Shām (Syria)</span>
+                    <span class="arabic-loc">الشام</span>
+                </div>
+                
+                <p class="narrative-text">
+                    'Amr traveled to Syria where he encountered the <strong>Amalekites (Al-'Amālīq)</strong>, a powerful and advanced civilization that practiced idol worship.
+                </p>
+
+                <div class="dialogue-box">
+                    <div class="dialogue-label">The Amalekites' Claim</div>
+                    <div class="dialogue-content">
+                        "These are our sources of power. When we are in drought, hunger, or war, we pray to them and miracles happen."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: The Import -->
+            <div class="column">
+                <div class="location-header">
+                    <span>Return to Makkah</span>
+                    <span class="arabic-loc">مكة</span>
+                </div>
+
+                <p class="narrative-text">
+                    Impressed by their utilitarian argument, 'Amr requested an idol to take back to his people. They gifted him their chief deity.
+                </p>
+
+                <div class="hubal-card">
+                    <div class="hubal-name">Hubal (هبل)</div>
+                    <div class="hubal-desc">
+                        The first idol placed at the Ka'bah<br>
+                        Became the chief deity of Quraysh
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

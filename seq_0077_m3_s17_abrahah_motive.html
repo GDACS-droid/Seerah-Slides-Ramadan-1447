@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* kept top padding (50px) intact */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 100px 20px; /* reduced bottom padding */
+            gap: 24px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        /* Strategy Diagram */
+        .strategy-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #C5A059;
+        }
+
+        .strategy-node {
+            text-align: center;
+            width: 200px;
+        }
+
+        .node-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .node-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .flow-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8D6E63;
+            flex: 1;
+            position: relative;
+        }
+
+        .arrow-line {
+            height: 2px;
+            background-color: #8D6E63;
+            width: 100%;
+            position: relative;
+        }
+
+        .arrow-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid #8D6E63;
+        }
+
+        .arrow-text {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cross-mark {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #C62828;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Motive Cards */
+        .motives-grid {
+            display: flex;
+            gap: 24px;
+        }
+
+        .motive-card {
+            flex: 1;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px; /* slightly reduced padding */
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .motive-icon {
+            position: absolute;
+            top: -18px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #C5A059;
+            color: #1A3C40;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 3px solid #FDFBF7;
+        }
+
+        .motive-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #C5A059;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 8px;
+        }
+
+        .motive-desc {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #E0F2F1;
+        }
+
+        .term-box {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A3C40;
+        }
+
+        .english-term {
+            font-size: 1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 10px; /* reduced bottom padding to lower total height */
+            font-size: 1rem;
+            color: #5D4037;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Abrahah's Motive</h1>
+            <div class="subtitle">Diverting the Pilgrimage Economy</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Strategy Diagram -->
+            <div class="strategy-container">
+                <div class="strategy-node">
+                    <i class="fas fa-users node-icon"></i>
+                    <div class="node-label">Arab Pilgrims</div>
+                </div>
+
+                <div class="flow-arrow">
+                    <div class="arrow-text">Traditional Route</div>
+                    <div class="arrow-line"></div>
+                    <div class="cross-mark">×</div>
+                </div>
+
+                <div class="strategy-node" style="opacity: 0.5;">
+                    <i class="fas fa-kaaba node-icon"></i>
+                    <div class="node-label">Makkah (Ka'bah)</div>
+                </div>
+
+                <div class="flow-arrow">
+                    <div class="arrow-text">New Route</div>
+                    <div class="arrow-line"></div>
+                </div>
+
+                <div class="strategy-node">
+                    <i class="fas fa-church node-icon" style="color: #C5A059;"></i>
+                    <div class="node-label" style="color: #C5A059;">Sana'a (Al-Qullays)</div>
+                </div>
+            </div>
+
+            <!-- Motive Cards -->
+            <div class="motives-grid">
+                <div class="motive-card">
+                    <div class="motive-icon"><i class="fas fa-cross"></i></div>
+                    <div class="motive-title">Religious Supremacy</div>
+                    <p class="motive-desc">
+                        To establish Christianity as the dominant faith in Arabia by replacing the ancient Abrahamic sanctuary with a grand cathedral.
+                    </p>
+                </div>
+
+                <div class="motive-card">
+                    <div class="motive-icon"><i class="fas fa-coins"></i></div>
+                    <div class="motive-title">Economic Monopoly</div>
+                    <p class="motive-desc">
+                        To capture the massive wealth generated by the annual Hajj pilgrimage and control the trade routes of Western Arabia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="term-box">
+                <span class="arabic-term">صَرْفُ الحَجّ</span>
+                <span class="english-term"> — Ṣarf al-Ḥajj (Diverting the Pilgrimage)</span>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "An early example of weaponizing religion for geopolitical gain."
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #1A3C40;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #FDFBF7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 20px solid #1A3C40;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .next-label {
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            color: #C5A059;
+            margin-bottom: 20px;
+        }
+
+        .next-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: #FDFBF7;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .next-desc {
+            font-size: 1.4rem;
+            color: rgba(253, 251, 247, 0.8);
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .icon-wrapper {
+            font-size: 3rem;
+            color: #C5A059;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="icon-wrapper">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+
+        <div class="next-label">Coming Up Next</div>
+        
+        <h1 class="next-title">Module 3: The Battle of Badr</h1>
+        
+        <p class="next-desc">
+            With the internal front secured, the new state faces its first existential external threat.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* keep upper padding for title (50px) */
+        .header-section {
+            padding: 50px 60px 10px; /* reduced horizontal & bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px; /* reduced gap to save space */
+            padding: 10px 60px 20px; /* reduced vertical padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .term-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            padding: 12px; /* reduced padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            border-left: 4px solid #1A3C40;
+        }
+
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px; /* reduced spacing */
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 6px; /* reduced */
+        }
+
+        .term-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #8D6E63;
+        }
+
+        .term-desc {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .footer-quote {
+            text-align: center;
+            padding: 0 60px 20px; /* reduced bottom padding */
+            z-index: 5;
+        }
+
+        .quran-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #5D4037;
+            background-color: rgba(197, 160, 89, 0.1);
+            padding: 10px 20px; /* reduced padding */
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .citation {
+            font-weight: 700;
+            color: #1A3C40;
+            margin-left: 10px;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Superstitious Animal Rites</h1>
+            <div class="subtitle">Fabricated Prohibitions Condemned in the Qur'ān</div>
+        </div>
+
+        <div class="grid-container">
+            <!-- Bahirah -->
+            <div class="term-card">
+                <div class="term-header">
+                    <span class="term-name">Bahīrah</span>
+                    <span class="term-arabic">بحيرة</span>
+                </div>
+                <p class="term-desc">
+                    A she-camel with a slit ear whose milk was set aside for idols.
+                </p>
+            </div>
+
+            <!-- Sa'ibah -->
+            <div class="term-card">
+                <div class="term-header">
+                    <span class="term-name">Sā'ibah</span>
+                    <span class="term-arabic">سائبة</span>
+                </div>
+                <p class="term-desc">
+                    A she-camel let loose for idols and not burdened with loads.
+                </p>
+            </div>
+
+            <!-- Wasilah -->
+            <div class="term-card">
+                <div class="term-header">
+                    <span class="term-name">Waṣīlah</span>
+                    <span class="term-arabic">وصيلة</span>
+                </div>
+                <p class="term-desc">
+                    A she-camel that bore successive females and was spared slaughter.
+                </p>
+            </div>
+
+            <!-- Ham -->
+            <div class="term-card">
+                <div class="term-header">
+                    <span class="term-name">Ḥām</span>
+                    <span class="term-arabic">حام</span>
+                </div>
+                <p class="term-desc">
+                    A stallion freed from work after siring many offspring.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            <div class="quran-text">
+                "Allah has not appointed [such innovations as] Bahīrah or Sā'ibah or Waṣīlah or Ḥām. But those who disbelieve invent lies against Allah."
+                <span class="citation">(Qur'ān 5:103)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

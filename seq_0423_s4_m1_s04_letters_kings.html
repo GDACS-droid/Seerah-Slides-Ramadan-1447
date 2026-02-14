@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .left-column {
+            flex: 0.4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-column {
+            flex: 0.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .seal-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 30px;
+            border: 2px solid #C5A059;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .seal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #C5A059;
+        }
+
+        .seal-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .seal-inscription {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.5);
+            padding-top: 15px;
+            font-style: italic;
+        }
+
+        .envoy-list {
+            list-style: none;
+        }
+
+        .envoy-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px 20px;
+            border-left: 4px solid #1A3C40;
+        }
+
+        .envoy-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #C5A059;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .envoy-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .envoy-details p {
+            font-size: 1rem;
+            color: #5D4037;
+        }
+
+        .destination-tag {
+            margin-left: auto;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Letters to Kings</h1>
+            <p class="subtitle">The Global Call to Islam (Muḥarram 7 AH)</p>
+        </div>
+
+        <div class="content-section">
+            <!-- Left Column: The Seal -->
+            <div class="left-column">
+                <div class="seal-box">
+                    <h2 class="seal-title">The Silver Seal</h2>
+                    <p class="seal-text">
+                        When told that kings do not read unsealed letters, the Prophet ﷺ ordered a silver ring to be made.
+                    </p>
+                    <div class="seal-inscription">
+                        "Muḥammad Rasūl Allāh"
+                    </div>
+                </div>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #3E2723;">
+                    The letters invited the rulers to Islam with a unified message: <br>
+                    <strong>"Accept Islam and you will be safe; Allah will grant you a double reward."</strong>
+                </p>
+            </div>
+
+            <!-- Right Column: The Envoys -->
+            <div class="right-column">
+                <ul class="envoy-list">
+                    <li class="envoy-item">
+                        <div class="envoy-icon"><i class="fas fa-crown"></i></div>
+                        <div class="envoy-details">
+                            <h3>Diḥyah al-Kalbī</h3>
+                            <p>Sent to Heraclius (Caesar)</p>
+                        </div>
+                        <span class="destination-tag">Rome / Byzantium</span>
+                    </li>
+
+                    <li class="envoy-item">
+                        <div class="envoy-icon"><i class="fas fa-fire"></i></div>
+                        <div class="envoy-details">
+                            <h3>'Abdullāh ibn Ḥudhāfah</h3>
+                            <p>Sent to Khosrow (Chosroes)</p>
+                        </div>
+                        <span class="destination-tag">Persia</span>
+                    </li>
+
+                    <li class="envoy-item">
+                        <div class="envoy-icon"><i class="fas fa-water"></i></div>
+                        <div class="envoy-details">
+                            <h3>Ḥāṭib ibn Abī Balta'ah</h3>
+                            <p>Sent to Al-Muqawqis</p>
+                        </div>
+                        <span class="destination-tag">Egypt</span>
+                    </li>
+
+                    <li class="envoy-item">
+                        <div class="envoy-icon"><i class="fas fa-ship"></i></div>
+                        <div class="envoy-details">
+                            <h3>'Amr ibn Umayyah</h3>
+                            <p>Sent to The Negus (Al-Najāshī)</p>
+                        </div>
+                        <span class="destination-tag">Abyssinia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

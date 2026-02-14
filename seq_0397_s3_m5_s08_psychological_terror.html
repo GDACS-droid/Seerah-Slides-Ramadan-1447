@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .verse-container {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 30px 50px;
+            text-align: center;
+            border: 2px solid #C5A059;
+            width: 100%;
+            max-width: 1000px;
+            position: relative;
+        }
+
+        .verse-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 15px;
+        }
+
+        .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .verse-ref {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C5A059;
+        }
+
+        .split-container {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+        }
+
+        .info-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #8D6E63;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #3E2723;
+            margin-bottom: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .box-icon {
+            margin-right: 10px;
+            color: #8D6E63;
+        }
+
+        .box-text {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .safiyyah-highlight {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(141, 110, 99, 0.3);
+            font-style: italic;
+            font-size: 1rem;
+            color: #5D4037;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Maximum Danger</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Quranic Verse -->
+            <div class="verse-container">
+                <div class="verse-icon"><i class="fas fa-quran"></i></div>
+                <p class="verse-text">
+                    "[Remember] when they came at you from above you and from below you, and when eyes shifted [in fear], and hearts reached the throats, and you assumed about Allāh [various] assumptions."
+                </p>
+                <div class="verse-ref">Surah Al-Aḥzāb (33:10)</div>
+            </div>
+
+            <div class="split-container">
+                <!-- The Internal Threat -->
+                <div class="info-box">
+                    <h3 class="box-title">
+                        <i class="fas fa-home box-icon"></i>
+                        The Vulnerable Rear
+                    </h3>
+                    <p class="box-text">
+                        With the men at the trench facing the Confederates ("from above"), the betrayal of Banū Qurayẓah ("from below") meant the fortresses housing women and children were now the front line, completely exposed to attack.
+                    </p>
+                </div>
+
+                <!-- The Incident -->
+                <div class="info-box" style="border-left-color: #1A3C40;">
+                    <h3 class="box-title">
+                        <i class="fas fa-female box-icon" style="color: #1A3C40;"></i>
+                        Defense of the Fortress
+                    </h3>
+                    <p class="box-text">
+                        A Jewish scout breached the fortress of Fāri'. With no men available to defend them, <strong>Ṣafiyyah bint 'Abd al-Muṭṭalib</strong> (the Prophet's aunt) took a pole, went down, and struck him dead herself.
+                    </p>
+                    <div class="safiyyah-highlight">
+                        Her bravery deceived the enemy into thinking the fortress was garrisoned by soldiers.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

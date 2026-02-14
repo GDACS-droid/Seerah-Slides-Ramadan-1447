@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep the top padding of the title (50px) unchanged */
+        .header-section {
+            padding: 50px 40px 8px; /* reduced horizontal and bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 8px 40px 12px; /* reduced top/bottom and horizontal padding */
+            gap: 30px; /* reduced gap between columns */
+            flex-grow: 0; /* avoid forcing extra height */
+            z-index: 5;
+            align-items: flex-start; /* let columns size to content */
+        }
+
+        /* Left Column: Criteria */
+        .criteria-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* tightened spacing */
+        }
+
+        .col-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 5px;
+        }
+
+        .criteria-item {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px; /* reduced padding */
+            border-left: 4px solid #C5A059;
+        }
+
+        .criteria-icon {
+            width: 44px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-right: 12px;
+        }
+
+        .criteria-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 2px;
+        }
+
+        .criteria-text span {
+            font-size: 1rem;
+            color: #5D4037;
+        }
+
+        /* Right Column: Classes */
+        .classes-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 18px; /* tightened spacing */
+        }
+
+        .class-card {
+            padding: 16px; /* reduced padding */
+            border: 1px solid #C5A059;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* don't stretch */
+        }
+
+        .card-bitah {
+            background-color: rgba(26, 60, 64, 0.05);
+            border-left: 6px solid #1A3C40;
+        }
+
+        .card-zawahir {
+            background-color: rgba(141, 110, 99, 0.05);
+            border-left: 6px solid #8D6E63;
+        }
+
+        .class-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .title-bitah { color: #1A3C40; }
+        .title-zawahir { color: #8D6E63; }
+
+        .class-subtitle {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .class-desc {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #3E2723;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 40px 12px; /* reduced horizontal and bottom padding */
+            font-size: 1.1rem;
+            color: #1A3C40;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Sharaf System</h1>
+            <div class="subtitle">The Hierarchy of Quraysh</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: The Pillars of Nobility -->
+            <div class="criteria-col">
+                <div class="col-header">The Pillars of Nobility</div>
+                
+                <div class="criteria-item">
+                    <div class="criteria-icon"><i class="fas fa-dna"></i></div>
+                    <div class="criteria-text">
+                        <h3>Nasab (Lineage)</h3>
+                        <span>Purity of blood and connection to Quṣayy.</span>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon"><i class="fas fa-coins"></i></div>
+                    <div class="criteria-text">
+                        <h3>Māl (Wealth)</h3>
+                        <span>Success in trade caravans and commercial influence.</span>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon"><i class="fas fa-users"></i></div>
+                    <div class="criteria-text">
+                        <h3>'Izzah (Manpower)</h3>
+                        <span>Number of sons, brothers, and tribal allies.</span>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="criteria-text">
+                        <h3>Karam (Generosity)</h3>
+                        <span>Feeding pilgrims and slaughtering camels for guests.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: The Class Divide -->
+            <div class="classes-col">
+                <div class="col-header">The Social Divide</div>
+
+                <div class="class-card card-bitah">
+                    <div class="class-title title-bitah">Quraysh al-Biṭāḥ</div>
+                    <div class="class-subtitle" style="color: #1A3C40;">The Valley Dwellers</div>
+                    <p class="class-desc">
+                        The inner circle living directly around the Ka'bah. They held political power, the key offices, and the highest prestige.
+                    </p>
+                </div>
+
+                <div class="class-card card-zawahir">
+                    <div class="class-title title-zawahir">Quraysh al-Ẓawāhir</div>
+                    <div class="class-subtitle" style="color: #8D6E63;">The Outskirts Dwellers</div>
+                    <p class="class-desc">
+                        Those living in the surrounding hills. They served as the city's defenders but held less political sway in Dār al-Nadwah.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "The Prophet ﷺ came from the absolute peak of this hierarchy: Quraysh al-Biṭāḥ, Banū Hāshim."
+        </div>
+    </div>
+</body>
+</html>

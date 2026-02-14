@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep the top padding of the title (50px) unchanged */
+        .header-section {
+            padding: 50px 60px 8px; /* reduced side and bottom padding to save vertical space */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .names-display {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* reduced gap */
+            margin-bottom: 10px; /* reduced from 40px */
+            z-index: 5;
+        }
+
+        .name-block {
+            text-align: center;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 8px; /* slight reduction */
+            min-width: 200px;
+        }
+
+        .name-en {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #3E2723;
+            font-weight: 700;
+        }
+
+        .name-ar {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            margin-top: 5px;
+        }
+
+        .narrative-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 60px 10px; /* reduced side and bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .narrative-step {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 16px; /* reduced padding */
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -12px; /* slightly adjusted */
+            left: 20px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-top: 10px;
+            margin-bottom: 12px; /* slight tightening */
+            font-weight: 700;
+        }
+
+        .step-desc {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #5D4037;
+        }
+
+        .location-footer {
+            text-align: center;
+            padding: 12px; /* reduced */
+            margin: 0 60px 10px; /* reduced bottom margin */
+            background-color: rgba(26, 60, 64, 0.05);
+            border-left: 4px solid #C5A059;
+            z-index: 5;
+        }
+
+        .location-text {
+            font-size: 1.3rem;
+            color: #3E2723;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #1A3C40;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Irony of Isāf and Nā'ilah</h1>
+            <div class="subtitle">From Divine Punishment to Pagan Worship</div>
+        </div>
+
+        <div class="names-display">
+            <div class="name-block">
+                <div class="name-en">Isāf</div>
+                <div class="name-ar">إساف</div>
+            </div>
+            <div class="name-block">
+                <div class="name-en">Nā'ilah</div>
+                <div class="name-ar">نائلة</div>
+            </div>
+        </div>
+
+        <div class="narrative-container">
+            <!-- Step 1 -->
+            <div class="narrative-step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">The Transgression</h3>
+                <p class="step-desc">
+                    Two lovers from the Jurhum tribe who committed adultery inside the sacred precincts of the Ka'bah, violating its sanctity.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="narrative-step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">The Punishment</h3>
+                <p class="step-desc">
+                    As a divine sign, they were instantly <span class="highlight">petrified (turned to stone)</span>. The people placed them at Safa and Marwah as a warning to others.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="narrative-step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">The Corruption</h3>
+                <p class="step-desc">
+                    Over centuries, the "warning" narrative was lost. Later generations assumed these statues were placed there to be venerated, turning sinners into idols.
+                </p>
+            </div>
+        </div>
+
+        <div class="location-footer">
+            <p class="location-text">
+                Placed at <strong>Al-Ṣafā</strong> and <strong>Al-Marwah</strong>, they became central to the corrupted Hajj rites of Quraysh.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            position: relative;
+        }
+
+        /* Central Target */
+        .madinah-circle {
+            width: 200px;
+            height: 200px;
+            background: #1A3C40;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FDFBF7;
+            border: 4px solid #C5A059;
+            z-index: 10;
+            box-shadow: 0 0 0 15px rgba(26, 60, 64, 0.1);
+        }
+
+        .madinah-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .madinah-pop {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Threat Cards */
+        .threat-card {
+            position: absolute;
+            width: 280px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #8D6E63;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .threat-card::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 60px;
+            background: #8D6E63;
+            z-index: 1;
+        }
+
+        /* Top Threat: Jewish Tribes */
+        .threat-top {
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 4px solid #8D6E63;
+        }
+        .threat-top::before {
+            bottom: -60px;
+            left: 50%;
+        }
+
+        /* Left Threat: Quraysh */
+        .threat-left {
+            bottom: 50px;
+            left: 100px;
+            border-left: 4px solid #3E2723;
+        }
+        .threat-left::before {
+            top: 50%;
+            right: -80px;
+            height: 2px;
+            width: 80px;
+        }
+
+        /* Right Threat: Ghatafan */
+        .threat-right {
+            bottom: 50px;
+            right: 100px;
+            border-right: 4px solid #5D4037;
+        }
+        .threat-right::before {
+            top: 50%;
+            left: -80px;
+            height: 2px;
+            width: 80px;
+        }
+
+        .threat-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #3E2723;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .threat-count {
+            font-size: 1.1rem;
+            color: #C5A059;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .threat-desc {
+            font-size: 0.9rem;
+            color: #5D4037;
+        }
+
+        .total-banner {
+            position: absolute;
+            bottom: 0;
+            background: #8D6E63;
+            color: #FDFBF7;
+            padding: 10px 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border: 2px solid #C5A059;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Confederates (Al-Aḥzāb)</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Central Target -->
+            <div class="madinah-circle">
+                <div class="madinah-label">Madīnah</div>
+                <div class="madinah-pop">3,000 Defenders</div>
+            </div>
+
+            <!-- Top Threat: The Architects -->
+            <div class="threat-card threat-top">
+                <div class="threat-title">The Architects</div>
+                <div class="threat-desc">
+                    <strong>Ḥuyayy ibn Akhṭab</strong> & Banū Naḍīr (Exiled to Khaybar). They traveled tribe to tribe, inciting war and funding the coalition.
+                </div>
+            </div>
+
+            <!-- Left Threat: Quraysh -->
+            <div class="threat-card threat-left">
+                <div class="threat-title">Quraysh & Allies</div>
+                <div class="threat-count">4,000 Soldiers</div>
+                <div class="threat-desc">
+                    Led by Abu Sufyān. Included 300 horses and 1,500 camels. Seeking final destruction of Islam.
+                </div>
+            </div>
+
+            <!-- Right Threat: Ghatafan -->
+            <div class="threat-card threat-right">
+                <div class="threat-title">Ghaṭafān & Najd</div>
+                <div class="threat-count">6,000 Soldiers</div>
+                <div class="threat-desc">
+                    Mercenary tribes bribed with 50% of Khaybar's date harvest to join the siege.
+                </div>
+            </div>
+
+            <div class="total-banner">
+                Total Force: 10,000 Soldiers (Larger than the entire population of Madīnah)
+            </div>
+        </div>
+    </div>
+</body>
+</html>

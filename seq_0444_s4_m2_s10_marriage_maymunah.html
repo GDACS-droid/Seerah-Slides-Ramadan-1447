@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .info-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border-top: 4px solid #1A3C40;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 10px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #1A3C40;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px;
+            margin-top: auto;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .footer-note {
+            margin: 0 80px 40px;
+            padding: 15px;
+            border-top: 1px solid #C5A059;
+            text-align: center;
+            font-size: 1rem;
+            color: #8D6E63;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Marriage to Maymūnah bint al-Ḥārith</h1>
+            <h2 class="subtitle">The Final Union & Strategic Diplomacy</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Left Card: The Union -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-ring card-icon"></i>
+                    <h3 class="card-title">The Union</h3>
+                </div>
+                <p class="card-text">
+                    Maymūnah was the sister of Umm al-Faḍl (wife of Al-'Abbās). The marriage was proposed by Al-'Abbās during the 'Umrah.
+                </p>
+                <p class="card-text">
+                    She holds the distinction of being the <strong>last woman</strong> the Prophet ﷺ married.
+                </p>
+                <div class="highlight-box">
+                    "She surrendered herself to the Prophet."
+                </div>
+            </div>
+
+            <!-- Right Card: The Strategy -->
+            <div class="info-card">
+                <div class="card-header">
+                    <i class="fas fa-chess-rook card-icon"></i>
+                    <h3 class="card-title">Strategic Impact</h3>
+                </div>
+                <p class="card-text">
+                    <strong>Alliance with Najd:</strong> She belonged to the powerful Banū Hilāl tribe. This union helped neutralize the hostility of the Najdi tribes (Hawāzin) and soften their hearts towards Islam.
+                </p>
+                <p class="card-text">
+                    <strong>Attempted Reconciliation:</strong> The Prophet ﷺ invited the Quraysh to the wedding feast (Walīmah) to build bridges, but they rudely refused: <em>"We have no need for your food. Leave us."</em>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>
+            <strong>Sarif:</strong> The location just outside Makkah where the marriage was consummated, and coincidentally, where she passed away and was buried years later.
+        </div>
+    </div>
+</body>
+</html>

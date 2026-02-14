@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* kept top padding (50px) as required; reduced bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 80px 12px; /* reduced top/bottom and side padding to save vertical space */
+            flex-grow: 1;
+            z-index: 5;
+            justify-content: center;
+        }
+
+        .pillars-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* reduced gap between columns */
+            height: 100%;
+        }
+
+        .pillar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .pillar::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 20%;
+            bottom: 20%;
+            width: 1px;
+            background-color: #C5A059;
+            opacity: 0.5;
+        }
+
+        .pillar:last-child::after {
+            display: none;
+        }
+
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border: 2px solid #C5A059;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 12px; /* reduced */
+        }
+
+        .pillar-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px; /* reduced */
+            height: 60px; /* Fixed height for alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-text {
+            font-size: 1.15rem;
+            color: #3E2723;
+            line-height: 1.6;
+        }
+
+        .highlight-phrase {
+            display: block;
+            margin-top: 8px; /* reduced */
+            font-weight: 700;
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .footer-term {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 10px; /* reduced from 30px */
+            border-top: 1px solid #C5A059;
+            width: 40%;
+            align-self: center;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Orphanhood as Prophetic Preparation</h1>
+            <div class="subtitle">How Adversity Shaped the Messenger</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="pillars-container">
+                <!-- Pillar 1 -->
+                <div class="pillar">
+                    <div class="icon-circle"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="pillar-title">Social Empathy</div>
+                    <div class="pillar-text">
+                        Suffering the pain of loss created a deep, visceral resonance with the weak, the poor, and the destitute. He became the "Father of Orphans" because he was one.
+                    </div>
+                    <span class="highlight-phrase">Mercy to the Worlds</span>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="pillar">
+                    <div class="icon-circle"><i class="fas fa-mountain"></i></div>
+                    <div class="pillar-title">Psychological Independence</div>
+                    <div class="pillar-text">
+                        Growing up without a father's shadow forced an early maturity. He learned to make decisions and navigate complex tribal dynamics without a safety net.
+                    </div>
+                    <span class="highlight-phrase">Strength of Character</span>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="pillar">
+                    <div class="icon-circle"><i class="fas fa-praying-hands"></i></div>
+                    <div class="pillar-title">Spiritual Reliance</div>
+                    <div class="pillar-text">
+                        With no human protector to fall back on ultimately, his heart learned to lean entirely on the Divine. The void of human support was filled by divine presence.
+                    </div>
+                    <span class="highlight-phrase">Tawakkul (Trust)</span>
+                </div>
+            </div>
+
+            <div class="footer-term">
+                <span class="term-arabic">الإِعْدَادُ الرَّبَّانِي</span>
+                <span class="term-english">Al-I'dād al-Rabbānī (Divine Preparation)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

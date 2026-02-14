@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 50px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .left-column {
+            flex: 0.45;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-column {
+            flex: 0.55;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .plot-box {
+            background-color: #3E2723;
+            color: #FDFBF7;
+            padding: 25px;
+            border: 2px solid #C5A059;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .plot-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plot-text {
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .hidden-agenda {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #C5A059;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .verse-container {
+            background-color: #FDFBF7;
+            border: 1px solid #C5A059;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .verse-icon {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 2rem;
+            color: #1A3C40;
+            background-color: #FDFBF7;
+            padding: 0 10px;
+        }
+
+        .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #1A3C40;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .verse-ref {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #8D6E63;
+            font-weight: 700;
+        }
+
+        .command-box {
+            margin-top: 20px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px 20px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border-left: 4px solid #C5A059;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Masjid al-Dirār</h1>
+            <h2 class="subtitle">The Mosque of Harm</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Left: The Conspiracy -->
+            <div class="left-column">
+                <div class="plot-box">
+                    <div class="plot-title"><i class="fas fa-mask"></i> The Deception</div>
+                    <p class="plot-text">
+                        Built by 12 hypocrites near Masjid Qubā'. They claimed it was for "the weak and for rainy nights" and asked the Prophet ﷺ to pray in it to legitimize it.
+                    </p>
+                    <div class="hidden-agenda">
+                        <strong>Real Purpose:</strong> An outpost for Abū 'Āmir al-Rāhib (an enemy of Islam) and a center to divide the believers.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: The Divine Verdict -->
+            <div class="right-column">
+                <div class="verse-container">
+                    <i class="fas fa-quran verse-icon"></i>
+                    <p class="verse-text">
+                        "And [there are] those who took for themselves a mosque for causing harm (Dirār) and disbelief (Kufr) and division (Tafriq) among the believers and as a station for whoever had warred against Allah..."
+                    </p>
+                    <div class="verse-ref">Surah At-Tawbah (9:107)</div>
+                </div>
+
+                <div class="command-box">
+                    "Do not stand [for prayer] within it - ever."<br>
+                    <span style="font-size: 0.9rem; font-family: 'Lato', sans-serif; opacity: 0.8; margin-top: 5px; display: block;">
+                        The Prophet ﷺ ordered it to be burned and leveled to the ground.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .left-column {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-column {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 30px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .event-icon {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border: 2px solid #C5A059;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.6;
+        }
+
+        .reaction-box {
+            background-color: #3E2723;
+            color: #FDFBF7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #C5A059;
+        }
+
+        .reaction-quote {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .reaction-source {
+            font-size: 0.9rem;
+            color: #C5A059;
+            text-transform: uppercase;
+        }
+
+        .verse-box {
+            background-color: #FDFBF7;
+            border: 2px solid #1A3C40;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .verse-ref {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            font-weight: 700;
+        }
+
+        .vertical-line {
+            width: 4px;
+            background-color: #C5A059;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Bilāl on the Kaaba</h1>
+            <h2 class="subtitle">The Triumph of Faith over Lineage</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Left: The Event -->
+            <div class="left-column">
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="card-title">The Historic Command</h3>
+                    <p class="card-text">
+                        The Prophet ﷺ ordered Bilāl ibn Rabāḥ, a former Abyssinian slave who had been tortured in Makkah for his faith, to climb the roof of the Kaaba—the holiest site in Arabia—to call the Adhān.
+                    </p>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-level-up-alt"></i></div>
+                    <h3 class="card-title">The Symbolism</h3>
+                    <p class="card-text">
+                        This act physically and symbolically placed a former slave above the chiefs of Quraysh, dismantling the idols of racism and class superiority alongside the idols of stone.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: The Reaction & Verse -->
+            <div class="right-column">
+                <div class="reaction-box">
+                    <div class="reaction-quote">
+                        "Thank God my father died before seeing this day."
+                    </div>
+                    <div class="reaction-source">
+                        — Reaction of Quraysh Elites (Attab ibn Asid / Al-Harith ibn Hisham)
+                    </div>
+                </div>
+
+                <div class="verse-box">
+                    <p class="verse-text">
+                        "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you."
+                    </p>
+                    <div class="verse-ref">Surah Al-Hujurat (49:13)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

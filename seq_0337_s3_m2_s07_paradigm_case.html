@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .story-column {
+            width: 46%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-top: 3px solid #C5A059;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .column-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #3E2723;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .speaker-name {
+            font-size: 1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .analysis-box {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #5D4037;
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.3);
+            padding-top: 15px;
+        }
+
+        .arrow-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Paradigm Case</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="story-column">
+                <h3 class="column-title">The Offer</h3>
+                <p class="quote-text">
+                    "I am the wealthiest of the Anṣār. Take half of my wealth. I have two wives; look at which one pleases you more, and I will divorce her for you to marry."
+                </p>
+                <div class="speaker-name">Sa'd ibn al-Rabī'</div>
+                <div class="analysis-box">
+                    Demonstrates the Anṣār's total commitment and selflessness (Īthār).
+                </div>
+            </div>
+
+            <i class="fas fa-exchange-alt arrow-icon"></i>
+
+            <div class="story-column">
+                <h3 class="column-title">The Response</h3>
+                <p class="quote-text">
+                    "May Allāh bless you in your family and wealth. I have no need for this. Just show me the way to the marketplace."
+                </p>
+                <div class="speaker-name">'Abd al-Raḥmān ibn 'Awf</div>
+                <div class="analysis-box">
+                    Demonstrates the Muhājirūn's dignity ('Iffah) and desire for self-sufficiency.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 20px 100px 40px;
+            gap: 50px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        /* Left Column: The Setting */
+        .setting-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 2px solid rgba(197, 160, 89, 0.3);
+            padding-right: 40px;
+        }
+
+        .icon-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hubal-icon {
+            font-size: 4rem;
+            color: #1A3C40;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .desc-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Right Column: The Mechanism */
+        .mechanism-col {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .term-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #C5A059;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .english-term {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-left: 4px solid #C5A059;
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        .step-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+        }
+
+        /* Bottom: The Outcome */
+        .outcome-section {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .outcome-card {
+            background-color: #FDFBF7;
+            border: 2px solid #1A3C40;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .outcome-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8D6E63;
+            margin-bottom: 5px;
+        }
+
+        .outcome-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #C62828; /* Red for danger/sacrifice */
+            font-weight: 700;
+        }
+
+        .arrow-icon {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #1A3C40;
+            background-color: #FDFBF7;
+            padding: 0 10px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 30px;
+            font-size: 1rem;
+            color: #5D4037;
+            font-style: italic;
+            z-index: 5;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Lottery of Arrows</h1>
+            <div class="subtitle">Al-Istikhārah bi al-Azlām</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: The Setting -->
+            <div class="setting-col">
+                <div class="icon-container">
+                    <i class="fas fa-kaaba hubal-icon"></i>
+                </div>
+                <h2 class="section-title">The Sanctuary</h2>
+                <p class="desc-text">
+                    The ritual took place inside the Ka'bah, before the idol <strong>Hubal</strong>. This was the highest court of appeal for the Arabs.
+                </p>
+            </div>
+
+            <!-- Right: The Mechanism -->
+            <div class="mechanism-col">
+                <div class="term-box">
+                    <div class="arabic-term">الأَزْلَام</div>
+                    <div class="english-term">Al-Azlām (Divination Arrows)</div>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Ten arrows were prepared, each inscribed with the name of one son.</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">The arrows were given to the <em>Sādin</em> (custodian) of the Ka'bah.</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">He shuffled them in the quiver and drew one single arrow.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom: The Outcome -->
+        <div class="outcome-section">
+            <div class="outcome-card">
+                <i class="fas fa-arrow-down arrow-icon"></i>
+                <div class="outcome-label">The Arrow Fell Upon</div>
+                <div class="outcome-name">'Abdullāh</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "The Qur'an later prohibited this practice (5:3), but it was the supreme law of the time."
+        </div>
+    </div>
+</body>
+</html>

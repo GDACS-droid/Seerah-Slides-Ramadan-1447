@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep per rules */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* must keep upper padding 50px */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 80px 20px; /* reduced bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .name-container {
+            text-align: center;
+            margin-bottom: 20px; /* reduced from 40 */
+            position: relative;
+        }
+
+        .arabic-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem; /* keep font size */
+            color: #1A3C40;
+            line-height: 1.1; /* slightly tighter to save space */
+            text-shadow: 4px 4px 0px rgba(197, 160, 89, 0.2);
+        }
+
+        .english-meaning {
+            font-size: 2rem;
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: -10px;
+            font-weight: 700;
+        }
+
+        .quote-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 6px solid #1A3C40;
+            padding: 18px 30px; /* reduced padding */
+            max-width: 800px;
+            margin-bottom: 20px; /* reduced from 40 */
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -18px;
+            left: 20px;
+            font-size: 3rem;
+            color: #C5A059;
+            background-color: #FDFBF7;
+            padding: 0 10px;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #3E2723;
+            font-style: italic;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .quote-author {
+            display: block;
+            text-align: right;
+            margin-top: 12px;
+            font-size: 1.1rem;
+            color: #8D6E63;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .context-grid {
+            display: flex;
+            gap: 20px; /* reduced gap */
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .context-item {
+            flex: 1;
+            text-align: center;
+            border-top: 2px solid #C5A059;
+            padding-top: 10px; /* reduced top padding */
+        }
+
+        .context-title {
+            font-size: 1.1rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .context-desc {
+            font-size: 1.1rem;
+            color: #5D4037;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Naming: "Muḥammad"</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="name-container">
+                <div class="arabic-name">مُحَمَّد</div>
+                <div class="english-meaning">The Praised One</div>
+            </div>
+
+            <div class="quote-box">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="quote-text">
+                    "I wanted him to be praised by God in the heavens and by people on earth."
+                </p>
+                <span class="quote-author">— 'Abd al-Muṭṭalib</span>
+            </div>
+
+            <div class="context-grid">
+                <div class="context-item">
+                    <div class="context-title">Unprecedented</div>
+                    <div class="context-desc">Virtually unknown name in Arabia at the time.</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-title">Prophetic Sign</div>
+                    <div class="context-desc">A form of <em>Irhaṣāt</em> (precursor to prophethood).</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-title">Root Meaning</div>
+                    <div class="context-desc">From <em>ḥ-m-d</em> (to praise, to thank).</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

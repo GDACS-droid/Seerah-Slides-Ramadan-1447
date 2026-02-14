@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 40px;
+        }
+
+        .roadmap-column {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .column-header {
+            margin-bottom: 25px;
+            width: 100%;
+            border-bottom: 2px solid #1A3C40;
+            padding-bottom: 15px;
+        }
+
+        .column-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            background-color: #FDFBF7;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #C5A059;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .column-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .topic-list {
+            list-style: none;
+            width: 100%;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .topic-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #5D4037;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .topic-item::before {
+            content: "•";
+            color: #C5A059;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-right: 10px;
+        }
+
+        .topic-desc {
+            font-size: 0.95rem;
+            color: #8D6E63;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .number-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            border: 2px solid #C5A059;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Module Roadmap</h1>
+            <h2 class="subtitle">Key Events & Strategic Shifts</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Column 1 -->
+            <div class="roadmap-column">
+                <div class="number-badge">1</div>
+                <div class="column-header">
+                    <div class="column-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="column-title">The Northern Front</h3>
+                </div>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <div>
+                            <strong>The Battle of Mu'tah</strong>
+                            <span class="topic-desc">Confronting the Roman Superpower</span>
+                        </div>
+                    </li>
+                    <li class="topic-item">
+                        <div>
+                            <strong>Dhāt al-Salāsil</strong>
+                            <span class="topic-desc">Restoring Prestige & Border Security</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="roadmap-column">
+                <div class="number-badge">2</div>
+                <div class="column-header">
+                    <div class="column-icon"><i class="fas fa-kaaba"></i></div>
+                    <h3 class="column-title">The Sacred Return</h3>
+                </div>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <div>
+                            <strong>'Umrah al-Qaḍā'</strong>
+                            <span class="topic-desc">Fulfilling the Vision of Victory</span>
+                        </div>
+                    </li>
+                    <li class="topic-item">
+                        <div>
+                            <strong>Marriage to Maymūnah</strong>
+                            <span class="topic-desc">Diplomatic Alliances</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="roadmap-column">
+                <div class="number-badge">3</div>
+                <div class="column-header">
+                    <div class="column-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="column-title">The Tipping Point</h3>
+                </div>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <div>
+                            <strong>Conversion of Giants</strong>
+                            <span class="topic-desc">Khālid ibn al-Walīd & 'Amr ibn al-'Āṣ</span>
+                        </div>
+                    </li>
+                    <li class="topic-item">
+                        <div>
+                            <strong>Strategic Analysis</strong>
+                            <span class="topic-desc">The Shifting Balance of Power</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

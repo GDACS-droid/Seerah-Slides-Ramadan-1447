@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 40px;
+        }
+
+        .panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            border: 1px solid #C5A059;
+        }
+
+        .panel-left {
+            background: rgba(62, 39, 35, 0.05);
+            border-top: 5px solid #8D6E63;
+        }
+
+        .panel-right {
+            background: rgba(26, 60, 64, 0.05);
+            border-top: 5px solid #1A3C40;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .panel-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #C5A059;
+        }
+
+        .panel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #3E2723;
+        }
+
+        .dialogue-box {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #C5A059;
+        }
+
+        .speaker {
+            font-weight: 700;
+            color: #1A3C40;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #5D4037;
+            font-size: 1.05rem;
+            line-height: 1.4;
+        }
+
+        .strategic-impact {
+            background: #FDFBF7;
+            padding: 20px;
+            border: 1px dashed #1A3C40;
+            margin-top: auto;
+        }
+
+        .impact-title {
+            font-weight: 700;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .impact-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .danger-banner {
+            margin: 0 80px 40px;
+            background: #3E2723;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border: 2px solid #C5A059;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Ultimate Betrayal</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Left: The Negotiation -->
+            <div class="panel panel-left">
+                <div class="panel-header">
+                    <i class="fas fa-comments-dollar panel-icon"></i>
+                    <h2 class="panel-title">The Seduction</h2>
+                </div>
+                
+                <div class="dialogue-box">
+                    <div class="speaker">Ḥuyayy ibn Akhṭab (The Instigator)</div>
+                    <div class="quote">"Woe to you, Ka'b! Open the door. I have brought you the glory of the age! I have brought you Quraysh and Ghaṭafān who have pledged not to leave until they uproot Muhammad."</div>
+                </div>
+
+                <div class="dialogue-box">
+                    <div class="speaker">Ka'b ibn Asad (Banū Qurayẓah)</div>
+                    <div class="quote">"By God, you have brought me humiliation... Leave me be, for I have seen nothing from Muhammad except truth and loyalty."</div>
+                </div>
+
+                <p style="font-size: 0.95rem; margin-top: 10px; color: #3E2723;">
+                    Ḥuyayy persisted, shaming Ka'b and finally promising: <em>"If they leave without victory, I will enter your fortress and share your fate."</em> Ka'b yielded.
+                </p>
+            </div>
+
+            <!-- Right: The Consequence -->
+            <div class="panel panel-right">
+                <div class="panel-header">
+                    <i class="fas fa-map-marked-alt panel-icon"></i>
+                    <h2 class="panel-title">The Strategic Nightmare</h2>
+                </div>
+                
+                <div class="strategic-impact">
+                    <div class="impact-title"><i class="fas fa-shield-alt" style="margin-right: 10px; color: #8D6E63;"></i> The Shield Breaks</div>
+                    <p class="impact-text">
+                        Banū Qurayẓah guarded the southern approach to Madīnah, the only side not protected by the Trench or natural lava fields.
+                    </p>
+                </div>
+
+                <div class="strategic-impact" style="margin-top: 20px;">
+                    <div class="impact-title"><i class="fas fa-baby" style="margin-right: 10px; color: #8D6E63;"></i> The Vulnerability</div>
+                    <p class="impact-text">
+                        The Muslim women and children were sheltered in fortresses near Banū Qurayẓah. With the treaty broken, the families of the defenders were now directly exposed to massacre from the rear.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="danger-banner">
+            "The enemy came upon you from above you (The Trench) and from below you (Banū Qurayẓah)..." (Qur'an 33:10)
+        </div>
+    </div>
+</body>
+</html>

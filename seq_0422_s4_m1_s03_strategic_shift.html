@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 60px;
+        }
+
+        .strategy-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 40px 30px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.15rem;
+            color: #5D4037;
+            line-height: 1.6;
+        }
+
+        .arrow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+        }
+
+        .arrow-icon {
+            font-size: 4rem;
+            color: #C5A059;
+        }
+
+        .arrow-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #8D6E63;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px 30px;
+            text-align: center;
+            border: 2px solid #C5A059;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            z-index: 20;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Strategic Shift</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Left Card: South -->
+            <div class="strategy-card">
+                <i class="fas fa-handshake card-icon"></i>
+                <h2 class="card-title">The Southern Front</h2>
+                <p class="card-text">
+                    The Treaty of Ḥudaybiyyah neutralized the Quraysh for 10 years. The southern flank was now secure, removing the immediate threat of a two-front war.
+                </p>
+            </div>
+
+            <!-- Center Arrow -->
+            <div class="arrow-container">
+                <i class="fas fa-arrow-right arrow-icon"></i>
+                <div class="arrow-label">Pivot</div>
+            </div>
+
+            <!-- Right Card: North -->
+            <div class="strategy-card">
+                <i class="fas fa-chess-knight card-icon"></i>
+                <h2 class="card-title">The Northern Front</h2>
+                <p class="card-text">
+                    Khaybar had become the center of intrigue, uniting Jewish tribes and Ghaṭafān against Madīnah. The Prophet ﷺ immediately turned his attention to neutralizing this remaining existential threat.
+                </p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            "We were never able to conquer Khaybar until we made peace at Ḥudaybiyyah."
+        </div>
+    </div>
+</body>
+</html>

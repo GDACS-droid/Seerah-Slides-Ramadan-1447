@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep the top padding of the title unchanged (50px). Reduce lower spacing to save height. */
+        .header {
+            padding: 50px 60px 10px; /* reduced bottom padding */
+            z-index: 5;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            margin-bottom: 8px; /* reduced margin */
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 400;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 0 60px 16px; /* reduced bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .concept-block {
+            margin-bottom: 20px; /* reduced */
+        }
+
+        .arabic-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #3E2723;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .etymology {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px; /* reduced */
+        }
+
+        .prohibitions-list {
+            list-style: none;
+        }
+
+        .prohibitions-list li {
+            font-size: 1.3rem;
+            margin-bottom: 12px; /* slightly reduced */
+            padding-left: 25px;
+            position: relative;
+            color: #5D4037;
+        }
+
+        .prohibitions-list li::before {
+            content: "•";
+            color: #C5A059;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px; /* reduced gap to save vertical space */
+        }
+
+        .quran-box {
+            background-color: rgba(26, 60, 64, 0.05);
+            border-left: 4px solid #1A3C40;
+            padding: 30px;
+        }
+
+        .quran-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .source-ref {
+            font-size: 1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .quote-box {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: #3E2723;
+            font-style: italic;
+        }
+
+        .quote-author {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #C5A059;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="title">The Principle of Sanctity (Ḥurmah)</h1>
+            <div class="subtitle">Al-Ḥaram (الحرم): The Concept of Sacred Space</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="left-col">
+                <div class="concept-block">
+                    <span class="arabic-large">Al-Ḥaram / الحرم</span>
+                    <p class="etymology">
+                        The word "Ḥaram" shares its root with <strong>"ḥarām"</strong> (forbidden). Makkah is designated as <em>Al-Ḥaram</em> because acts that are permissible elsewhere become strictly forbidden within its boundaries.
+                    </p>
+                </div>
+                
+                <ul class="prohibitions-list">
+                    <li>Prohibition of hunting animals</li>
+                    <li>Prohibition of uprooting plants or cutting trees</li>
+                    <li>Prohibition of initiating hostilities or warfare</li>
+                </ul>
+            </div>
+
+            <div class="right-col">
+                <div class="quran-box">
+                    <div class="quran-text">"Whoever enters it shall be safe."</div>
+                    <div class="source-ref">Qur'ān 3:97</div>
+                </div>
+
+                <div class="quote-box">
+                    <div class="quote-text">
+                        "A man would see the murderer of his father performing ṭawāf and would not touch a hair on his head."
+                    </div>
+                    <div class="quote-author">— Ibn 'Abbās (RA)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

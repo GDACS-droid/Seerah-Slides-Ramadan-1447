@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep top padding for title (must not be shrunk) */
+        .header-section {
+            padding: 50px 40px 10px; /* reduced horizontal and bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 10px 40px 20px; /* reduced vertical and horizontal padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 24px; /* smaller gap */
+            align-items: flex-start; /* align to top to avoid extra vertical space */
+        }
+
+        /* Left Column: Profile */
+        .profile-card {
+            flex: 1;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 18px; /* reduced padding */
+            text-align: center;
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .profile-icon {
+            font-size: 3rem;
+            color: #C5A059;
+            margin-bottom: 12px;
+        }
+
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 6px;
+            color: #FDFBF7;
+        }
+
+        .profile-detail {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-desc {
+            margin-top: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #FDFBF7;
+            opacity: 0.9;
+        }
+
+        /* Right Column: Signs - changed to grid to save vertical space */
+        .signs-container {
+            flex: 1.5;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .sign-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #C5A059;
+            padding: 12px 14px; /* reduced padding */
+        }
+
+        /* Make the last item span both columns to keep layout balanced */
+        .signs-container .sign-item:nth-child(3) {
+            grid-column: 1 / -1;
+        }
+
+        .sign-icon {
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 14px;
+            margin-top: 4px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .sign-content {
+            flex: 1;
+        }
+
+        .sign-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .sign-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin: 10px 0 12px; /* reduced footer spacing */
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.1rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Baḥīrā Incident: The Monk</h1>
+            <div class="subtitle">The Watcher on the Roman Frontier</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: Profile -->
+            <div class="profile-card">
+                <div class="profile-icon"><i class="fas fa-church"></i></div>
+                <div class="profile-name">Baḥīrā</div>
+                <div class="profile-detail">Christian Monk</div>
+                <div class="profile-detail">Buṣrā, Syria</div>
+                <div class="profile-desc">
+                    A learned scholar of the scriptures who lived in a monastery on the trade route, watching for the signs of the final Prophet.
+                </div>
+            </div>
+
+            <!-- Right: Signs -->
+            <div class="signs-container">
+                <div class="sign-item">
+                    <div class="sign-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="sign-content">
+                        <div class="sign-title">The Shading Cloud</div>
+                        <div class="sign-text">
+                            He observed a solitary cloud that moved with the caravan, specifically shading the young boy from the intense desert sun.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sign-item">
+                    <div class="sign-icon"><i class="fas fa-tree"></i></div>
+                    <div class="sign-content">
+                        <div class="sign-title">The Bending Tree</div>
+                        <div class="sign-text">
+                            When the boy sat under a tree, its branches lowered to provide shade, a sign of nature's submission to a higher authority.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sign-item">
+                    <div class="sign-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="sign-content">
+                        <div class="sign-title">The Unprecedented Feast</div>
+                        <div class="sign-text">
+                            Breaking his usual seclusion, he invited the entire caravan to a meal, solely to identify the one who caused these signs.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">الرَّاهِب</span>
+            <span class="term-english">Al-Rāhib (The Monk)</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 10px 80px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 25px;
+        }
+
+        /* Hardship Section */
+        .hardship-box {
+            background: rgba(62, 39, 35, 0.05);
+            border-left: 5px solid #3E2723;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hardship-icon {
+            font-size: 2.5rem;
+            color: #8D6E63;
+            margin-right: 25px;
+        }
+
+        .hardship-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #3E2723;
+            margin-bottom: 5px;
+        }
+
+        .hardship-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        /* Miracles Section */
+        .miracles-container {
+            display: flex;
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        .miracle-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .miracle-desc {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #3E2723;
+            margin-bottom: 15px;
+        }
+
+        .prophecy-box {
+            margin-top: auto;
+            background: rgba(197, 160, 89, 0.1);
+            padding: 15px;
+            border-left: 3px solid #C5A059;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #1A3C40;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Digging the Trench</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Hardship -->
+            <div class="hardship-box">
+                <div class="hardship-icon"><i class="fas fa-hammer"></i></div>
+                <div class="hardship-content">
+                    <h3>The Communal Struggle</h3>
+                    <p class="hardship-text">
+                        3,000 men worked in shifts through the freezing winter nights. Hunger was so severe that the Companions tied stones to their stomachs to suppress the pain. The Prophet ﷺ worked alongside them, covered in dust, chanting poetry to lift their spirits.
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Miracles -->
+            <div class="miracles-container">
+                <!-- Miracle 1: The Rock -->
+                <div class="miracle-card">
+                    <div class="card-header">
+                        <i class="fas fa-bolt"></i>
+                        The Unbreakable Rock
+                    </div>
+                    <div class="card-body">
+                        <p class="miracle-desc">
+                            A massive rock obstructed the digging. The Prophet ﷺ struck it three times. Each strike emitted a flash of light, revealing visions of future conquests.
+                        </p>
+                        <div class="prophecy-box">
+                            "Allāhu Akbar! I have been given the keys of Syria... the keys of Persia... and the keys of Yemen."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Miracle 2: The Feast -->
+                <div class="miracle-card">
+                    <div class="card-header">
+                        <i class="fas fa-utensils"></i>
+                        Jābir's Feast
+                    </div>
+                    <div class="card-body">
+                        <p class="miracle-desc">
+                            Jābir ibn 'Abdullāh invited the Prophet ﷺ for a small meal (one sheep and some barley). The Prophet ﷺ brought the entire army of 1,000 men.
+                        </p>
+                        <div class="prophecy-box">
+                            The food multiplied miraculously; everyone ate until full, and the pot remained brimming with meat and the dough with bread.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

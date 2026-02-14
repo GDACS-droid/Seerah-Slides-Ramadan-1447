@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 60px 80px 20px; /* preserved top padding, reduced bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .factors-container {
+            display: flex;
+            justify-content: center;
+            gap: 24px; /* reduced gap */
+            padding: 10px 60px 30px; /* reduced top/right/left/bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+            align-items: flex-start;
+        }
+
+        .factor-card {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 20px 18px; /* reduced padding */
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .factor-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #C5A059;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 10px; /* reduced margin */
+            opacity: 0.6;
+        }
+
+        .factor-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #3E2723;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 10px; /* reduced margin */
+            display: block;
+        }
+
+        .factor-desc {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #5D4037;
+        }
+
+        .divider-line {
+            width: 40px;
+            height: 2px;
+            background-color: #C5A059;
+            margin: 10px auto; /* reduced margin */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Why One Man Could Change an Entire Religion</h1>
+            <div class="subtitle">Three Factors Behind the Success of 'Amr's Innovation</div>
+        </div>
+
+        <div class="factors-container">
+            <!-- Factor 1 -->
+            <div class="factor-card">
+                <div class="factor-number">01</div>
+                <h2 class="factor-title">Inferiority Complex</h2>
+                <span class="arabic-term">عقدة النقص</span>
+                <div class="divider-line"></div>
+                <p class="factor-desc">
+                    'Amr was overawed by the Amalekites' military power, architecture, and advanced civilization. He assumed their material success meant their theology was correct.
+                </p>
+            </div>
+
+            <!-- Factor 2 -->
+            <div class="factor-card">
+                <div class="factor-number">02</div>
+                <h2 class="factor-title">Personal Authority</h2>
+                <span class="arabic-term">زعامة</span>
+                <div class="divider-line"></div>
+                <p class="factor-desc">
+                    As the chieftain of Khuzā'ah, 'Amr was wealthy, generous, and a respected war hero. His people followed him due to his prestige and credentials.
+                </p>
+            </div>
+
+            <!-- Factor 3 -->
+            <div class="factor-card">
+                <div class="factor-number">03</div>
+                <h2 class="factor-title">Temporal Distance</h2>
+                <span class="arabic-term">بُعد زمني</span>
+                <div class="divider-line"></div>
+                <p class="factor-desc">
+                    Approximately 2,000 years had passed since Ibrāhīm (AS). No prophetic guidance had intervened, allowing ignorance to prevail and traditions to fade.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

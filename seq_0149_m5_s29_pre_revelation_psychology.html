@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 12px; /* keep top padding (50px) as required */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 8px 60px 16px; /* reduced vertical padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        /* Left Panel: Rejection */
+        .panel-rejection {
+            flex: 1;
+            padding: 18px; /* reduced padding */
+            border-right: 2px solid #C5A059;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .panel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 8px; /* reduced */
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px; /* reduced */
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .list-icon {
+            color: #8D6E63;
+            margin-right: 12px; /* slightly reduced */
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* Right Panel: Preparation */
+        .panel-preparation {
+            flex: 1;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 18px; /* reduced padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .prep-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #C5A059;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 8px; /* reduced */
+        }
+
+        .dream-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 12px; /* reduced */
+            color: #FDFBF7;
+        }
+
+        .dream-desc {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: rgba(253, 251, 247, 0.9);
+        }
+
+        .sun-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: rgba(197, 160, 89, 0.2);
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: 12px; /* reduced */
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">What Was He Seeking?</h1>
+            <div class="subtitle">The Psychology of Pre-Revelation</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left Panel: The Rejection -->
+            <div class="panel-rejection">
+                <div class="panel-title">Spiritual Alienation</div>
+                
+                <div class="list-item">
+                    <i class="fas fa-ban list-icon"></i>
+                    <span><strong>Aversion to Idols:</strong> He never bowed to an idol and felt a deep, innate repulsion towards the pagan rites of Quraysh.</span>
+                </div>
+                
+                <div class="list-item">
+                    <i class="fas fa-utensils list-icon"></i>
+                    <span><strong>Dietary Purity:</strong> He refused to eat meat sacrificed on stone altars (Nuṣub) dedicated to false gods.</span>
+                </div>
+
+                <div class="list-item">
+                    <i class="fas fa-user-shield list-icon"></i>
+                    <span><strong>Moral Solitude:</strong> He withdrew from the frivolous gatherings and moral decay of Meccan society, seeking something "other."</span>
+                </div>
+            </div>
+
+            <!-- Right Panel: The Preparation -->
+            <div class="panel-preparation">
+                <i class="fas fa-sun sun-icon"></i>
+                <div class="prep-title">The True Dreams</div>
+                
+                <div class="dream-quote">
+                    "He would not see a dream except that it came true like the breaking of day."
+                </div>
+                
+                <div class="dream-desc">
+                    For six months prior to the first revelation, these vivid, truthful dreams (<em>Al-Ru'yā al-Ṣādiqah</em>) prepared his heart to receive the heavy reality of the Unseen.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">فَلَقُ الصُّبْح</span>
+            <span class="term-english">Falaq al-Ṣubḥ (The Breaking of Day)</span>
+        </div>
+    </div>
+</body>
+</html>

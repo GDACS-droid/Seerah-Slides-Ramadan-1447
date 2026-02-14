@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 25px;
+        }
+
+        .scene-box {
+            background: rgba(62, 39, 35, 0.05);
+            border-left: 5px solid #8D6E63;
+            padding: 20px 40px;
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+        }
+
+        .scene-icon {
+            font-size: 2rem;
+            color: #8D6E63;
+            margin-right: 25px;
+        }
+
+        .scene-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .conflict-container {
+            display: flex;
+            width: 100%;
+            gap: 40px;
+            flex-grow: 1;
+        }
+
+        .conflict-card {
+            flex: 1;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #C5A059;
+        }
+
+        .card-left {
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .card-right {
+            background: #1A3C40;
+            color: #FDFBF7;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-left .card-title { color: #8D6E63; }
+        .card-right .card-title { color: #C5A059; }
+
+        .card-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .promise-box {
+            width: 100%;
+            background: rgba(197, 160, 89, 0.15);
+            border: 2px solid #C5A059;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+        }
+
+        .promise-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .promise-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Test: Abu Jandal</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Scene -->
+            <div class="scene-box">
+                <div class="scene-icon"><i class="fas fa-link"></i></div>
+                <div class="scene-text">
+                    <strong>The Arrival:</strong> Just as the treaty was concluded, <strong>Abu Jandal</strong> (the son of the negotiator Suhayl ibn 'Amr) stumbled into the camp, bound in chains, having escaped from torture in Makkah.
+                </div>
+            </div>
+
+            <!-- The Conflict -->
+            <div class="conflict-container">
+                <!-- Left: The Demand -->
+                <div class="conflict-card card-left">
+                    <h3 class="card-title"><i class="fas fa-gavel" style="margin-right: 10px;"></i> The Demand</h3>
+                    <p class="card-quote">
+                        "O Muhammad! This is the first one I demand you return to me under the treaty."
+                    </p>
+                    <p class="card-desc">
+                        Suhayl struck his son and refused to proceed with the peace unless Abu Jandal was returned immediately.
+                    </p>
+                </div>
+
+                <!-- Right: The Plea -->
+                <div class="conflict-card card-right">
+                    <h3 class="card-title"><i class="fas fa-praying-hands" style="margin-right: 10px;"></i> The Plea</h3>
+                    <p class="card-quote">
+                        "O Muslims! Am I to be returned to the polytheists to be tested in my religion?"
+                    </p>
+                    <p class="card-desc">
+                        His cry caused immense distress among the Companions, who wept at the sight of his condition.
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Prophetic Promise -->
+            <div class="promise-box">
+                <p class="promise-quote">
+                    "O Abu Jandal, be patient and seek reward with Allāh. Allāh will make a way out for you and those with you. We have given them our word, and we do not betray."
+                </p>
+                <div class="promise-label">The Prophetic Consolation</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

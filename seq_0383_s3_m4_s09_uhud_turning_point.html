@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .panel {
+            width: 100%;
+            max-width: 1000px;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .panel-error {
+            background: rgba(141, 110, 99, 0.1);
+            border-left: 6px solid #8D6E63;
+        }
+
+        .panel-consequence {
+            background: rgba(26, 60, 64, 0.1);
+            border-left: 6px solid #1A3C40;
+        }
+
+        .panel-icon {
+            font-size: 3rem;
+            margin-right: 40px;
+            width: 60px;
+            text-align: center;
+        }
+
+        .panel-error .panel-icon { color: #8D6E63; }
+        .panel-consequence .panel-icon { color: #1A3C40; }
+
+        .panel-content {
+            flex-grow: 1;
+        }
+
+        .panel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .panel-error .panel-title { color: #8D6E63; }
+        .panel-consequence .panel-title { color: #1A3C40; }
+
+        .panel-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .quote-inline {
+            font-style: italic;
+            color: #5D4037;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .connector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #C5A059;
+            font-size: 1.5rem;
+            height: 40px;
+        }
+
+        .connector-line {
+            width: 2px;
+            height: 100%;
+            background: #C5A059;
+        }
+
+        .connector-arrow {
+            margin-top: -5px;
+        }
+
+        .khalid-badge {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Turning Point</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Error -->
+            <div class="panel panel-error">
+                <div class="panel-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="panel-content">
+                    <h3 class="panel-title">The Fatal Mistake</h3>
+                    <p class="panel-text">
+                        Seeing the Meccans retreat, 40 of the 50 archers abandoned their post to collect spoils, ignoring their commander 'Abdullāh ibn Jubayr.
+                    </p>
+                    <span class="quote-inline">"The people are looting! What are you waiting for?"</span>
+                </div>
+            </div>
+
+            <!-- Connector -->
+            <div class="connector">
+                <div class="connector-line"></div>
+                <div class="connector-arrow"><i class="fas fa-chevron-down"></i></div>
+            </div>
+
+            <!-- The Consequence -->
+            <div class="panel panel-consequence">
+                <div class="panel-icon">
+                    <i class="fas fa-chess-knight"></i>
+                </div>
+                <div class="panel-content">
+                    <div class="khalid-badge">Khālid ibn al-Walīd</div>
+                    <h3 class="panel-title">The Tactical Opportunity</h3>
+                    <p class="panel-text">
+                        Commanding the Meccan cavalry, Khālid noticed the rear flank was now exposed. He wheeled his forces around Mount Uḥud, killed the remaining 10 archers, and launched a devastating attack from behind.
+                    </p>
+                    <span class="quote-inline">The Pincer Movement: The Muslims were now trapped between the returning Meccan infantry and Khālid's cavalry.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

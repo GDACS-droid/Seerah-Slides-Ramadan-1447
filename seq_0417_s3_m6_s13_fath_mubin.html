@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .verse-box {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px 40px;
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .verse-ref {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C5A059;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .analysis-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #8D6E63;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .quote-banner {
+            width: 100%;
+            background: rgba(62, 39, 35, 0.05);
+            border-left: 5px solid #1A3C40;
+            padding: 15px 20px;
+            margin-top: auto;
+            font-size: 1.05rem;
+            color: #3E2723;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .quote-author {
+            font-weight: 700;
+            color: #1A3C40;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Analytical: The Manifest Victory</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Verse -->
+            <div class="verse-box">
+                <p class="verse-text">
+                    "Indeed, We have given you, [O Muḥammad], a clear conquest (Fatḥan Mubīna)..."
+                </p>
+                <div class="verse-ref">Surah Al-Fatḥ (48:1)</div>
+            </div>
+
+            <!-- The 3 Pillars of Victory -->
+            <div class="analysis-grid">
+                <!-- Pillar 1 -->
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="card-title">Political Recognition</h3>
+                    <p class="card-text">
+                        For the first time, Quraysh treated the Muslims not as rebels or runaways, but as a sovereign state with equal status. This legitimized the Islamic State in the eyes of all Arabia.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="card-title">Explosion of Da'wah</h3>
+                    <p class="card-text">
+                        Peace removed the barrier of fear. People mixed freely and heard the Quran. In the 2 years of the truce, more people entered Islam than in the entire previous 18 years combined.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-chess-knight"></i></div>
+                    <h3 class="card-title">Strategic Focus</h3>
+                    <p class="card-text">
+                        By neutralizing the southern threat (Quraysh), the Prophet ﷺ was finally free to deal with the existential threat in the north: the fortress of Khaybar.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Historical Insight -->
+            <div class="quote-banner">
+                "There was no victory in Islam greater than this. War was a barrier between people... but when the truce was laid and war laid down its burdens, no one possessed of reason spoke of Islam but that he entered it."
+                <br>
+                <span class="quote-author">— Imam Ibn Shihāb al-Zuhrī</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

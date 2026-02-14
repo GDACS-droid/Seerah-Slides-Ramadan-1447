@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* kept top padding (50px) unchanged, reduced bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 100px 28px; /* reduced bottom padding to save height */
+            gap: 18px; /* reduced gap between sections */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .forces-container {
+            display: flex;
+            gap: 30px; /* slightly reduced horizontal gap */
+            flex: 1;
+        }
+
+        .force-card {
+            flex: 1;
+            padding: 24px; /* reduced inner padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .card-left {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border: 2px solid #C5A059;
+        }
+
+        .card-right {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 2px solid #1A3C40;
+            color: #3E2723;
+        }
+
+        .force-icon {
+            font-size: 3rem;
+            margin-bottom: 16px; /* reduced spacing below icon */
+        }
+
+        .icon-left { color: #C5A059; }
+        .icon-right { color: #1A3C40; }
+
+        .force-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .force-stat {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .force-desc {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .resistance-box {
+            background-color: rgba(141, 110, 99, 0.1);
+            border-left: 4px solid #8D6E63;
+            padding: 18px; /* slightly reduced padding */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .resistance-icon {
+            font-size: 1.5rem;
+            color: #8D6E63;
+        }
+
+        .resistance-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .term-box {
+            position: absolute;
+            bottom: -10px; /* reduced negative offset to avoid overflow */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #C5A059;
+            color: #1A3C40;
+            padding: 10px 30px;
+            border: 2px solid #FDFBF7;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 20px; /* reduced bottom padding */
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The March on Makkah</h1>
+            <div class="subtitle">The Unstoppable Force</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="forces-container">
+                <!-- Left: The Elephant -->
+                <div class="force-card card-left">
+                    <div class="force-icon icon-left"><i class="fas fa-elephant"></i></div>
+                    <div class="force-title">The Vanguard</div>
+                    <div class="force-stat">Maḥmūd</div>
+                    <p class="force-desc">
+                        A massive elephant brought to smash the walls of the Ka'bah and terrify the Arabs, who had never seen such a beast.
+                    </p>
+                    <div class="term-box">أَصْحَابُ الفِيل</div>
+                </div>
+
+                <!-- Right: The Army -->
+                <div class="force-card card-right">
+                    <div class="force-icon icon-right"><i class="fas fa-shield-alt"></i></div>
+                    <div class="force-title">The Army</div>
+                    <div class="force-stat">60,000 Troops</div>
+                    <p class="force-desc">
+                        A massive coalition of Abyssinian soldiers and conscripted Yemeni tribesmen, far outnumbering any force in Makkah.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resistance Note -->
+            <div class="resistance-box">
+                <i class="fas fa-history resistance-icon"></i>
+                <p class="resistance-text">
+                    <strong>The Failed Resistance:</strong> Arab chieftains like Dhū Nafar and Nufayl ibn Ḥabīb attempted to stop the army en route but were easily crushed and captured.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "The Arabs had never seen a military force of this magnitude or nature."
+        </div>
+    </div>
+</body>
+</html>

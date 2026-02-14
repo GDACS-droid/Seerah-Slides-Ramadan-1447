@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .definition-box {
+            background: #fff;
+            border: 1px solid #C5A059;
+            padding: 30px 50px;
+            text-align: center;
+            max-width: 900px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .definition-text {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: #3E2723;
+            font-style: italic;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+        }
+
+        .detail-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .detail-desc {
+            font-size: 1.1rem;
+            color: #5D4037;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Solution: Mu'ākhāh</h1>
+            <div class="arabic-term">"Brotherhood Pact"</div>
+        </div>
+
+        <div class="content-section">
+            <div class="definition-box">
+                <p class="definition-text">
+                    A formal, divinely-sanctioned pairing of Muhājirūn and Anṣār into bonds of brotherhood that initially superseded blood relations in inheritance and support.
+                </p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <i class="fas fa-home detail-icon"></i>
+                    <h3 class="detail-title">The Venue</h3>
+                    <p class="detail-desc">House of Anas ibn Mālik</p>
+                </div>
+
+                <div class="detail-item">
+                    <i class="fas fa-users detail-icon"></i>
+                    <h3 class="detail-title">The Participants</h3>
+                    <p class="detail-desc">90 Men<br>(45 Muhājirūn + 45 Anṣār)</p>
+                </div>
+
+                <div class="detail-item">
+                    <i class="fas fa-scroll detail-icon"></i>
+                    <h3 class="detail-title">Legal Status</h3>
+                    <p class="detail-desc">Binding contract of inheritance<br>(Later abrogated by Sūrah al-Aḥzāb)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

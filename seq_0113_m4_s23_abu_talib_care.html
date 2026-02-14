@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep the title's top padding unchanged (50px) as required */
+        .header-section {
+            padding: 50px 60px 6px; /* reduced side and bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        /* Reduced overall padding and gaps to bring the layout within 720px */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 60px 18px; /* tightened top/sides/bottom */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 16px; /* smaller gap between sections */
+        }
+
+        .care-grid {
+            display: flex;
+            gap: 20px; /* reduced horizontal gap */
+            align-items: flex-start;
+        }
+
+        .care-card {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 18px; /* reduced padding inside cards */
+            position: relative;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px; /* tightened spacing */
+            border-bottom: 2px solid #1A3C40;
+            padding-bottom: 6px; /* tightened spacing */
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #1A3C40;
+            margin-right: 12px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .care-list {
+            list-style: none;
+        }
+
+        .care-item {
+            margin-bottom: 10px; /* reduced spacing between list items */
+            font-size: 1.15rem;
+            color: #3E2723;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .care-bullet {
+            color: #C5A059;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .timeline-bar {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 14px 24px; /* tightened padding */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid #C5A059;
+            margin-top: auto;
+        }
+
+        .timeline-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #C5A059;
+        }
+
+        .timeline-duration {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .timeline-desc {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #C5A059;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 6px; /* tightened spacing */
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .english-term {
+            font-size: 1.1rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Abū Ṭālib's Care</h1>
+            <div class="subtitle">More Than a Father</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="care-grid">
+                <!-- Domestic Care -->
+                <div class="care-card">
+                    <div class="card-header">
+                        <i class="fas fa-home card-icon"></i>
+                        <div class="card-title">Domestic Tenderness</div>
+                    </div>
+                    <ul class="care-list">
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He would not eat unless the young Muḥammad ﷺ was present.
+                        </li>
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He made him sleep next to his own bed for comfort and protection.
+                        </li>
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He favored him over his own biological children in food and attention.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Public Care -->
+                <div class="care-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <div class="card-title">Public Protection</div>
+                    </div>
+                    <ul class="care-list">
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He took him to public gatherings and tribal councils, integrating him into society.
+                        </li>
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He defended him fiercely against any perceived slight or harm.
+                        </li>
+                        <li class="care-item">
+                            <i class="fas fa-circle care-bullet" style="font-size: 0.6rem;"></i>
+                            He later stood as a political shield against the entirety of Quraysh.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-bar">
+                <div class="timeline-label">The Fortress of Protection</div>
+                <div class="timeline-duration">42 YEARS</div>
+                <div class="timeline-desc">From Age 8 to Age 50</div>
+            </div>
+
+            <div class="footer-term">
+                <span class="arabic-term">الحَدَب</span>
+                <span class="english-term">Al-Ḥadab (Compassionate Protection)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px;
+        }
+
+        .questions-container {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        .question-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header {
+            background: #1A3C40;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid #C5A059;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #FDFBF7;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-text {
+            font-size: 1.05rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .quote-banner {
+            width: 100%;
+            background: rgba(62, 39, 35, 0.05);
+            border-left: 5px solid #8D6E63;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #3E2723;
+        }
+
+        .quote-ref {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Discussion & Reflection</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="questions-container">
+                <!-- Q1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3 class="card-title">Strategy vs. Weakness</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            How do we distinguish between strategic patience (like Ḥudaybiyyah) and humiliation? When is compromise a victory, and when is it a defeat?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3 class="card-title">Leadership Under Pressure</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            The Prophet ﷺ faced intense emotional pushback from his most loyal followers. How did he balance empathy for their feelings with adherence to the vision?
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-female"></i></div>
+                        <h3 class="card-title">The Counsel of Women</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Reflect on Umm Salamah's pivotal role in saving the community from disobedience. How does this challenge cultural narratives about women's leadership in Islam?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-banner">
+                <p class="quote-text">
+                    "But perhaps you hate a thing and it is good for you; and perhaps you love a thing and it is bad for you. And Allāh knows, while you know not."
+                </p>
+                <div class="quote-ref">Surah Al-Baqarah (2:216)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

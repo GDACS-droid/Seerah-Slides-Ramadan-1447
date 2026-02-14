@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 60px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .encounter-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border: 2px solid #C5A059;
+        }
+
+        .person-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 10px;
+            height: 50px; /* Fixed height for alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reaction-type {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .quote-text {
+            font-size: 1rem;
+            color: #5D4037;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .result-banner {
+            background-color: #3E2723;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            margin: 0 60px 40px;
+            border: 1px solid #C5A059;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Diplomatic Failure</h1>
+            <h2 class="subtitle">Abū Sufyān's Desperate Mission</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Stop 1 -->
+            <div class="encounter-card">
+                <div class="icon-circle"><i class="fas fa-comment-slash"></i></div>
+                <h3 class="person-name">The Prophet ﷺ</h3>
+                <div class="reaction-type">Absolute Silence</div>
+                <p class="quote-text">
+                    He spoke to him, but the Prophet ﷺ did not answer him with a single word. The door was closed.
+                </p>
+            </div>
+
+            <!-- Stop 2 -->
+            <div class="encounter-card">
+                <div class="icon-circle"><i class="fas fa-hand-paper"></i></div>
+                <h3 class="person-name">Abū Bakr</h3>
+                <div class="reaction-type">Polite Refusal</div>
+                <p class="quote-text">
+                    "My affair is not in my hands. I cannot help you against the Messenger of Allah."
+                </p>
+            </div>
+
+            <!-- Stop 3 -->
+            <div class="encounter-card">
+                <div class="icon-circle"><i class="fas fa-gavel"></i></div>
+                <h3 class="person-name">'Umar ibn al-Khaṭṭāb</h3>
+                <div class="reaction-type">Harsh Rejection</div>
+                <p class="quote-text">
+                    "Intercede for you? By Allah, if I only found ants to fight you with, I would fight you."
+                </p>
+            </div>
+
+            <!-- Stop 4 -->
+            <div class="encounter-card">
+                <div class="icon-circle"><i class="fas fa-users"></i></div>
+                <h3 class="person-name">'Alī & Fāṭimah</h3>
+                <div class="reaction-type">Helplessness</div>
+                <p class="quote-text">
+                    'Alī confirmed it was too late. Fāṭimah refused to let her child intercede. The decision was final.
+                </p>
+            </div>
+        </div>
+
+        <div class="result-banner">
+            He returned to Makkah empty-handed, having failed to secure a renewal, leaving Quraysh exposed to the consequences of their betrayal.
+        </div>
+    </div>
+</body>
+</html>

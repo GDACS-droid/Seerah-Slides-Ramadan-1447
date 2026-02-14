@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .corner-decoration {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 2px solid #1A3C40;
+            z-index: 10;
+        }
+
+        .top-left { top: 30px; left: 30px; border-right: none; border-bottom: none; }
+        .top-right { top: 30px; right: 30px; border-left: none; border-bottom: none; }
+        .bottom-left { bottom: 30px; left: 30px; border-right: none; border-top: none; }
+        .bottom-right { bottom: 30px; right: 30px; border-left: none; border-top: none; }
+
+        .module-number {
+            font-size: 1.5rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px; /* keep upper spacing before title intact */
+            position: relative;
+            display: inline-block;
+            z-index: 5;
+        }
+
+        .module-number::before, .module-number::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 1px;
+            background-color: #C5A059;
+        }
+
+        .module-number::before { left: -60px; }
+        .module-number::after { right: -60px; }
+
+        .arabic-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .english-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #C5A059;
+            font-style: italic;
+            margin-bottom: 20px; /* reduced from 60 to save vertical space */
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .session-info {
+            margin-top: 10px; /* reduced */
+            padding-top: 10px; /* reduced */
+            border-top: 1px solid #C5A059;
+            font-size: 1.2rem;
+            color: #3E2723;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* geometric shapes reduced in size and centered so they don't push or overlap text */
+        .geometric-center {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .geometric-square {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border: 1px solid rgba(26, 60, 64, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <div class="geometric-center"></div>
+        <div class="geometric-square"></div>
+
+        <div class="module-number">Module 5</div>
+        
+        <h1 class="arabic-title">Al-Shabāb wa al-Rujūlah al-Mubakkirah</h1>
+        <h2 class="english-title">Youth and Early Manhood</h2>
+
+        <div class="session-info">Session I: Al-Ta'sīs Qabl al-Waḥy</div>
+    </div>
+</body>
+</html>

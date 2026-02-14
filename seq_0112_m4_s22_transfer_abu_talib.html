@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            /* keep upper padding (top) for title consistency */
+            padding: 50px 60px 10px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 20px; /* reduced vertical and horizontal padding */
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        /* Lineage Section */
+        .lineage-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* shrunk spacing */
+        }
+
+        .mother-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 8px 20px; /* reduced padding */
+            border: 2px solid #C5A059;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 12px; /* reduced spacing */
+            position: relative;
+        }
+
+        .mother-box::after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            width: 2px;
+            height: 16px;
+            background-color: #C5A059;
+        }
+
+        .connector-line {
+            width: 400px;
+            height: 2px;
+            background-color: #C5A059;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .connector-line::before, .connector-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 16px;
+            background-color: #C5A059;
+        }
+
+        .connector-line::before { left: 0; }
+        .connector-line::after { right: 0; }
+
+        .brothers-row {
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            gap: 16px;
+        }
+
+        .brother-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 10px 18px; /* reduced padding */
+            text-align: center;
+            width: 200px;
+        }
+
+        .brother-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .brother-role {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .highlight-box {
+            background-color: rgba(197, 160, 89, 0.1);
+            border: 2px solid #C5A059;
+        }
+
+        /* Reasons Grid */
+        .reasons-grid {
+            display: flex;
+            gap: 18px; /* reduced gap */
+            width: 100%;
+        }
+
+        .reason-card {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #1A3C40;
+            padding: 12px; /* reduced padding */
+        }
+
+        .reason-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .reason-icon {
+            margin-right: 10px;
+            color: #C5A059;
+        }
+
+        .reason-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .term-footer {
+            margin-top: 12px;
+            text-align: center;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 10px; /* reduced padding */
+            border: 2px solid #C5A059;
+            width: 60%;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: #C5A059;
+        }
+
+        .english-term {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Transfer to Abū Ṭālib</h1>
+            <div class="subtitle">Why was he chosen as the next guardian?</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Lineage Visualization -->
+            <div class="lineage-container">
+                <div class="mother-box">Fāṭimah bint 'Amr</div>
+                <div class="connector-line"></div>
+                <div class="brothers-row">
+                    <div class="brother-box">
+                        <div class="brother-name">'Abdullāh</div>
+                        <div class="brother-role">The Father</div>
+                    </div>
+                    <div class="brother-box highlight-box">
+                        <div class="brother-name">Abū Ṭālib</div>
+                        <div class="brother-role">The Guardian</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reasons -->
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-title">
+                        <i class="fas fa-dna reason-icon"></i>
+                        The Blood Tie
+                    </div>
+                    <div class="reason-text">
+                        He was the <strong>Full Brother</strong> (Shaqīq) of 'Abdullāh. They shared the same mother, creating the strongest possible bond among uncles.
+                    </div>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-title">
+                        <i class="fas fa-crown reason-icon"></i>
+                        The Character
+                    </div>
+                    <div class="reason-text">
+                        Though financially poor, he was a <strong>Sayyid</strong> (Chief) known for his nobility, generosity, and immense social standing in Quraysh.
+                    </div>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-title">
+                        <i class="fas fa-scroll reason-icon"></i>
+                        The Will
+                    </div>
+                    <div class="reason-text">
+                        'Abd al-Muṭṭalib specifically entrusted the Prophet ﷺ to him on his deathbed, knowing his compassionate nature.
+                    </div>
+                </div>
+            </div>
+
+            <div class="term-footer">
+                <span class="arabic-term">الأَخُ الشَّقِيق</span>
+                <span class="english-term">Al-Akh al-Shaqīq (Full Brother)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

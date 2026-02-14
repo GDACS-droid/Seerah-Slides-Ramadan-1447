@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 100px 40px;
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #1A3C40;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            transition: transform 0.2s;
+        }
+
+        .icon-box {
+            background-color: #1A3C40;
+            color: #C5A059;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .text-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 15px 30px;
+            border: 1px solid #C5A059;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+        }
+
+        .english-term {
+            font-size: 1.2rem;
+            color: #5D4037;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .note-text {
+            font-size: 1.1rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Life Among Banū Sa'd</h1>
+            <div class="subtitle">The Desert as a School (Age 0-5)</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="grid-container">
+                <!-- Item 1 -->
+                <div class="grid-item">
+                    <div class="icon-box"><i class="fas fa-language"></i></div>
+                    <div class="text-content">
+                        <h3>Linguistic Purity</h3>
+                        <p>Acquired the purest Arabic dialect (Fuṣḥā). The Prophet ﷺ was later renowned as the most eloquent of Arabs.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="grid-item">
+                    <div class="icon-box"><i class="fas fa-campground"></i></div>
+                    <div class="text-content">
+                        <h3>Physical Resilience</h3>
+                        <p>Developed endurance, self-reliance, and health in the clean desert air, away from urban diseases.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="grid-item">
+                    <div class="icon-box"><i class="fas fa-staff-snake"></i></div>
+                    <div class="text-content">
+                        <h3>Occupational Training</h3>
+                        <p>Learned shepherding from a young age—a profession of patience and care shared by all prophets.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="grid-item">
+                    <div class="icon-box"><i class="fas fa-cloud-moon"></i></div>
+                    <div class="text-content">
+                        <h3>Spiritual Foundation</h3>
+                        <p>Experience of solitude, vast horizons, and observation of nature fostered a contemplative spirit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <div>
+                    <span class="arabic-term">بَنُو سَعْد</span>
+                    <span class="english-term">Banū Sa'd</span>
+                </div>
+                <div class="note-text">
+                    "The Barakah in Ḥalīmah's household continued to grow throughout his stay."
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

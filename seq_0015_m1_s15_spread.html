@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 60px 80px 30px; /* top padding must not be reduced */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        /* Reduced vertical padding to bring total height down under the min-height overflow threshold */
+        .timeline-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 80px; /* reduced from 40px 100px */
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .stat-block {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: #C5A059;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 6px; /* slightly reduced spacing */
+        }
+
+        .stat-label {
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px; /* slightly reduced spacing */
+        }
+
+        .stat-desc {
+            font-size: 1.2rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .arrow-connector {
+            font-size: 3rem;
+            color: #3E2723;
+            opacity: 0.3;
+        }
+
+        .insight-section {
+            margin: 0 80px 40px; /* reduced horizontal margin and bottom margin */
+            padding: 20px; /* slightly reduced padding */
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 2px solid #C5A059;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .insight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .insight-text {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: #3E2723;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Spread of Idolatry</h1>
+            <div class="subtitle">From a Single Innovation to a Pantheon</div>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Start -->
+            <div class="stat-block">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Hubal</div>
+                <div class="stat-desc">The first idol brought by 'Amr ibn Luḥay from Al-Shām.</div>
+            </div>
+
+            <div class="arrow-connector">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+
+            <!-- End -->
+            <div class="stat-block">
+                <div class="stat-number">360</div>
+                <div class="stat-label">Idols</div>
+                <div class="stat-desc">Surrounding the Ka'bah by the time of the Conquest of Makkah.</div>
+            </div>
+        </div>
+
+        <div class="insight-section">
+            <div class="insight-title">The Sociological Driver: Tribal Representation</div>
+            <div class="insight-text">
+                The Ka'bah transformed from a sanctuary of One God into a "federal hall" of deities. Every tribe desired political and spiritual representation by placing their specific idol within the sacred precinct.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

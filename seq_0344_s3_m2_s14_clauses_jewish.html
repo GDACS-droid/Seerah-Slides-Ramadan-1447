@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* upper padding must stay */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Layout refreshed: two-column grid to reduce vertical stacking */
+        .content-section {
+            padding: 20px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 36px;
+            row-gap: 16px;
+            align-items: start;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .clause-box {
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid #8D6E63;
+            padding: 12px 24px; /* shrunk inner padding */
+            margin-bottom: 0; /* spacing handled by grid gap */
+            position: relative;
+        }
+
+        /* Place the 3rd clause under the 2nd to balance column heights */
+        .content-section .clause-box:nth-child(3) {
+            grid-column: 2;
+        }
+
+        .clause-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #8D6E63;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .clause-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem; /* font sizes unchanged */
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .clause-note {
+            font-size: 1rem;
+            color: #5D4037;
+            margin-top: 8px;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Key Clauses: Jewish Tribes</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="clause-box">
+                <div class="clause-title">Clause 25: Religious Autonomy</div>
+                <div class="clause-text">
+                    "The Jews of Banū 'Awf are a community along with the believers. To the Jews their religion and to the Muslims their religion."
+                </div>
+                <div class="clause-note">
+                    Established religious freedom and political inclusion without forced conversion.
+                </div>
+            </div>
+
+            <div class="clause-box">
+                <div class="clause-title">Clause 37: Mutual Defense</div>
+                <div class="clause-text">
+                    "The Jews must bear their expenses and the Muslims their expenses. Each must help the other against anyone who attacks the people of this document."
+                </div>
+                <div class="clause-note">
+                    Created a joint defense pact against external aggression.
+                </div>
+            </div>
+
+            <div class="clause-box">
+                <div class="clause-title">Clause 37 (Cont.): Counsel</div>
+                <div class="clause-text">
+                    "They must seek mutual advice and consultation, and righteousness is a protection against sin."
+                </div>
+                <div class="clause-note">
+                    Emphasized good faith cooperation and counsel.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Reduced bottom padding and vertical gaps to remove overflow by 50px */
+        .content-section {
+            padding: 10px 80px 10px; /* bottom reduced from 30px to 10px (-20px) */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 10px; /* reduced from 25px to 10px (two gaps: -30px total) */
+        }
+
+        .erasure-box {
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px 40px;
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #C5A059;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .erasure-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-right: 25px;
+        }
+
+        .erasure-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .term-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .term-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #C5A059;
+        }
+
+        .term-num {
+            background: #8D6E63;
+            color: #FDFBF7;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+
+        .term-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .term-desc {
+            font-size: 1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .recognition-banner {
+            width: 100%;
+            background: rgba(197, 160, 89, 0.1);
+            border-left: 5px solid #C5A059;
+            padding: 15px;
+            margin-top: auto;
+            font-size: 1.05rem;
+            color: #3E2723;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Treaty of Ḥudaybiyyah</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- The Erasure Incident -->
+            <div class="erasure-box">
+                <div class="erasure-icon"><i class="fas fa-eraser"></i></div>
+                <div class="erasure-text">
+                    <strong>The Compromise:</strong> Suhayl ibn 'Amr refused to write "Rasūlullāh" (Messenger of Allāh). When 'Alī refused to erase it, the Prophet ﷺ erased it with his own hand and wrote "Muḥammad ibn 'Abdullāh" to secure the peace.
+                </div>
+            </div>
+
+            <!-- The Terms -->
+            <div class="terms-grid">
+                <!-- Term 1 -->
+                <div class="term-card">
+                    <div class="term-header">
+                        <div class="term-num">1</div>
+                        <h3 class="term-title">10-Year Truce</h3>
+                    </div>
+                    <p class="term-desc">
+                        A complete cessation of hostilities for ten years. This granted the Muslims security to spread Islam without the threat of war.
+                    </p>
+                </div>
+
+                <!-- Term 2 -->
+                <div class="term-card">
+                    <div class="term-header">
+                        <div class="term-num">2</div>
+                        <h3 class="term-title">The "Unfair" Clause</h3>
+                    </div>
+                    <p class="term-desc">
+                        Any man who comes to Muhammad from Quraysh without permission must be returned. But any Muslim who flees to Quraysh need not be returned.
+                    </p>
+                </div>
+
+                <!-- Term 3 -->
+                <div class="term-card">
+                    <div class="term-header">
+                        <div class="term-num">3</div>
+                        <h3 class="term-title">Deferment of 'Umrah</h3>
+                    </div>
+                    <p class="term-desc">
+                        The Muslims must return to Madīnah this year. They can perform 'Umrah next year, staying in Makkah for only three days with sheathed swords.
+                    </p>
+                </div>
+
+                <!-- Term 4 -->
+                <div class="term-card">
+                    <div class="term-header">
+                        <div class="term-num">4</div>
+                        <h3 class="term-title">Freedom of Alliance</h3>
+                    </div>
+                    <p class="term-desc">
+                        Any tribe is free to ally with Muhammad or with Quraysh. (This allowed Khuzā'ah to ally with the Muslims and Banū Bakr with Quraysh).
+                    </p>
+                </div>
+            </div>
+
+            <div class="recognition-banner">
+                <strong>Political Victory:</strong> By signing a treaty, Quraysh officially recognized the Islamic State as a sovereign equal power for the first time.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

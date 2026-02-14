@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 20px; /* keep top padding (50px) intact */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 80px 20px; /* reduced padding to save vertical space */
+            flex-grow: 1;
+            z-index: 5;
+            justify-content: flex-start;
+        }
+
+        /* Use a two-column grid to reduce vertical length */
+        .takeaway-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 24px; /* row-gap, column-gap */
+            align-items: start;
+        }
+
+        .takeaway-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid #1A3C40;
+            padding: 12px; /* reduced padding */
+        }
+
+        .item-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-right: 18px;
+            margin-top: 4px;
+            width: 36px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .item-text {
+            font-size: 1.15rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .closing-statement {
+            margin-top: 18px; /* reduced space */
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            font-style: italic;
+            border-top: 1px solid #C5A059;
+            padding-top: 12px; /* reduced padding */
+            width: 80%;
+            align-self: center;
+        }
+
+        /* Ensure items in each column don't overflow the slide vertically */
+        @media (max-height: 900px) {
+            .content-wrapper { padding-bottom: 10px; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+
+        <div class="header-section">
+            <h1 class="main-title">Key Takeaways</h1>
+            <div class="subtitle">Module 4: Al-Yatīm al-Karīm</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="takeaway-list">
+                <!-- Point 1 -->
+                <div class="takeaway-item">
+                    <div class="item-icon"><i class="fas fa-gem"></i></div>
+                    <div class="item-content">
+                        <div class="item-title">Orphanhood as Selection</div>
+                        <div class="item-text">His orphanhood was not a random tragedy but a divine design to detach him from worldly reliance and attach him solely to Allah.</div>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="takeaway-item">
+                    <div class="item-icon"><i class="fas fa-sun"></i></div>
+                    <div class="item-content">
+                        <div class="item-title">The Power of Barakah</div>
+                        <div class="item-text">His presence in the desert brought tangible abundance to Ḥalīmah's household, proving his blessed nature long before Prophethood.</div>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="takeaway-item">
+                    <div class="item-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="item-content">
+                        <div class="item-title">Spiritual Preparation</div>
+                        <div class="item-text">The incident of <em>Shaqq al-Ṣadr</em> (Opening of the Chest) marked his physical and spiritual purification, setting him apart from all others.</div>
+                    </div>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="takeaway-item">
+                    <div class="item-icon"><i class="fas fa-users"></i></div>
+                    <div class="item-content">
+                        <div class="item-title">Divine Guardianship</div>
+                        <div class="item-text">Allah replaced every lost guardian with another, ensuring he was protected by the best of Makkah ('Abd al-Muṭṭalib, then Abū Ṭālib).</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="closing-statement">"He found you an orphan and gave you shelter."</div>
+        </div>
+    </div>
+</body>
+</html>

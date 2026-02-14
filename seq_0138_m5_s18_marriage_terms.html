@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* top padding must not change */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 20px 80px 20px; /* reduced bottom and side padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 40px; /* smaller horizontal gap (no vertical effect but tidy) */
+            align-items: center;
+        }
+
+        /* Left: The Contract */
+        .contract-paper {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #dcdcdc;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+            padding: 20px; /* reduced from 40px -> saves 40px vertical space */
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        .contract-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #1A3C40;
+        }
+
+        .contract-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            text-align: center;
+            margin-bottom: 15px; /* slightly tightened spacing */
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 8px;
+        }
+
+        .contract-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; /* reduced */
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 3px; /* reduced */
+        }
+
+        .contract-label {
+            font-weight: 700;
+            color: #5D4037;
+        }
+
+        .contract-value {
+            color: #1A3C40;
+            font-weight: 400;
+        }
+
+        /* Right: The Impact */
+        .impact-section {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* reduced vertical gap */
+        }
+
+        .quran-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px; /* reduced from 25px */
+            border-left: 5px solid #C5A059;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem; /* kept (do not shrink fonts) */
+            line-height: 1.5;
+        }
+
+        .quran-ref {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            margin-top: 6px; /* tightened */
+            color: #C5A059;
+            font-family: 'Lato', sans-serif;
+            font-style: normal;
+        }
+
+        .impact-list {
+            list-style: none;
+        }
+
+        .impact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px; /* reduced */
+        }
+
+        .impact-icon {
+            color: #C5A059;
+            font-size: 1.4rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .impact-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .impact-content p {
+            font-size: 1.05rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: 20px;
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Blessed Union: Terms & Impact</h1>
+            <div class="subtitle">A Partnership Founded on Respect</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: The Contract -->
+            <div class="contract-paper">
+                <div class="contract-title">Marriage Contract Details</div>
+                
+                <div class="contract-item">
+                    <span class="contract-label">Groom's Age</span>
+                    <span class="contract-value">25 Years</span>
+                </div>
+                <div class="contract-item">
+                    <span class="contract-label">Bride's Age</span>
+                    <span class="contract-value">40 Years (approx.)</span>
+                </div>
+                <div class="contract-item">
+                    <span class="contract-label">Mahr (Dowry)</span>
+                    <span class="contract-value">20 Camels</span>
+                </div>
+                <div class="contract-item">
+                    <span class="contract-label">Spokesperson</span>
+                    <span class="contract-value">Abū Ṭālib</span>
+                </div>
+                <div class="contract-item">
+                    <span class="contract-label">Bride's Walī</span>
+                    <span class="contract-value">Waraqah / 'Amr ibn Asad</span>
+                </div>
+            </div>
+
+            <!-- Right: The Impact -->
+            <div class="impact-section">
+                <div class="quran-box">
+                    "And He found you poor and enriched [you]."
+                    <span class="quran-ref">(Quran 93:8)</span>
+                </div>
+
+                <ul class="impact-list">
+                    <li class="impact-item">
+                        <i class="fas fa-coins impact-icon"></i>
+                        <div class="impact-content">
+                            <h3>Financial Independence</h3>
+                            <p>This marriage liberated him from the daily struggle for survival (shepherding), granting him stability.</p>
+                        </div>
+                    </li>
+                    <li class="impact-item">
+                        <i class="fas fa-mountain impact-icon"></i>
+                        <div class="impact-content">
+                            <h3>Time for Contemplation</h3>
+                            <p>The financial security allowed him the leisure to engage in <em>Taḥannuth</em> (seclusion) in the Cave of Ḥirā'.</p>
+                        </div>
+                    </li>
+                    <li class="impact-item">
+                        <i class="fas fa-heart impact-icon"></i>
+                        <div class="impact-content">
+                            <h3>Emotional Anchor</h3>
+                            <p>Khadījah became his primary source of emotional support, believing in him when the revelation eventually came.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">المَهْر</span>
+            <span class="term-english">Al-Mahr (The Dowry)</span>
+        </div>
+    </div>
+</body>
+</html>

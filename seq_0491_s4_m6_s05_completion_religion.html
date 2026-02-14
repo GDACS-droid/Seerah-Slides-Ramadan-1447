@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        /* Reduced inner paddings to avoid overflow */
+        .content-section {
+            padding: 12px 80px; /* reduced vertical and horizontal inner padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .verse-container {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px 40px; /* reduced from 40px 60px */
+            border: 4px double #C5A059;
+            text-align: center;
+            position: relative;
+            margin-bottom: 10px; /* reduced margin to pull up the following row */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 900px;
+        }
+
+        .verse-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .verse-english {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #C5A059;
+            line-height: 1.5;
+        }
+
+        .verse-ref {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .context-row {
+            display: flex;
+            gap: 24px; /* tightened gap to save space */
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .context-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #1A3C40;
+            padding: 12px; /* reduced padding */
+        }
+
+        .context-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .context-text {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+
+        .icon-decoration {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FDFBF7;
+            padding: 0 15px;
+            font-size: 2rem;
+            color: #C5A059;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Completion of Religion</h1>
+            <h2 class="subtitle">The Culmination of the Mission</h2>
+        </div>
+
+        <div class="content-section">
+            <div class="verse-container">
+                <div class="icon-decoration"><i class="fas fa-star-and-crescent"></i></div>
+                <div class="verse-arabic">
+                    الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا
+                </div>
+                <div class="verse-english">
+                    "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion."
+                </div>
+                <div class="verse-ref">Surah Al-Ma'idah (5:3)</div>
+            </div>
+
+            <div class="context-row">
+                <div class="context-box">
+                    <div class="context-title"><i class="fas fa-clock" style="margin-right: 10px;"></i> The Timing</div>
+                    <p class="context-text">
+                        Revealed on Friday, the Day of Arafah, after Asr. It was the spiritual climax of the Farewell Hajj.
+                    </p>
+                </div>
+
+                <div class="context-box" style="border-color: #8D6E63;">
+                    <div class="context-title"><i class="fas fa-eye" style="margin-right: 10px;"></i> The Insight</div>
+                    <p class="context-text">
+                        While others rejoiced, Umar ibn al-Khaṭṭāb wept. He understood the implication: "Nothing becomes perfect except that it begins to decrease." He realized the Prophet's departure was near.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

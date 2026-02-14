@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            /* keep upper padding for title consistency */
+            padding: 50px 80px 8px; /* reduced bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .central-concept {
+            text-align: center;
+            margin-bottom: 6px; /* reduced spacing */
+            z-index: 5;
+        }
+
+        .concept-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .concept-english {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .content-columns {
+            display: flex;
+            gap: 40px; /* slightly reduced gap */
+            padding: 0 80px 20px; /* reduced bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .col-card {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 12px; /* reduced inner padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px; /* reduced */
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 6px; /* reduced */
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #3E2723;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #5D4037;
+            margin-bottom: 10px; /* reduced */
+        }
+
+        .quote-highlight {
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 10px; /* reduced */
+            font-style: italic;
+            color: #1A3C40;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-top: auto;
+            border-left: 3px solid #C5A059;
+        }
+
+        .footer-hadith {
+            margin: 0 80px 20px; /* reduced bottom margin */
+            text-align: center;
+            padding: 12px; /* reduced padding */
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            z-index: 5;
+        }
+
+        .hadith-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+
+        .hadith-ref {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #C5A059;
+            font-family: 'Lato', sans-serif;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Zayd ibn 'Amr ibn Nufayl</h1>
+            <div class="subtitle">The Solitary Believer</div>
+        </div>
+
+        <div class="central-concept">
+            <div class="concept-arabic">أمة وحده</div>
+            <div class="concept-english">A Nation By Himself</div>
+        </div>
+
+        <div class="content-columns">
+            <!-- Theological Stance -->
+            <div class="col-card">
+                <div class="card-header">
+                    <i class="fas fa-hand-paper card-icon"></i>
+                    <h3 class="card-title">Theological Purity</h3>
+                </div>
+                <p class="card-text">
+                    He publicly rejected the idols of Quraysh and refused to eat meat slaughtered in their names, challenging the logic of his people.
+                </p>
+                <div class="quote-highlight">
+                    "Allah created the sheep and sent down rain for it... yet you slaughter it in the name of other than Him?"
+                </div>
+            </div>
+
+            <!-- Social Stance -->
+            <div class="col-card">
+                <div class="card-header">
+                    <i class="fas fa-child card-icon"></i>
+                    <h3 class="card-title">Social Justice</h3>
+                </div>
+                <p class="card-text">
+                    He actively fought against the practice of female infanticide (Wa'd al-Banāt). He would take the daughters from their fathers and raise them himself.
+                </p>
+                <div class="quote-highlight">
+                    "Do not kill her. I will suffice you her provision."
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-hadith">
+            <div class="hadith-text">
+                "He will be resurrected on the Day of Judgment as a nation (Ummah) by himself."
+            </div>
+            <span class="hadith-ref">Prophet Muhammad ﷺ</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            width: 48%;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #1A3C40;
+            padding: 25px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            color: #C5A059;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .names-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .names-list li {
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: #5D4037;
+        }
+
+        .insight-box {
+            width: 100%;
+            max-width: 1000px;
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 25px;
+            border: 2px solid #C5A059;
+            display: flex;
+            align-items: center;
+        }
+
+        .insight-icon {
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-right: 30px;
+            padding-right: 30px;
+            border-right: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .insight-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .insight-text p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Intelligence Gathering</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="top-row">
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-binoculars card-icon"></i>
+                        <h3 class="card-title">The Scouts</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>The Prophet ﷺ dispatched two trusted companions ahead of the main army to scout the wells of Badr:</p>
+                        <ul class="names-list">
+                            <li>• Basbas ibn 'Amr al-Juhanī</li>
+                            <li>• 'Adī ibn Abī al-Zaghbā' al-Juhanī</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-file-signature card-icon"></i>
+                        <h3 class="card-title">The Intel</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            They successfully infiltrated the area near the wells and overheard two water-carriers confirming that the caravan would arrive "tomorrow or the day after."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <div class="insight-icon">
+                    <i class="fas fa-chess-knight"></i>
+                </div>
+                <div class="insight-text">
+                    <h3>Strategic Insight</h3>
+                    <p>
+                        The Prophet ﷺ did not move blindly. He prioritized accurate, timely information over sheer numbers, establishing intelligence as a cornerstone of military strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

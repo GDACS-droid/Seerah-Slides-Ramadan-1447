@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{overflow:hidden}
+        .slide-container{
+            width:1280px;
+            min-height:720px; /* keep as required */
+            background-color:#FDFBF7;
+            position:relative;
+            font-family:'Lato',sans-serif;
+            color:#3E2723;
+            display:flex;
+            flex-direction:column;
+            border:20px solid #FDFBF7;
+        }
+        .border-frame{position:absolute;top:20px;left:20px;right:20px;bottom:20px;border:2px solid #C5A059;pointer-events:none;z-index:10}
+        .header-section{padding:50px 60px 8px;text-align:center;z-index:5}
+        .main-title{font-family:'Playfair Display',serif;font-size:2.8rem;color:#1A3C40;margin-bottom:0.5rem}
+        .arabic-subtitle{font-family:'Playfair Display',serif;font-size:2rem;color:#C5A059;margin-bottom:6px}
+        .content-wrapper{display:flex;flex-direction:column;padding:8px 60px 12px;flex-grow:1;z-index:5;justify-content:flex-start}
+        .timeline-container{position:relative;padding-left:34px}
+        .timeline-line{position:absolute;left:19px;top:10px;bottom:10px;width:2px;background-color:#C5A059;z-index:1}
+        .timeline-item{display:flex;align-items:flex-start;margin-bottom:12px;position:relative;z-index:2}
+        .timeline-icon{width:40px;height:40px;background-color:#1A3C40;border:2px solid #C5A059;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FDFBF7;font-size:1.2rem;margin-right:18px;flex-shrink:0;margin-left:-16px}
+        .timeline-content{background-color:rgba(255,255,255,0.6);border-left:4px solid #1A3C40;padding:10px 18px;flex-grow:1;display:flex;flex-direction:column}
+        .step-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:#1A3C40;font-weight:700;margin-bottom:4px}
+        .step-desc{font-size:1.1rem;color:#3E2723;line-height:1.25}
+        .highlight-term{color:#C5A059;font-weight:700}
+        .footer-term{margin-top:14px;text-align:center;background-color:rgba(26,60,64,0.05);padding:8px;border:1px solid #C5A059;align-self:center;width:100%}
+        .term-arabic{font-family:'Playfair Display',serif;font-size:1.6rem;color:#1A3C40;margin-right:8px}
+        .term-english{font-size:1.1rem;color:#5D4037;text-transform:uppercase;letter-spacing:1px}
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">Shaqq al-Ṣadr: The Splitting of the Chest</h1>
+            <div class="arabic-subtitle">شَقُّ الصَّدْر</div>
+        </div>
+        <div class="content-wrapper">
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-user-friends"></i></div>
+                    <div class="timeline-content">
+                        <div class="step-title">The Arrival</div>
+                        <div class="step-desc">Two angels approached him while he played with other children.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <div class="step-title">The Extraction</div>
+                        <div class="step-desc">They opened his chest and removed a <span class="highlight-term">"Black Clot"</span>.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-tint"></i></div>
+                    <div class="timeline-content">
+                        <div class="step-title">The Purification</div>
+                        <div class="step-desc">His heart was washed with Zamzam water in a golden basin.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="timeline-content">
+                        <div class="step-title">The Restoration</div>
+                        <div class="step-desc">They returned and sealed his chest.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-term">
+                <span class="term-arabic">العَلَقَة السَّوْدَاء</span>
+                <span class="term-english">Al-'Alaqah al-Sawdā' (The Black Clot)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

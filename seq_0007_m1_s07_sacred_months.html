@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 60px 40px 10px; /* keep top padding 60px */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .arabic-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 40px 40px;
+            z-index: 5;
+        }
+
+        .months-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .month-card {
+            flex: 1;
+            border: 1px solid #C5A059;
+            padding: 15px 10px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .month-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #3E2723;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .month-arabic {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .description-box {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .concept-title {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #C5A059;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .concept-text {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #3E2723;
+            margin-bottom: 12px;
+        }
+
+        .quran-ref {
+            font-style: italic;
+            color: #8D6E63;
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Sacred Months as a Pre-Islamic Legal Institution</h1>
+            <div class="arabic-subtitle">Al-Ashhur al-Ḥurum (الأشهر الحرم)</div>
+        </div>
+
+        <div class="content-section">
+            <div class="months-container">
+                <div class="month-card">
+                    <div class="month-name">Dhū al-Qa'dah</div>
+                    <div class="month-arabic">ذو القعدة</div>
+                </div>
+                <div class="month-card">
+                    <div class="month-name">Dhū al-Ḥijjah</div>
+                    <div class="month-arabic">ذو الحجة</div>
+                </div>
+                <div class="month-card">
+                    <div class="month-name">Muḥarram</div>
+                    <div class="month-arabic">محرم</div>
+                </div>
+                <div class="month-card">
+                    <div class="month-name">Rajab</div>
+                    <div class="month-arabic">رجب</div>
+                </div>
+            </div>
+
+            <div class="description-box">
+                <div class="concept-title">Enforced Cessation of Hostilities</div>
+                <p class="concept-text">
+                    These four months constituted a mandatory legal framework where all warfare ceased and tribes observed strict prohibition of violence. Islam retained this institution, confirming its Abrahamic origin rather than abolishing it as a pagan relic.
+                </p>
+                <div class="quran-ref">
+                    (Reference: Qur'ān 9:36)
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

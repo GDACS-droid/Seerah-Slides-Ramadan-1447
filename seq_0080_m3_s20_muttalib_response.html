@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 20px; /* keep top padding (title upper padding) unchanged */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 80px 16px; /* reduced top and bottom padding */
+            gap: 12px; /* reduced gap between sections */
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        .context-box {
+            width: 100%;
+            background-color: rgba(26, 60, 64, 0.05);
+            border-left: 4px solid #1A3C40;
+            padding: 12px 20px; /* reduced padding */
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .dialogue-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .dialogue-row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .speaker-label {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: 180px;
+            text-align: right;
+            padding-top: 5px;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .speech-bubble {
+            flex: 1;
+            padding: 12px 16px; /* slightly reduced padding */
+            border: 1px solid #C5A059;
+            background-color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+            color: #3E2723;
+            position: relative;
+        }
+
+        .quote-highlight {
+            text-align: center;
+            border: 4px double #C5A059;
+            padding: 12px 30px; /* reduced padding */
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            width: 100%;
+            margin-top: 0; /* removed extra top margin to rely on gap */
+        }
+
+        .arabic-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #C5A059;
+            line-height: 1.4;
+        }
+
+        .english-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 12px; /* reduced bottom padding */
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">'Abd al-Muṭṭalib's Response</h1>
+            <div class="subtitle">The Meeting with Abrahah</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="context-box">
+                <strong>The Context:</strong> Abrahah's army had seized 200 camels belonging to 'Abd al-Muṭṭalib. When the Qurayshi chief entered the camp, his dignity was such that Abrahah descended from his throne to sit with him on the carpet.
+            </div>
+
+            <div class="dialogue-container">
+                <div class="dialogue-row">
+                    <div class="speaker-label">Abrahah</div>
+                    <div class="speech-bubble">
+                        "I was impressed by you, but now I withdraw my respect. I came to destroy your House—your religion and honor—and you speak to me about 200 camels?"
+                    </div>
+                </div>
+
+                <div class="dialogue-row">
+                    <div class="speaker-label" style="color: #1A3C40;">'Abd al-Muṭṭalib</div>
+                    <div class="speech-bubble" style="border-color: #1A3C40; background-color: rgba(26, 60, 64, 0.05);">
+                        "I am the lord of the camels. As for the House, it has a Lord who will protect it."
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-highlight">
+                <div class="arabic-quote">أَنَا رَبُّ الإِبِلِ، وَلِلْبَيْتِ رَبٌّ يَحْمِيهِ</div>
+                <div class="english-quote">"I am the lord of the camels, and the House has a Lord who will protect it."</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            A statement of ultimate Tawakkul (Reliance) — acknowledging human limits and Divine power.
+        </div>
+    </div>
+</body>
+</html>

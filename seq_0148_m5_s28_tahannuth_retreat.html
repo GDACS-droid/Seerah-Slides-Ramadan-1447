@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep min-height requirement */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* keep top padding intact, reduce bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 20px 80px 20px; /* reduced horizontal and bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 30px; /* reduced gap */
+            align-items: flex-start;
+        }
+
+        /* Left Panel: The Practice */
+        .panel-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 18px; /* smaller internal gap */
+        }
+
+        .definition-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 18px; /* reduced padding */
+            border-left: 5px solid #C5A059;
+        }
+
+        .def-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #C5A059;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .def-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .context-list {
+            list-style: none;
+        }
+
+        .context-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px; /* tightened spacing */
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #C5A059;
+        }
+
+        .context-icon {
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 16px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .context-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .context-content p {
+            font-size: 1.05rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        /* Right Panel: The Place */
+        .panel-right {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 20px; /* reduced padding */
+            position: relative;
+        }
+
+        .panel-right::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            pointer-events: none;
+        }
+
+        .place-header {
+            text-align: center;
+            margin-bottom: 15px; /* reduced */
+        }
+
+        .place-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .place-subtitle {
+            font-size: 1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .place-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced */
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-icon {
+            font-size: 1.4rem;
+            color: #C5A059;
+            margin-right: 12px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .detail-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 10px; /* tightened spacing */
+            margin-bottom: 10px;
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Retreat to Ghār Ḥirā': Taḥannuth</h1>
+            <div class="subtitle">The Spiritual Preparation</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left Panel: The Practice -->
+            <div class="panel-left">
+                <div class="definition-box">
+                    <div class="def-title">Definition</div>
+                    <div class="def-text">
+                        Linguistically derived from <em>Ḥinth</em> (sin), <strong>Taḥannuth</strong> means to shun sin or to engage in worship to purify oneself from it. It was a practice of the <em>Ḥunafā'</em>.
+                    </div>
+                </div>
+
+                <ul class="context-list">
+                    <li class="context-item">
+                        <div class="context-icon"><i class="fas fa-moon"></i></div>
+                        <div class="context-content">
+                            <h3>The Timing</h3>
+                            <p>He would retreat for multiple nights, often spending the entire month of <strong>Ramadan</strong> in seclusion.</p>
+                        </div>
+                    </li>
+                    <li class="context-item">
+                        <div class="context-icon"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="context-content">
+                            <h3>The Provision</h3>
+                            <p>He would return to Khadijah only to replenish his supplies (Zād), highlighting her crucial support role.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Panel: The Place -->
+            <div class="panel-right">
+                <div class="place-header">
+                    <h2 class="place-title">Jabal al-Nūr</h2>
+                    <div class="place-subtitle">The Mountain of Light</div>
+                </div>
+
+                <div class="place-details">
+                    <div class="detail-row">
+                        <i class="fas fa-mountain detail-icon"></i>
+                        <div class="detail-text">
+                            <strong>The Cave:</strong> A small, narrow opening at the summit, providing isolation from the noise of Makkah.
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <i class="fas fa-eye detail-icon"></i>
+                        <div class="detail-text">
+                            <strong>The View:</strong> The cave faces the Ka'bah directly, allowing him to combine seclusion with visual connection to the House of Allah.
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <i class="fas fa-wind detail-icon"></i>
+                        <div class="detail-text">
+                            <strong>The Atmosphere:</strong> Absolute silence, vast sky, and distance from the idolatry of the city below.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">التَّحَنُّث</span>
+            <span class="term-english">Al-Taḥannuth (Devotional Seclusion)</span>
+        </div>
+    </div>
+</body>
+</html>

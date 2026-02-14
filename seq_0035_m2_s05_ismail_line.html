@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* keep top padding (50px) as required */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 60px; /* reduced vertical and horizontal padding */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .node-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 12px 28px; /* reduced vertical padding to save height */
+            border: 2px solid #C5A059;
+            text-align: center;
+            width: 600px;
+            position: relative;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .node-desc {
+            font-size: 1.1rem;
+            color: #E0E0E0;
+        }
+
+        .connector-line {
+            width: 4px;
+            height: 20px; /* reduced connector height */
+            background-color: #1A3C40;
+            margin: 6px 0; /* smaller gaps around connectors */
+        }
+
+        .uncertainty-zone {
+            width: 600px;
+            height: 96px; /* reduced from 120px */
+            border: 3px dashed #8D6E63;
+            background-color: rgba(141, 110, 99, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 6px 0; /* reduced margin */
+            position: relative;
+        }
+
+        .uncertainty-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .uncertainty-sub {
+            font-size: 1rem;
+            color: #5D4037;
+            margin-top: 5px;
+        }
+
+        .quote-box {
+            margin-top: 10px; /* reduced top margin */
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid #C5A059;
+            padding: 16px 24px; /* slightly reduced padding */
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .quote-ref {
+            font-size: 1rem;
+            color: #8D6E63;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .side-note {
+            position: absolute;
+            right: -220px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            text-align: left;
+            font-size: 1rem;
+            color: #5D4037;
+            border-left: 2px solid #C5A059;
+            padding-left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Ismā'īlī Line</h1>
+            <div class="subtitle">From Ismā'īl to 'Adnān</div>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Top Node -->
+            <div class="node-box">
+                <div class="node-title">Ismā'īl (AS) + Jurhum Tribe</div>
+                <div class="node-desc">The Origin of Al-'Arab al-Musta'ribah (Arabized Arabs)</div>
+                <div class="side-note">
+                    Ismā'īl learned Arabic from Jurhum and married into them, merging the Abrahamic bloodline with Arab culture.
+                </div>
+            </div>
+
+            <div class="connector-line"></div>
+
+            <!-- Uncertainty Zone -->
+            <div class="uncertainty-zone">
+                <div class="uncertainty-text">The Era of Uncertainty (Mubham)</div>
+                <div class="uncertainty-sub">Multiple generations unrecorded or disputed</div>
+            </div>
+
+            <div class="connector-line"></div>
+
+            <!-- Bottom Node -->
+            <div class="node-box">
+                <div class="node-title">'Adnān</div>
+                <div class="node-desc">The Agreed-Upon Ancestor</div>
+            </div>
+
+            <!-- Quote -->
+            <div class="quote-box">
+                <div class="quote-text">
+                    "Beyond 'Adnān, the genealogists lie."
+                </div>
+                <div class="quote-ref">Prophetic Tradition</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

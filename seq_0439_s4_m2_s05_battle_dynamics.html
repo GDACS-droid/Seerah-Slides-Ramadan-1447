@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        /* Left Column: The Numbers */
+        .stats-column {
+            flex: 0.35;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 2px solid rgba(197, 160, 89, 0.3);
+            padding-right: 40px;
+        }
+
+        .stat-group {
+            margin-bottom: 40px;
+        }
+
+        .stat-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .stat-bar-container {
+            width: 100%;
+            background-color: rgba(0,0,0,0.05);
+            height: 40px;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .stat-bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .bar-muslim {
+            width: 10%; /* Representational */
+            background-color: #1A3C40;
+        }
+
+        .bar-enemy {
+            width: 100%;
+            background-color: #8D6E63;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            color: #5D4037;
+            text-align: right;
+        }
+
+        /* Right Column: The Narrative */
+        .narrative-column {
+            flex: 0.65;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-item {
+            display: flex;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-left: 4px solid #C5A059;
+        }
+
+        .event-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            margin-right: 20px;
+            line-height: 1;
+        }
+
+        .event-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .event-content p {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .highlight-wing {
+            color: #1A3C40;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Battle of Mu'tah</h1>
+            <h2 class="subtitle">3,000 vs. 200,000</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Left: The Odds -->
+            <div class="stats-column">
+                <div class="stat-group">
+                    <div class="stat-label">Muslim Army</div>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar bar-muslim" style="width: 5%;">3k</div>
+                    </div>
+                    <div class="stat-value">3,000 Mujāhidīn</div>
+                </div>
+
+                <div class="stat-group">
+                    <div class="stat-label">Roman & Arab Coalition</div>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar bar-enemy">200k</div>
+                    </div>
+                    <div class="stat-value">100k Romans + 100k Tribes</div>
+                </div>
+
+                <p style="font-style: italic; font-size: 0.95rem; color: #8D6E63; margin-top: 20px;">
+                    "We have never seen an army like this before."
+                </p>
+            </div>
+
+            <!-- Right: The Narrative -->
+            <div class="narrative-column">
+                <!-- Zayd -->
+                <div class="event-item">
+                    <div class="event-number">1</div>
+                    <div class="event-content">
+                        <h3>Zayd's Martyrdom</h3>
+                        <p>
+                            Zayd fought fearlessly with the banner until he was pierced by spears and fell. He fulfilled the prophecy first.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ja'far -->
+                <div class="event-item">
+                    <div class="event-number">2</div>
+                    <div class="event-content">
+                        <h3>Ja'far al-Ṭayyār (The Flyer)</h3>
+                        <p>
+                            He took the banner. His right hand was cut off; he held it with his left. His left was cut off; he held it with his chest until he was killed. <br>
+                            <span class="highlight-wing">"Allah replaced his hands with two wings with which he flies in Paradise."</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Abdullah -->
+                <div class="event-item">
+                    <div class="event-number">3</div>
+                    <div class="event-content">
+                        <h3>'Abdullāh's Stand</h3>
+                        <p>
+                            He hesitated for a moment due to the sheer horror, then recited poetry to conquer his fear. He took the banner and fought until he too joined his companions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

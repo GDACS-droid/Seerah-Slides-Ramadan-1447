@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 10px; /* keep upper padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 12px 60px 20px; /* reduced vertical/horizontal padding */
+            gap: 30px;
+            flex-grow: 1;
+            z-index: 5;
+            align-items: stretch;
+        }
+
+        /* Left: The Empire */
+        .empire-col {
+            flex: 1;
+            background-color: rgba(26, 60, 64, 0.05);
+            border: 1px solid #1A3C40;
+            padding: 18px; /* reduced */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 2px solid #1A3C40;
+            padding-bottom: 8px; /* reduced */
+        }
+
+        .col-icon {
+            font-size: 2rem;
+            color: #1A3C40;
+            margin-right: 15px;
+        }
+
+        .col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .info-list {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .info-item {
+            margin-bottom: 10px; /* reduced */
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .bullet {
+            color: #C5A059;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        /* Right: The Cathedral */
+        .cathedral-col {
+            flex: 1;
+            background-color: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 18px; /* reduced */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cathedral-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 8px; /* reduced */
+        }
+
+        .cathedral-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-right: 15px;
+        }
+
+        .cathedral-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .term-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 12px; /* reduced */
+            text-align: center;
+            border: 2px solid #C5A059;
+            margin-top: auto;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .english-term {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 60px 18px; /* reduced */
+            font-size: 1rem;
+            color: #5D4037;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Geopolitical Context</h1>
+            <div class="subtitle">Yemen Under Abyssinian Rule</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: The Empire -->
+            <div class="empire-col">
+                <div class="col-header">
+                    <i class="fas fa-crown col-icon"></i>
+                    <div class="col-title">The Aksumite Rule</div>
+                </div>
+                <ul class="info-list">
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        Yemen was a vassal state of the powerful <strong>Aksumite Empire</strong> (modern-day Ethiopia).
+                    </li>
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        Ruled by the viceroy <strong>Abrahah al-Ashram</strong>, a formidable Christian general who had seized power.
+                    </li>
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        Abrahah sought to consolidate power and spread Christianity across the Arabian Peninsula.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right: The Cathedral -->
+            <div class="cathedral-col">
+                <div class="cathedral-header">
+                    <i class="fas fa-church cathedral-icon"></i>
+                    <div class="cathedral-title">The Rival Sanctuary</div>
+                </div>
+                <ul class="info-list">
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        Abrahah built a magnificent cathedral in Ṣan'ā' named <strong>Al-Qullays</strong>.
+                    </li>
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        It was constructed with colored marble, gold, and silver to dazzle the Arabs.
+                    </li>
+                    <li class="info-item">
+                        <i class="fas fa-circle bullet" style="font-size: 0.5rem;"></i>
+                        <strong>Goal:</strong> To replace the Ka'bah as the center of pilgrimage.
+                    </li>
+                </ul>
+                
+                <div class="term-box">
+                    <div class="arabic-term">القُلَّيْس</div>
+                    <div class="english-term">Al-Qullays (The Cathedral)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "A deliberate strategy to shift the religious and economic center of Arabia from Makkah to Ṣan'ā'."
+        </div>
+    </div>
+</body>
+</html>

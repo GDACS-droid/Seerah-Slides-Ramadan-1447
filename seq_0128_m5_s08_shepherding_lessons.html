@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* keep top padding 50 */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 16px; /* reduced inner padding */
+            z-index: 5;
+            justify-content: flex-start; /* avoid stretching to fill space */
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px; /* reduced gap */
+            margin-bottom: 12px;
+        }
+
+        .lessons-bottom-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .lesson-card {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 12px; /* reduced padding */
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bottom-card {
+            width: calc(33.33% - 8px); /* Match width of grid items */
+        }
+
+        .card-icon {
+            font-size: 2rem; /* font-size must not change */
+            color: #1A3C40;
+            margin-bottom: 12px;
+            background-color: #FDFBF7;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #C5A059;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-text {
+            font-size: 1.05rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 12px; /* avoid auto so it doesn't push content */
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Lessons of Shepherding</h1>
+            <div class="subtitle">Why Shepherding Before Prophethood?</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Top Row -->
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="card-title">Patience (Ṣabr)</div>
+                    <div class="card-text">
+                        Sheep are difficult to herd and scatter constantly. Keeping them together requires immense patience and gentle persistence.
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="card-title">Leadership</div>
+                    <div class="card-text">
+                        Managing a flock teaches how to care for a community, recognizing the weak, the stray, and the stubborn.
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="card-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="card-title">Solitude</div>
+                    <div class="card-text">
+                        Long hours alone in nature foster deep contemplation and spiritual reflection, away from the noise of the city.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="lessons-bottom-row">
+                <div class="lesson-card bottom-card">
+                    <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="card-title">Humility</div>
+                    <div class="card-text">
+                        It is humble labor that strips away pride. The leader serves the flock, not the other way around.
+                    </div>
+                </div>
+
+                <div class="lesson-card bottom-card">
+                    <div class="card-icon"><i class="fas fa-eye"></i></div>
+                    <div class="card-title">Vigilance</div>
+                    <div class="card-text">
+                        The shepherd must be constantly alert to predators, just as a Prophet must guard his community from spiritual dangers.
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-term">
+                <span class="term-arabic">الصَّبْر</span>
+                <span class="term-english">Al-Ṣabr (Patience)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

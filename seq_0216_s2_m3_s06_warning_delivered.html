@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../session2_styles.css">
+    <title>The Warning Delivered</title>
+    <style>
+        /* Reduced inner paddings and vertical gaps to bring total height under 720px */
+        .warning-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px; /* reduced from 25 */
+            text-align: center;
+            border: 2px solid #C5A059;
+            margin-top: 15px; /* reduced from 30 */
+            position: relative;
+        }
+        .warning-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .warning-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #C5A059;
+            margin-top: 8px; /* reduced from 10 */
+        }
+        .address-container {
+            display: flex;
+            gap: 18px; /* reduced gap */
+            margin-top: 12px; /* reduced from 30 */
+        }
+        .address-col {
+            flex: 1;
+            background-color: rgba(253, 251, 247, 0.8);
+            border-top: 4px solid #1A3C40;
+            padding: 12px; /* reduced from 20 */
+        }
+        .col-icon {
+            font-size: 1.8rem; /* slightly smaller visual icon but not font-size of content */
+            color: #C5A059;
+            margin-bottom: 10px; /* reduced */
+            text-align: center;
+        }
+        .col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px; /* reduced */
+            text-align: center;
+        }
+        .col-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .col-list li {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: #5D4037;
+            margin-bottom: 6px; /* reduced from 8 */
+            padding-bottom: 6px; /* reduced from 8 */
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .col-list li:last-child {
+            border-bottom: none;
+        }
+        .principle-box {
+            margin-top: 12px; /* reduced from 30 */
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-style: italic;
+            border-top: 1px solid #C5A059;
+            padding-top: 10px; /* reduced from 15 */
+        }
+        .arabic-term-container {
+            margin-top: 12px; /* reduced from 20 */
+            text-align: center;
+        }
+        /* Minor tweak: compact footer spacing */
+        .slide-footer { padding: 6px 0; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Border Elements -->
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="content-wrapper">
+            <h2 class="slide-title">The Warning Delivered</h2>
+            <h3 class="slide-subtitle">The Content of the Message</h3>
+
+            <div class="warning-box">
+                <div class="warning-text">"I am a warner to you before a severe punishment."</div>
+                <div class="warning-arabic">إِنِّي نَذِيرٌ لَكُمْ بَيْنَ يَدَيْ عَذَابٍ شَدِيدٍ</div>
+            </div>
+
+            <div class="address-container">
+                <!-- Column 1: The Clans -->
+                <div class="address-col">
+                    <div class="col-icon"><i class="fas fa-users"></i></div>
+                    <div class="col-title">The Public Roll Call</div>
+                    <ul class="col-list">
+                        <li>"O Banū 'Abd Manāf!"</li>
+                        <li>"O Banū 'Abd al-Muṭṭalib!"</li>
+                        <li>"Save yourselves from the Fire!"</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: The Family -->
+                <div class="address-col">
+                    <div class="col-icon"><i class="fas fa-child"></i></div>
+                    <div class="col-title">The Personal Appeal</div>
+                    <ul class="col-list">
+                        <li>"O Ṣafiyyah, aunt of the Messenger!"</li>
+                        <li>"O Fāṭimah, daughter of Muḥammad!"</li>
+                        <li>"I cannot avail you against Allah at all."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-box">
+                "Lineage provides no exemption. Salvation is by faith and deed alone."
+            </div>
+
+            <div class="arabic-term-container">
+                <h1 class="arabic-title">نَذِيرٌ</h1>
+                <div style="font-family: 'Lato', sans-serif; font-size: 1.6rem; color: #8D6E63;">Nadhīr — Warner</div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">Session II | Module 3 | Slide 6</div>
+    </div>
+</body>
+</html>

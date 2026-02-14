@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* top padding kept as required */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            /* reduced vertical padding and side padding to save height */
+            padding: 10px 80px 20px;
+            gap: 20px; /* reduced gap between sections (was 40px) */
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 16px; /* slightly smaller horizontal gap */
+        }
+
+        .timeline-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 200px;
+        }
+
+        .node-icon {
+            width: 60px; /* slightly smaller to save some height */
+            height: 60px;
+            border-radius: 50%;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            border: 3px solid #C5A059;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .timeline-connector {
+            flex: 1;
+            height: 4px;
+            background-color: #8D6E63;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        .connector-label {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            color: #8D6E63;
+            font-weight: 700;
+            white-space: nowrap;
+            background-color: #FDFBF7;
+            padding: 0 10px;
+        }
+
+        /* Context Cards */
+        .context-grid {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .context-card {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 15px; /* reduced padding */
+            position: relative;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* reduced */
+            border-bottom: 2px solid #1A3C40;
+            padding-bottom: 8px;
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-right: 12px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .term-box {
+            margin-top: 10px;
+            text-align: center;
+            padding: 8px 20px; /* reduced */
+            background-color: #1A3C40;
+            color: #C5A059;
+            border: 2px solid #C5A059;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-right: 12px;
+        }
+
+        .english-term {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 10px; /* reduced bottom padding */
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Birth Context</h1>
+            <div class="subtitle">Born in the Year of the Elephant</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Timeline -->
+            <div class="timeline-container">
+                <div class="timeline-node">
+                    <div class="node-icon"><i class="fas fa-elephant"></i></div>
+                    <div class="node-title">Elephant Event</div>
+                </div>
+
+                <div class="timeline-connector">
+                    <div class="connector-label">50-55 Days Later</div>
+                </div>
+
+                <div class="timeline-node">
+                    <div class="node-icon" style="background-color: #C5A059; color: #1A3C40;"><i class="fas fa-star"></i></div>
+                    <div class="node-title">The Birth</div>
+                </div>
+            </div>
+
+            <!-- Context Cards -->
+            <div class="context-grid">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <div class="card-title">Divine Safety</div>
+                    </div>
+                    <p class="card-text">
+                        He was born into a city that had just witnessed a miraculous Divine defense, creating an atmosphere of awe and security.
+                    </p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown card-icon"></i>
+                        <div class="card-title">Peak Prestige</div>
+                    </div>
+                    <p class="card-text">
+                        Quraysh were at the height of their power as "The People of God," ensuring the Prophet's tribe was respected by all.
+                    </p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe card-icon"></i>
+                        <div class="card-title">Global Attention</div>
+                    </div>
+                    <p class="card-text">
+                        The defeat of Abrahah turned the eyes of the major empires (Byzantium and Persia) toward this obscure valley.
+                    </p>
+                </div>
+            </div>
+
+            <div class="term-box">
+                <span class="arabic-term">عَامُ الفِيل</span>
+                <span class="english-term">'Ām al-Fīl (The Year of the Elephant)</span>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "The Divine protection of the House was a prelude to the arrival of its Master."
+        </div>
+    </div>
+</body>
+</html>

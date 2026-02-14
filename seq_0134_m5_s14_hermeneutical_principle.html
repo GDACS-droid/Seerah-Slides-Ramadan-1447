@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 20px; /* keep top padding = 50px */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 60px 10px; /* reduced horizontal & bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 12px; /* reduced vertical gaps between blocks */
+        }
+
+        /* Comparison Columns */
+        .comparison-grid {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .comp-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 8px;
+            margin-bottom: 12px;
+            border-bottom: 3px solid;
+        }
+
+        .preserved-header {
+            color: #1A3C40;
+            border-color: #1A3C40;
+        }
+
+        .abolished-header {
+            color: #8D6E63;
+            border-color: #8D6E63;
+        }
+
+        .list-container {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 12px; /* reduced padding */
+            flex: 1;
+            border: 1px solid #C5A059;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* reduced spacing between items */
+            font-size: 1.15rem;
+            color: #3E2723;
+        }
+
+        .check-icon {
+            color: #1A3C40;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .cross-icon {
+            color: #8D6E63;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* Principle Box */
+        .principle-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 18px; /* slightly reduced */
+            text-align: center;
+            border: 2px solid #C5A059;
+            position: relative;
+        }
+
+        .principle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #C5A059;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .principle-text {
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 6px; /* tightened */
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Hermeneutical Principle: Pre-Islamic Ethics</h1>
+            <div class="subtitle">What Islam Preserved vs. What It Abolished</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Comparison Grid -->
+            <div class="comparison-grid">
+                <!-- Preserved -->
+                <div class="comp-col">
+                    <div class="col-header preserved-header">Preserved & Purified</div>
+                    <div class="list-container">
+                        <div class="item-row">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Justice &amp; Fairness</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Hospitality to Guests</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Honoring Covenants</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Protecting the Weak</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abolished -->
+                <div class="comp-col">
+                    <div class="col-header abolished-header">Abolished & Rejected</div>
+                    <div class="list-container">
+                        <div class="item-row">
+                            <i class="fas fa-times cross-icon"></i>
+                            <span>Idol Worship (Shirk)</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-times cross-icon"></i>
+                            <span>Female Infanticide</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-times cross-icon"></i>
+                            <span>Usury (Ribā)</span>
+                        </div>
+                        <div class="item-row">
+                            <i class="fas fa-times cross-icon"></i>
+                            <span>Blood Revenge Cycles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principle Box -->
+            <div class="principle-box">
+                <div class="principle-title">The Guiding Principle</div>
+                <div class="principle-text">
+                    "I was sent only to complete noble character traits."
+                    <br><span style="font-size: 0.9rem; opacity: 0.8;">(Muwaṭṭa' Mālik)</span>
+                </div>
+            </div>
+
+            <div class="footer-term">
+                <span class="term-arabic">مَكَارِمُ الأَخْلَاق</span>
+                <span class="term-english">Makārim al-Akhlāq (Noble Character Traits)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

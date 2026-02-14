@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .timeline-container {
+            display: flex;
+            width: 100%;
+            max-width: 1150px;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .timeline-bar {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #1A3C40;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 2;
+            width: 19%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .item-icon-box {
+            width: 100px;
+            height: 100px;
+            background: #FDFBF7;
+            border: 3px solid #C5A059;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .step-num {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid #FDFBF7;
+        }
+
+        .item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-weight: 700;
+            height: 50px; /* Fixed height for alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-desc {
+            font-size: 0.9rem;
+            color: #5D4037;
+            line-height: 1.4;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            height: 120px; /* Fixed height for uniformity */
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Module Roadmap</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="timeline-container">
+                <div class="timeline-bar"></div>
+
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="item-icon-box">
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        <div class="step-num">1</div>
+                    </div>
+                    <h3 class="item-title">The Gathering Storm</h3>
+                    <p class="item-desc">Formation of the Confederates (Al-Aḥzāb): Quraysh, Ghaṭafān, and Jewish tribes unite.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="item-icon-box">
+                        <i class="fas fa-hammer"></i>
+                        <div class="step-num">2</div>
+                    </div>
+                    <h3 class="item-title">The Trench</h3>
+                    <p class="item-desc">Salmān al-Fārisī's strategy and the communal effort of digging the Khandaq.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="item-icon-box">
+                        <i class="fas fa-chess-rook"></i>
+                        <div class="step-num">3</div>
+                    </div>
+                    <h3 class="item-title">The Siege</h3>
+                    <p class="item-desc">The stalemate, skirmishes, and the psychological pressure of the standoff.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="item-icon-box">
+                        <i class="fas fa-handshake-slash"></i>
+                        <div class="step-num">4</div>
+                    </div>
+                    <h3 class="item-title">The Betrayal</h3>
+                    <p class="item-desc">Banū Qurayẓah breaks the treaty, exposing Madīnah's rear flank to attack.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <div class="item-icon-box">
+                        <i class="fas fa-wind"></i>
+                        <div class="step-num">5</div>
+                    </div>
+                    <h3 class="item-title">The Victory</h3>
+                    <p class="item-desc">Divine intervention via wind, the collapse of the coalition, and the judgment of Sa'd.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

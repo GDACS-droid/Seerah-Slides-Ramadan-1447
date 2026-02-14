@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            text-align: center;
+            padding-top: 50px; /* keep upper padding */
+            padding-bottom: 10px; /* reduced to save height */
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 60px; /* slightly reduced horizontal padding */
+            flex-grow: 1;
+            z-index: 5;
+            align-items: flex-start; /* avoid stretching vertically */
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #3E2723;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 10px; /* reduced */
+            margin-bottom: 10px; /* reduced */
+            text-align: center;
+        }
+
+        .origin-tag {
+            display: block;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8D6E63;
+            margin-top: 5px;
+        }
+
+        .list-item {
+            font-size: 1.4rem;
+            margin-bottom: 12px; /* reduced spacing between items */
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .list-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #C5A059;
+            font-size: 1.5rem;
+        }
+
+        .insight-box {
+            margin: 0 60px 20px; /* reduced bottom margin and horizontal */
+            padding: 16px; /* reduced padding */
+            background-color: rgba(197, 160, 89, 0.1);
+            border-left: 4px solid #1A3C40;
+            z-index: 5;
+        }
+
+        .insight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 6px; /* reduced */
+        }
+
+        .insight-text {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+        .vertical-divider {
+            width: 1px;
+            background-color: #C5A059;
+            opacity: 0.5;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Key Analytical Distinction</h1>
+            <div class="subtitle">What Islam Retained vs. What Islam Abolished</div>
+        </div>
+
+        <div class="comparison-container">
+            <!-- Left Column: Retained -->
+            <div class="column">
+                <div class="col-header">
+                    Retained
+                    <span class="origin-tag">Origin: Tawḥīd (Ibrahimic)</span>
+                </div>
+                <div class="list-item"><strong>Ḥajj Rites</strong></div>
+                <div class="list-item"><strong>Sacred Months</strong></div>
+                <div class="list-item"><strong>Sanctity of Makkah</strong></div>
+            </div>
+
+            <div class="vertical-divider"></div>
+
+            <!-- Right Column: Abolished -->
+            <div class="column">
+                <div class="col-header">
+                    Abolished
+                    <span class="origin-tag">Origin: Corruption (Pagan)</span>
+                </div>
+                <div class="list-item"><strong>Idol Worship</strong></div>
+                <div class="list-item"><strong>Altered Talbiyah</strong></div>
+                <div class="list-item"><strong>Superstitious Rites</strong></div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <div class="insight-title">The Hermeneutical Principle (Qā'idah)</div>
+            <div class="insight-text">
+                Islam restores the Ibrahimic original; it does not innovate from scratch. Paganism had corrupted monotheism—Islam cleansed these corruptions to reveal the foundation.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

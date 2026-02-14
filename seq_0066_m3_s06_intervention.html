@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 100px 40px;
+            gap: 30px;
+            flex-grow: 1;
+            z-index: 5;
+            justify-content: center;
+        }
+
+        .protest-container {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 6px solid #C62828; /* Red for intervention/stop */
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .protest-icon {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: #C62828;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 3px solid #FDFBF7;
+        }
+
+        .protest-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .protest-source {
+            font-size: 1.1rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .logic-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .logic-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+        }
+
+        .logic-text {
+            font-size: 1.2rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .solution-card {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid #C5A059;
+            margin-top: 10px;
+        }
+
+        .solution-content {
+            flex: 1;
+        }
+
+        .solution-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .solution-desc {
+            font-size: 1.1rem;
+            color: #E0F2F1;
+        }
+
+        .solution-arrow {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-left: 20px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 30px;
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Intervention of Quraysh</h1>
+            <div class="subtitle">"Do Not Set a Precedent!"</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- The Protest -->
+            <div class="protest-container">
+                <div class="protest-icon"><i class="fas fa-hand-paper"></i></div>
+                <div class="protest-quote">
+                    "By Allah, you shall not slaughter him until you find an excuse! If you do this, there will be no stopping others..."
+                </div>
+                <div class="protest-source">— The Elders of Quraysh & Banū Makhzūm</div>
+            </div>
+
+            <!-- The Logic -->
+            <div class="logic-box">
+                <div class="logic-icon"><i class="fas fa-users-slash"></i></div>
+                <div class="logic-text">
+                    They feared establishing a dark <strong>Sunnah</strong> (custom) where every father would feel compelled to sacrifice his son for a vow, leading to the extinction of the tribe.
+                </div>
+            </div>
+
+            <!-- The Solution -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-title">The Alternative: Al-Kāhinah</div>
+                    <div class="solution-desc">
+                        "Go to the soothsayer in <strong>Yathrib</strong>. If she commands you to sacrifice him, then do it. If she gives you a way out, take it."
+                    </div>
+                </div>
+                <div class="solution-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            The fate of the Prophet's father now rested on the word of a soothsayer.
+        </div>
+    </div>
+</body>
+</html>

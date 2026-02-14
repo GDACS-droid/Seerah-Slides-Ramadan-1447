@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 60px 6px; /* keep top padding (50px) as required; reduced bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .clans-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 10px; /* reduced gap */
+            padding: 6px 60px 6px; /* reduced vertical padding */
+            flex-grow: 0; /* prevent expanding to fill extra space */
+            align-items: start; /* avoid stretching items vertically */
+            z-index: 5;
+        }
+
+        .clan-card {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 8px; /* reduced padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Highlight the Power Triad */
+        .card-power {
+            background-color: rgba(26, 60, 64, 0.05);
+            border-top: 6px solid #1A3C40;
+        }
+
+        .card-standard {
+            border-top: 6px solid #8D6E63;
+        }
+
+        .clan-name-ar {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 4px;
+        }
+
+        .clan-name-en {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8D6E63;
+            font-weight: 700;
+            margin-bottom: 6px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+            padding-bottom: 3px;
+            width: 80%;
+        }
+
+        .clan-role {
+            font-size: 1rem;
+            color: #3E2723;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .clan-desc {
+            font-size: 0.95rem;
+            color: #5D4037;
+            line-height: 1.4;
+            margin-bottom: 6px; /* reduced */
+        }
+
+        .notable-figures {
+            font-size: 0.9rem;
+            color: #1A3C40;
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 2px 6px; /* slightly smaller */
+            width: 100%;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 60px 12px; /* reduced bottom padding */
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Clan Map of Quraysh</h1>
+            <div class="subtitle">Key Branches &amp; Their Roles</div>
+        </div>
+
+        <div class="clans-grid">
+            <!-- Banu Hashim -->
+            <div class="clan-card card-power">
+                <div class="clan-name-ar">بنو هاشم</div>
+                <div class="clan-name-en">Banū Hāshim</div>
+                <div class="clan-role">Prophecy &amp; Service</div>
+                <p class="clan-desc">Custodians of Siqāyah and Rifādah; known for generosity and prestige.</p>
+                <div class="notable-figures">The Prophet ﷺ, 'Alī, Ḥamzah</div>
+            </div>
+
+            <!-- Banu Umayyah -->
+            <div class="clan-card card-power">
+                <div class="clan-name-ar">بنو أمية</div>
+                <div class="clan-name-en">Banū Umayyah</div>
+                <div class="clan-role">Politics &amp; State</div>
+                <p class="clan-desc">Political rivals of Hāshim; skilled administrators and wealthy merchants.</p>
+                <div class="notable-figures">'Uthmān, Abū Sufyān</div>
+            </div>
+
+            <!-- Banu Makhzum -->
+            <div class="clan-card card-power">
+                <div class="clan-name-ar">بنو مخزوم</div>
+                <div class="clan-name-en">Banū Makhzūm</div>
+                <div class="clan-role">Military &amp; Wealth</div>
+                <p class="clan-desc">The military powerhouse; overseers of cavalry and logistics.</p>
+                <div class="notable-figures">Khālid ibn al-Walīd, Abū Jahl</div>
+            </div>
+
+            <!-- Banu Abd al-Dar -->
+            <div class="clan-card card-standard">
+                <div class="clan-name-ar">بنو عبد الدار</div>
+                <div class="clan-name-en">Banū 'Abd al-Dār</div>
+                <div class="clan-role">Tradition &amp; Keys</div>
+                <p class="clan-desc">Keepers of the Ka'bah keys (Ḥijābah) and the war banner.</p>
+                <div class="notable-figures">Muṣ'ab ibn 'Umayr</div>
+            </div>
+
+            <!-- Banu Taym -->
+            <div class="clan-card card-standard">
+                <div class="clan-name-ar">بنو تيم</div>
+                <div class="clan-name-en">Banū Taym</div>
+                <div class="clan-role">Virtue &amp; Arbitration</div>
+                <p class="clan-desc">A smaller clan respected for mild manners and arbitration.</p>
+                <div class="notable-figures">Abū Bakr al-Ṣiddīq, Ṭalḥah</div>
+            </div>
+
+            <!-- Banu Adi -->
+            <div class="clan-card card-standard">
+                <div class="clan-name-ar">بنو عدي</div>
+                <div class="clan-name-en">Banū 'Adī</div>
+                <div class="clan-role">Diplomacy</div>
+                <p class="clan-desc">Responsible for diplomacy and mediation between tribes.</p>
+                <div class="notable-figures">'Umar ibn al-Khaṭṭāb</div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "These clans formed the political landscape of pre-Islamic Makkah."
+        </div>
+    </div>
+</body>
+</html>

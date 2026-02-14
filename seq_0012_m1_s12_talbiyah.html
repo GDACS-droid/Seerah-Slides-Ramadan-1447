@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 10px; /* keep top padding intact, reduce bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 20px; /* reduced vertical padding */
+            gap: 16px; /* smaller gap */
+            z-index: 5;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .talbiyah-block {
+            padding: 12px; /* shrink inner padding */
+            border-left: 5px solid;
+            background-color: rgba(255, 255, 255, 0.5);
+            width: calc(50% - 10px); /* place side-by-side to save vertical space */
+        }
+
+        .block-original { border-color: #1A3C40; }
+        .block-corrupted { border-color: #8D6E63; }
+
+        .block-label {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .label-original { color: #1A3C40; }
+        .label-corrupted { color: #8D6E63; }
+
+        .arabic-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem; /* font sizes unchanged */
+            color: #3E2723;
+            margin-bottom: 8px;
+            direction: rtl;
+            line-height: 1.4;
+        }
+
+        .translation {
+            font-size: 1.3rem;
+            color: #5D4037;
+            font-style: italic;
+        }
+
+        .corruption-highlight {
+            color: #C5A059; /* Gold/Warning color */
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: rgba(197, 160, 89, 0.5);
+            text-underline-offset: 5px;
+        }
+
+        .analysis-box {
+            margin-top: 0;
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 12px; /* reduced padding */
+            border: 1px solid #C5A059;
+            text-align: center;
+        }
+
+        .analysis-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1A3C40;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .analysis-text {
+            font-size: 1.2rem;
+            color: #3E2723;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Corruption of the Talbiyah</h1>
+            <div class="subtitle">From Tawḥīd to Shirk in a Single Liturgical Formula</div>
+        </div>
+
+        <div class="content-section">
+            <div class="row">
+                <!-- Original -->
+                <div class="talbiyah-block block-original">
+                    <span class="block-label label-original">The Ibrahimic Original</span>
+                    <div class="arabic-text">لبيك اللهم لبيك، لبيك لا شريك لك لبيك</div>
+                    <div class="translation">"Here I am, O Allah, here I am. Here I am, You have no partner, here I am."</div>
+                </div>
+
+                <!-- Corrupted -->
+                <div class="talbiyah-block block-corrupted">
+                    <span class="block-label label-corrupted">The Innovation of 'Amr ibn Luḥay</span>
+                    <div class="arabic-text">لبيك اللهم لبيك، لبيك لا شريك لك <span class="corruption-highlight">إلا شريكاً هو لك، تملكه وما ملك</span></div>
+                    <div class="translation">"Here I am, O Allah... You have no partner <span class="corruption-highlight">except for a partner who belongs to You, and You control him and all he controls.</span>"</div>
+                </div>
+            </div>
+
+            <!-- Analysis (full-width) -->
+            <div class="analysis-box">
+                <div class="analysis-title">Theological Implication: Hierarchical Polytheism</div>
+                <div class="analysis-text">This formula preserved Allah as the supreme "Big Boss" deity while introducing subordinate partners, resembling ancient Greek theology rather than pure monotheism.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

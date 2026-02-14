@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            z-index: 5;
+            position: relative;
+        }
+
+        /* Connecting Line */
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 150px;
+            right: 150px;
+            height: 4px;
+            background-color: #C5A059;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        .phase-node {
+            position: relative;
+            z-index: 2;
+            width: 300px;
+            text-align: center;
+            background: #FDFBF7; /* To mask line behind */
+            padding: 20px 15px;
+            border: 1px solid #C5A059;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .node-number {
+            width: 40px;
+            height: 40px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 2px solid #C5A059;
+        }
+
+        .node-icon {
+            font-size: 2rem;
+            color: #8D6E63;
+            margin-bottom: 10px;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .node-desc {
+            font-size: 0.95rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Module Roadmap</h1>
+            <h2 class="subtitle">The Final Chapter</h2>
+        </div>
+
+        <div class="content-section">
+            <div class="timeline-line"></div>
+
+            <!-- Phase 1 -->
+            <div class="phase-node">
+                <div class="node-number">1</div>
+                <div class="node-icon"><i class="fas fa-mountain"></i></div>
+                <h3 class="node-title">The Completion</h3>
+                <p class="node-desc">The Farewell Hajj, the Sermon at Arafat, and the perfection of the religion.</p>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase-node">
+                <div class="node-number">2</div>
+                <div class="node-icon"><i class="fas fa-procedures"></i></div>
+                <h3 class="node-title">The Final Illness</h3>
+                <p class="node-desc">The onset of pain, the last prayers led in the mosque, and the final advice to the Ummah.</p>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase-node">
+                <div class="node-number">3</div>
+                <div class="node-icon"><i class="fas fa-door-open"></i></div>
+                <h3 class="node-title">The Departure</h3>
+                <p class="node-desc">The passing to the Highest Companion, the shock in Madīnah, and the succession of Abū Bakr.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

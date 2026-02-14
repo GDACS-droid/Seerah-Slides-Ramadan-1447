@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-container {
+            display: flex;
+            padding: 20px 80px 40px;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .left-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .quote-box {
+            background-color: rgba(26, 60, 64, 0.05);
+            border-left: 6px solid #1A3C40;
+            padding: 30px;
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 3rem;
+            color: #1A3C40;
+            opacity: 0.2;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .quote-ref {
+            font-size: 1.1rem;
+            color: #8D6E63;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .right-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .missing-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #3E2723;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .missing-item {
+            border: 2px dashed #C5A059;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .missing-icon {
+            font-size: 1.8rem;
+            color: #8D6E63;
+            margin-right: 20px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .missing-content {
+            flex: 1;
+        }
+
+        .missing-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #3E2723;
+            font-weight: 700;
+        }
+
+        .missing-arabic {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            margin-left: 10px;
+        }
+
+        .footer-summary {
+            text-align: center;
+            padding: 0 80px 50px;
+            z-index: 5;
+        }
+
+        .summary-text {
+            font-size: 1.3rem;
+            color: #5D4037;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Absence of a Unified Creed</h1>
+            <div class="subtitle">Theological Fragmentation in the Jāhiliyyah</div>
+        </div>
+
+        <div class="content-container">
+            <!-- Left Column: The Materialist View -->
+            <div class="left-col">
+                <div class="quote-box">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <div class="quote-text">
+                        "There is nothing but our worldly life; we die and live, and nothing destroys us except time (Dahr)."
+                    </div>
+                    <div class="quote-ref">Qur'ān 45:24</div>
+                </div>
+            </div>
+
+            <!-- Right Column: The Missing Pillars -->
+            <div class="right-col">
+                <div class="missing-header">The Theological Vacuum</div>
+                
+                <div class="missing-item">
+                    <div class="missing-icon"><i class="fas fa-book-dead"></i></div>
+                    <div class="missing-content">
+                        <span class="missing-title">No Scripture</span>
+                        <span class="missing-arabic">(Kitāb)</span>
+                    </div>
+                </div>
+
+                <div class="missing-item">
+                    <div class="missing-icon"><i class="fas fa-user-slash"></i></div>
+                    <div class="missing-content">
+                        <span class="missing-title">No Prophethood</span>
+                        <span class="missing-arabic">(Nubuwwah)</span>
+                    </div>
+                </div>
+
+                <div class="missing-item">
+                    <div class="missing-icon"><i class="fas fa-balance-scale-right"></i></div>
+                    <div class="missing-content">
+                        <span class="missing-title">No Accountability</span>
+                        <span class="missing-arabic">(Ḥisāb)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-summary">
+            <p class="summary-text">
+                Without dogma or moral accountability, religion was reduced to hollow rituals and tribal customs, creating a state of spiritual chaos.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep the top padding of the title (50px) as required. */
+        .header-section {
+            padding: 50px 60px 8px; /* reduced side and bottom padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.4rem; /* slightly tightened spacing */
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        /* Compressed grid padding and gaps to save vertical space */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 16px; /* reduced from 30px */
+            padding: 8px 60px 6px; /* tightened top/sides/bottom */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .office-card {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            padding: 12px; /* reduced from 20px */
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .office-icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: #1A3C40;
+            color: #C5A059;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-right: 16px; /* slightly reduced */
+            border: 2px solid #C5A059;
+            flex-shrink: 0;
+        }
+
+        .office-content {
+            flex: 1;
+        }
+
+        .office-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-bottom: 4px;
+        }
+
+        .office-english {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: #8D6E63;
+            margin-bottom: 6px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 4px;
+            display: inline-block;
+        }
+
+        .office-desc {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 60px 10px; /* reduced bottom spacing */
+            z-index: 5;
+        }
+
+        .note-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            font-style: italic;
+            background-color: rgba(197, 160, 89, 0.1);
+            padding: 8px 18px; /* reduced padding */
+            border-left: 4px solid #1A3C40;
+            border-right: 4px solid #1A3C40;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Quṣayy's Political Genius</h1>
+            <div class="subtitle">The Four Offices (Al-Manāṣib)</div>
+        </div>
+
+        <div class="grid-container">
+            <!-- Office 1: Hijabah -->
+            <div class="office-card">
+                <div class="office-icon-box"><i class="fas fa-key"></i></div>
+                <div class="office-content">
+                    <div class="office-arabic">الحجابة</div>
+                    <div class="office-english">Al-Ḥijābah</div>
+                    <p class="office-desc">
+                        <strong>Custodianship of the Ka'bah.</strong> Holding the keys to the Sacred House; no one could enter without his permission.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Office 2: Siqayah -->
+            <div class="office-card">
+                <div class="office-icon-box"><i class="fas fa-tint"></i></div>
+                <div class="office-content">
+                    <div class="office-arabic">السقاية</div>
+                    <div class="office-english">Al-Siqāyah</div>
+                    <p class="office-desc">
+                        <strong>Providing Water.</strong> Collecting and sweetening water for pilgrims (crucial in the desert heat before Zamzam's rediscovery).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Office 3: Rifadah -->
+            <div class="office-card">
+                <div class="office-icon-box"><i class="fas fa-utensils"></i></div>
+                <div class="office-content">
+                    <div class="office-arabic">الرفادة</div>
+                    <div class="office-english">Al-Rifādah</div>
+                    <p class="office-desc">
+                        <strong>Feeding the Pilgrims.</strong> A tax levied on Quraysh to provide food for Hajj pilgrims, establishing Makkah's reputation for generosity.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Office 4: Dar al-Nadwah -->
+            <div class="office-card">
+                <div class="office-icon-box"><i class="fas fa-landmark"></i></div>
+                <div class="office-content">
+                    <div class="office-arabic">دار الندوة</div>
+                    <div class="office-english">Dār al-Nadwah</div>
+                    <p class="office-desc">
+                        <strong>The Assembly.</strong> The parliament where war, peace, and marriage contracts were decided.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <div class="note-text">
+                "He united religious, military, and political authority in one hand—an unprecedented centralization."
+            </div>
+        </div>
+    </div>
+</body>
+</html>

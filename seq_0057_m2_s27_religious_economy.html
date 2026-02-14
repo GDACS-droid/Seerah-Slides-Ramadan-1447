@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .diagram-container {
+            flex-grow: 1;
+            position: relative;
+            margin: 20px 100px 40px;
+            z-index: 5;
+        }
+
+        /* Triangle Nodes */
+        .node {
+            position: absolute;
+            width: 280px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #1A3C40;
+            text-align: center;
+            z-index: 10;
+            box-shadow: 0 10px 20px rgba(26, 60, 64, 0.1);
+        }
+
+        .node-top {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: #C5A059;
+        }
+
+        .node-left {
+            bottom: 20px;
+            left: 0;
+        }
+
+        .node-right {
+            bottom: 20px;
+            right: 0;
+        }
+
+        .node-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .node-desc {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        /* Connecting Lines (Simulated with divs) */
+        .connector {
+            position: absolute;
+            background-color: rgba(197, 160, 89, 0.4);
+            z-index: 1;
+        }
+
+        /* Top to Left */
+        .conn-1 {
+            top: 120px;
+            left: 25%;
+            width: 4px;
+            height: 150px;
+            transform: rotate(35deg);
+        }
+
+        /* Top to Right */
+        .conn-2 {
+            top: 120px;
+            right: 25%;
+            width: 4px;
+            height: 150px;
+            transform: rotate(-35deg);
+        }
+
+        /* Left to Right */
+        .conn-3 {
+            bottom: 80px;
+            left: 280px;
+            right: 280px;
+            height: 4px;
+        }
+
+        .central-insight {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 300px;
+        }
+
+        .insight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .insight-text {
+            font-size: 1rem;
+            color: #8D6E63;
+        }
+
+        .quran-box {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px 30px;
+            text-align: center;
+            border: 1px solid #C5A059;
+        }
+
+        .quran-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .quran-ref {
+            font-size: 0.8rem;
+            color: #C5A059;
+            text-transform: uppercase;
+            margin-top: 5px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Religious Economy</h1>
+            <div class="subtitle">The Symbiosis of Faith and Trade</div>
+        </div>
+
+        <div class="diagram-container">
+            <!-- Top Node: Religion -->
+            <div class="node node-top">
+                <div class="node-icon" style="color: #C5A059;"><i class="fas fa-kaaba"></i></div>
+                <div class="node-title">The Ka'bah</div>
+                <div class="node-desc">
+                    The spiritual magnet that attracted tribes from all over Arabia for Hajj.
+                </div>
+            </div>
+
+            <!-- Left Node: Politics -->
+            <div class="node node-left">
+                <div class="node-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="node-title">The Sanctuary (Ḥaram)</div>
+                <div class="node-desc">
+                    A zone of absolute peace. Blood feuds were suspended, ensuring safe passage.
+                </div>
+            </div>
+
+            <!-- Right Node: Economy -->
+            <div class="node node-right">
+                <div class="node-icon"><i class="fas fa-balance-scale"></i></div>
+                <div class="node-title">The Markets (Sūq)</div>
+                <div class="node-desc">
+                    Trade fairs like <em>'Ukāẓ</em> flourished because enemies could trade side-by-side safely.
+                </div>
+            </div>
+
+            <!-- Connectors -->
+            <div class="connector conn-1"></div>
+            <div class="connector conn-2"></div>
+            <div class="connector conn-3"></div>
+
+            <!-- Central Insight -->
+            <div class="central-insight">
+                <div class="insight-title">"The Neutral Ground"</div>
+                <div class="insight-text">
+                    Makkah became the Switzerland of Arabia—wealth built on neutrality.
+                </div>
+            </div>
+
+            <!-- Quran Footer -->
+            <div class="quran-box">
+                <div class="quran-text">
+                    "Have they not seen that We made a safe sanctuary, while people are being snatched away all around them?"
+                </div>
+                <span class="quran-ref">Sūrah Al-'Ankabūt (29:67)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

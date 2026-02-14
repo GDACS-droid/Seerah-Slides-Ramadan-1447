@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Keep top padding (50px) intact */
+        .header-section {
+            padding: 50px 60px 12px; /* reduced bottom/side padding */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        /* Reduced padding and gap to fit content */
+        .content-section {
+            padding: 12px 80px; /* reduced top/bottom padding */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto; /* allow auto sizing */
+            gap: 20px; /* reduced gap */
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .takeaway-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid #C5A059;
+            padding: 18px; /* reduced padding */
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .takeaway-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: #1A3C40;
+        }
+
+        .icon-box {
+            min-width: 50px; /* slightly smaller */
+            height: 50px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            margin-right: 15px;
+            border: 1px solid #C5A059;
+        }
+
+        .text-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; /* slightly smaller */
+            color: #1A3C40;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .text-content p {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.45; /* tighter line height */
+        }
+
+        .footer-quote {
+            text-align: center;
+            padding-bottom: 25px; /* reduced bottom padding */
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #8D6E63;
+            font-size: 1.2rem;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Key Takeaways</h1>
+            <h2 class="subtitle">Lessons from the Northern Front &amp; The Return</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Takeaway 1 -->
+            <div class="takeaway-card">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <div class="text-content">
+                    <h3>Strategic Preservation</h3>
+                    <p>
+                        Mu'tah taught that withdrawing to save the army is not cowardice but wisdom. The Prophet ﷺ redefined victory as achieving the objective (survival), not just conquest.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Takeaway 2 -->
+            <div class="takeaway-card">
+                <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+                <div class="text-content">
+                    <h3>Legal Flexibility</h3>
+                    <p>
+                        Dhāt al-Salāsil demonstrated that leadership requires adapting rulings (Ijtihād) to reality. Preserving life takes precedence over standard rituals in extreme conditions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Takeaway 3 -->
+            <div class="takeaway-card">
+                <div class="icon-box"><i class="fas fa-brain"></i></div>
+                <div class="text-content">
+                    <h3>Psychological Victory</h3>
+                    <p>
+                        'Umrah al-Qaḍā' proved that discipline, spiritual strength, and displaying vitality (Ramal) can conquer hearts and minds before swords conquer lands.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Takeaway 4 -->
+            <div class="takeaway-card">
+                <div class="icon-box"><i class="fas fa-handshake"></i></div>
+                <div class="text-content">
+                    <h3>Diplomacy &amp; Statecraft</h3>
+                    <p>
+                        The marriage to Maymūnah was a strategic tool to neutralize tribal hostility. Every action of the Prophet ﷺ had a dimension of Da'wah and political stabilization.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            "The stage is now set for the greatest victory: The Conquest of Makkah."
+        </div>
+    </div>
+</body>
+</html>

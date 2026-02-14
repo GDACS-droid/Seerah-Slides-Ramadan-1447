@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* kept top padding (50px) unchanged */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 10px; /* reduced from 30px -> saves vertical space (3 gaps => -60px) */
+        }
+
+        .question-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 6px solid #1A3C40;
+            padding: 18px 24px; /* slightly reduced padding to tighten cards */
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .question-icon {
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-right: 18px;
+            margin-top: 5px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .question-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .question-content p {
+            font-size: 1.15rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+
+        .discussion-prompt {
+            text-align: center;
+            margin-top: 10px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #8D6E63;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Discussion & Reflection</h1>
+            <h2 class="subtitle">Critical Questions on Diplomacy & Statecraft</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Question 1 -->
+            <div class="question-card">
+                <div class="question-icon"><i class="fas fa-globe"></i></div>
+                <div class="question-content">
+                    <h3>The Shift to Global Diplomacy</h3>
+                    <p>
+                        How did the letters to kings transform the Muslim community's identity from a local Arab tribe to a universal faith? What risks did this escalation entail?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card">
+                <div class="question-icon"><i class="fas fa-chess"></i></div>
+                <div class="question-content">
+                    <h3>Strategic Prioritization</h3>
+                    <p>
+                        Why was it critical to deal with Khaybar immediately after Ḥudaybiyyah? What does this teach about managing multiple threats and seizing strategic windows?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card">
+                <div class="question-icon"><i class="fas fa-balance-scale"></i></div>
+                <div class="question-content">
+                    <h3>Justice & Context</h3>
+                    <p>
+                        Compare the outcome of Khaybar (treaty/sharecropping) with Banū Qurayẓah (execution). How does the context of treachery versus open conflict determine the appropriate response?
+                    </p>
+                </div>
+            </div>
+
+            <div class="discussion-prompt">
+                Reflect on how these lessons apply to modern leadership challenges.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

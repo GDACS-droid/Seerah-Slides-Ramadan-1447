@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 40px;
+        }
+
+        .threat-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid #C5A059;
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: #1A3C40;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 3px solid #C5A059;
+        }
+
+        .icon-container i {
+            font-size: 2rem;
+            color: #FDFBF7;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 10px;
+            width: 80%;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.6;
+        }
+
+        .quote-box {
+            margin: 0 80px 40px;
+            padding: 20px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            text-align: center;
+            border-radius: 0;
+            border: 1px solid #C5A059;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Threat of Khaybar</h1>
+            <h2 class="subtitle">The Center of Intrigue & The Northern Stronghold</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Military Threat -->
+            <div class="threat-card">
+                <div class="icon-container">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">Military Might</h3>
+                <p class="card-text">
+                    A collection of massive stone fortresses (Al-Qamūṣ, Al-Waṭīḥ) considered impregnable in Arabia. Defended by 10,000 well-armed warriors.
+                </p>
+            </div>
+
+            <!-- Economic Threat -->
+            <div class="threat-card">
+                <div class="icon-container">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3 class="card-title">Economic Engine</h3>
+                <p class="card-text">
+                    The wealthiest oasis in the Hijāz. They used their vast date harvests to fund the Aḥzāb (Confederates) and bribe tribes to attack Madīnah.
+                </p>
+            </div>
+
+            <!-- Political Threat -->
+            <div class="threat-card">
+                <div class="icon-container">
+                    <i class="fas fa-snake"></i>
+                </div>
+                <h3 class="card-title">Political Intrigue</h3>
+                <p class="card-text">
+                    Home to the exiled Banū Naḍīr leaders. They were actively negotiating with Ghaṭafān, offering half their annual harvest for military support.
+                </p>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            "Khaybar was not just a city; it was the bank and the war-room of the anti-Islamic coalition."
+        </div>
+    </div>
+</body>
+</html>

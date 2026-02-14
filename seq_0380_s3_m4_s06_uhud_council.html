@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-grow: 1;
+            z-index: 5;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid;
+        }
+
+        .col-left { border-color: #1A3C40; }
+        .col-right { border-color: #8D6E63; }
+
+        .col-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 10px;
+        }
+
+        .col-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .col-left .col-icon { color: #1A3C40; }
+        .col-right .col-icon { color: #8D6E63; }
+
+        .col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .dream-list {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .dream-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 1.05rem;
+            color: #3E2723;
+        }
+
+        .dream-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #C5A059;
+            font-weight: 700;
+        }
+
+        .debate-text {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #3E2723;
+            margin-bottom: 15px;
+        }
+
+        .quote-box {
+            margin-top: auto;
+            background: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px 40px;
+            text-align: center;
+            border: 2px solid #C5A059;
+            margin-bottom: 30px;
+            margin-left: 80px;
+            margin-right: 80px;
+            z-index: 5;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .quote-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #C5A059;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Council of War</h1>
+        </div>
+
+        <div class="content-section">
+            <!-- Left Column: The Vision -->
+            <div class="column col-left">
+                <div class="col-header">
+                    <i class="fas fa-moon col-icon"></i>
+                    <h2 class="col-title">The Prophetic Vision</h2>
+                </div>
+                <p class="debate-text">The Prophet ﷺ saw a dream indicating the best course of action:</p>
+                <ul class="dream-list">
+                    <li><strong>Cows Slaughtered:</strong> Interpreted as the loss of his companions.</li>
+                    <li><strong>Dented Sword:</strong> Interpreted as harm to a member of his family.</li>
+                    <li><strong>Secure Armor:</strong> Interpreted as the city of Madīnah itself.</li>
+                </ul>
+                <p class="debate-text" style="font-style: italic; color: #1A3C40;">
+                    <strong>Strategy:</strong> Stay in Madīnah and fight a defensive urban war.
+                </p>
+            </div>
+
+            <!-- Right Column: The Debate -->
+            <div class="column col-right">
+                <div class="col-header">
+                    <i class="fas fa-users col-icon"></i>
+                    <h2 class="col-title">The Public Debate</h2>
+                </div>
+                <p class="debate-text">
+                    <strong>The Elders & 'Abdullāh ibn Ubayy:</strong> Agreed with the Prophet's defensive plan to stay within the city.
+                </p>
+                <p class="debate-text">
+                    <strong>The Youth & Zealots:</strong> Especially those who missed Badr, urged the Prophet ﷺ to march out to meet the enemy, fearing that staying inside would be seen as cowardice.
+                </p>
+                <p class="debate-text" style="font-style: italic; color: #8D6E63;">
+                    <strong>Outcome:</strong> The majority favored the offensive strategy.
+                </p>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <div class="quote-label">The Point of No Return</div>
+            <p class="quote-text">
+                "It is not befitting for a Prophet to put on his armor and then take it off until Allāh judges between him and his enemy."
+            </p>
+        </div>
+    </div>
+</body>
+</html>

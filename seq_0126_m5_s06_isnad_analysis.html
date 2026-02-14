@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px; /* top padding must not be changed */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 60px 12px; /* reduced padding to save height */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 12px; /* reduced gap */
+        }
+
+        /* Top Zone: Evidence */
+        .evidence-grid {
+            display: flex;
+            gap: 24px; /* reduced gap between columns */
+            flex: 1;
+        }
+
+        .evidence-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced vertical gaps */
+        }
+
+        .col-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 8px;
+            margin-bottom: 6px; /* tightened */
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icon {
+            margin-right: 12px;
+            color: #C5A059;
+            font-size: 1.4rem;
+        }
+
+        .info-block {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #1A3C40;
+            padding: 10px; /* reduced */
+        }
+
+        .block-title {
+            font-weight: 700;
+            color: #1A3C40;
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .block-text {
+            font-size: 1.05rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        /* Bottom Zone: Verdict */
+        .verdict-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 16px 24px; /* reduced padding */
+            border: 2px solid #C5A059;
+            position: relative;
+            margin-top: 0; /* removed auto spacing to compact layout */
+        }
+
+        .verdict-label {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #C5A059;
+            color: #1A3C40;
+            padding: 4px 18px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .verdict-content {
+            display: flex;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .verdict-item {
+            flex: 1;
+        }
+
+        .verdict-title {
+            font-family: 'Playfair Display', serif;
+            color: #C5A059;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 4px;
+        }
+
+        .verdict-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 8px; /* small spacing inside verdict-box */
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.1rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Isnād Analysis: The Baḥīrā Incident</h1>
+            <div class="subtitle">Source Criticism (Taḥqīq)</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Top Zone -->
+            <div class="evidence-grid">
+                <!-- Left: The Chain -->
+                <div class="evidence-col">
+                    <div class="col-header">
+                        <i class="fas fa-link header-icon"></i>
+                        The Narration (Isnād)
+                    </div>
+                    <div class="info-block">
+                        <div class="block-title">Reported by Al-Tirmidhī</div>
+                        <div class="block-text">Classified as <em>Ḥasan Gharīb</em> (Good but strange/isolated).</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="block-title">The Narrator Issue</div>
+                        <div class="block-text">The chain includes 'Abd al-Raḥmān ibn Ghazwān, whom some scholars consider disputed or prone to errors in details.</div>
+                    </div>
+                </div>
+
+                <!-- Right: The Scholars -->
+                <div class="evidence-col">
+                    <div class="col-header">
+                        <i class="fas fa-user-graduate header-icon"></i>
+                        Scholarly Opinions
+                    </div>
+                    <div class="info-block">
+                        <div class="block-title">Ibn Kathīr</div>
+                        <div class="block-text">Accepted the core narrative of the journey but cautioned about specific miraculous details.</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="block-title">Al-Dhahabī</div>
+                        <div class="block-text">Expressed reservations about elements that seemed contradictory to established Prophetic timelines.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Zone -->
+            <div class="verdict-box">
+                <div class="verdict-label">The Academic Position</div>
+                <div class="verdict-content">
+                    <div class="verdict-item">
+                        <div class="verdict-title">Historical Plausibility</div>
+                        <div class="verdict-text">
+                            The core event (a journey to Syria with his uncle) is historically plausible and widely transmitted.
+                        </div>
+                    </div>
+                    <div class="verdict-item">
+                        <div class="verdict-title">Methodological Lesson</div>
+                        <div class="verdict-text">
+                            Not every popular Seerah story has a <em>Ṣaḥīḥ</em> (Authentic) chain. We distinguish between "proven fact" and "narrative tradition."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-term">
+                    <span class="term-arabic">التَّحْقِيق</span>
+                    <span class="term-english">Al-Taḥqīq (Critical Verification)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

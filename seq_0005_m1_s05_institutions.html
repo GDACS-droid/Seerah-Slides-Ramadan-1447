@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            /* Keep top padding (title upper padding) unchanged as required */
+            padding: 50px 80px 20px; /* reduced bottom padding slightly */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .content-section {
+            flex-grow: 1;
+            /* Shrink inner padding to save vertical space */
+            padding: 12px 60px 18px;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* New grid-based layout to reduce vertical stacking while preserving all items */
+        .grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* two columns to halve vertical space */
+            gap: 18px 32px;
+            align-items: start;
+        }
+
+        .card {
+            background: transparent;
+            padding: 12px 14px; /* reduced internal padding */
+            border-bottom: 1px solid rgba(197,160,89,0.15);
+        }
+
+        .practice-title {
+            font-weight: 700;
+            font-size: 1.3rem; /* unchanged font-size */
+            color: #3E2723;
+            margin-bottom: 6px;
+        }
+
+        .arabic-block {
+            font-family: 'Playfair Display', serif;
+            color: #1A3C40;
+            margin-bottom: 6px;
+        }
+
+        .arabic-script {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+            color: #3E2723;
+        }
+        .transliteration {
+            font-size: 1rem;
+            font-style: italic;
+            color: #8D6E63;
+        }
+
+        .desc {
+            font-size: 1.1rem; /* keep same font size */
+            line-height: 1.45; /* slightly tighter to save space without changing font size */
+            color: #5D4037;
+            margin-top: 6px;
+        }
+
+        /* Make sure the grid and cards don't force extra height */
+        .grid-header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 8px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #1A3C40;
+            border-bottom: 2px solid #C5A059;
+            margin-bottom: 6px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Ibrahimic Institutions That Survived</h1>
+            <div class="subtitle">Four Practices Ibrāhīm Instituted That Persisted Until the Prophet ﷺ</div>
+        </div>
+
+        <div class="content-section">
+            <div class="grid" role="list">
+                <div class="grid-header" aria-hidden="true">
+                    <div>Practice</div>
+                    <div>Arabic Term</div>
+                    <div>Description</div>
+                </div>
+
+                <div class="card" role="listitem">
+                    <div class="practice-title">Sanctity of Makkah</div>
+                    <div class="arabic-block"><span class="arabic-script">الحرم</span><span class="transliteration">Al-Ḥaram</span></div>
+                    <div class="desc">Prohibition of hunting, harming vegetation, or initiating violence within the sacred boundaries.</div>
+                </div>
+
+                <div class="card" role="listitem">
+                    <div class="practice-title">Reverence for the Ka'bah</div>
+                    <div class="arabic-block"><span class="arabic-script">تعظيم الكعبة</span><span class="transliteration">Ta'ẓīm al-Ka'bah</span></div>
+                    <div class="desc">Veneration of the physical structure as the Qiblah and center of worship established by Ibrāhīm.</div>
+                </div>
+
+                <div class="card" role="listitem">
+                    <div class="practice-title">The Sacred Months</div>
+                    <div class="arabic-block"><span class="arabic-script">الأشهر الحرم</span><span class="transliteration">Al-Ashhur al-Ḥurum</span></div>
+                    <div class="desc">Dhū al-Qa'dah, Dhū al-Ḥijjah, Muḥarram, and Rajab. A universally observed cessation of all warfare.</div>
+                </div>
+
+                <div class="card" role="listitem">
+                    <div class="practice-title">Ḥajj Rites</div>
+                    <div class="arabic-block"><span class="arabic-script">مناسك الحج</span><span class="transliteration">Manāsik al-Ḥajj</span></div>
+                    <div class="desc">Rituals including Ṭawāf, Sa'ī, animal sacrifice, and Iḥrām, though often mixed with later pagan innovations.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

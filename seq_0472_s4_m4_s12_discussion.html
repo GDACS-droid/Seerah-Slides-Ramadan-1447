@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 30px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex-grow: 1;
+            z-index: 5;
+            justify-content: center;
+        }
+
+        .discussion-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 6px solid #1A3C40;
+            padding: 25px 30px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .icon-container {
+            min-width: 60px;
+            height: 60px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-right: 25px;
+            border: 2px solid #C5A059;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-question {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Discussion</h1>
+            <h2 class="subtitle">Reflections on Victory & Leadership</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Point 1 -->
+            <div class="discussion-card">
+                <div class="icon-container"><i class="fas fa-balance-scale"></i></div>
+                <div class="text-content">
+                    <h3 class="card-title">The Ultimate Share</h3>
+                    <p class="card-question">
+                        The Anṣār were denied material wealth but given the Prophet ﷺ himself. How do we cultivate a mindset that genuinely values spiritual proximity over material gain in our daily lives?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="discussion-card">
+                <div class="icon-container"><i class="fas fa-anchor"></i></div>
+                <div class="text-content">
+                    <h3 class="card-title">Leadership in Crisis</h3>
+                    <p class="card-question">
+                        When 12,000 soldiers fled, the Prophet ﷺ stood firm and advanced. What qualities allowed him to remain calm in chaos, and how can we develop such resilience?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="discussion-card">
+                <div class="icon-container"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="text-content">
+                    <h3 class="card-title">The Wisdom of Giving</h3>
+                    <p class="card-question">
+                        The Prophet ﷺ gave massive wealth to his former enemies to "soften their hearts." How can generosity be used as a strategic tool for conflict resolution and Da'wah today?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

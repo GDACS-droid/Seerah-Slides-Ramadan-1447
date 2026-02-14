@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{overflow:hidden}
+        .slide-container{
+            width:1280px;
+            min-height:720px; /* keep as required */
+            background-color:#FDFBF7;
+            background-image:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position:relative;
+            font-family:'Lato',sans-serif;
+            color:#3E2723;
+            display:flex;flex-direction:column;
+            border:12px solid #FDFBF7; /* reduced from 20px to save height */
+        }
+        .border-frame{position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:2px solid #C5A059;pointer-events:none;z-index:10}
+        .header-section{padding:50px 60px 12px;text-align:center;z-index:5}
+        .main-title{font-family:'Playfair Display',serif;font-size:2.8rem;color:#1A3C40;margin-bottom:0.5rem}
+        .subtitle{font-size:1.4rem;color:#8D6E63;font-weight:300}
+        .content-wrapper{display:flex;flex-direction:column;padding:10px 60px 20px;flex-grow:1;z-index:5;justify-content:center}
+        .analysis-grid{display:flex;gap:16px;margin-bottom:18px}
+        .analysis-card{flex:1;background:rgba(255,255,255,0.6);border-top:4px solid #1A3C40;padding:12px;text-align:center;position:relative}
+        .card-icon{font-size:2rem;color:#1A3C40;margin-bottom:12px}
+        .card-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:#1A3C40;font-weight:700;margin-bottom:6px}
+        .card-loss{font-size:1rem;color:#8D6E63;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;border-bottom:1px solid #C5A059;padding-bottom:4px;display:inline-block}
+        .card-desc{font-size:1.1rem;color:#3E2723;line-height:1.4;height:auto}
+        .arrow-container{text-align:center;margin-bottom:12px;color:#C5A059;font-size:2rem}
+        .synthesis-box{background:#1A3C40;color:#FDFBF7;padding:18px;text-align:center;border:2px solid #C5A059;position:relative}
+        .synthesis-title{font-family:'Playfair Display',serif;font-size:1.8rem;color:#C5A059;margin-bottom:8px}
+        .synthesis-text{font-size:1.3rem;line-height:1.5;max-width:760px;margin:0 auto}
+        .arabic-concept{display:block;margin-top:10px;font-family:'Playfair Display',serif;font-size:1.4rem;color:#C5A059}
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">The Pattern of Orphanhood</h1>
+            <div class="subtitle">A Divine Curriculum of Loss</div>
+        </div>
+        <div class="content-wrapper">
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="card-title">The Father</div>
+                    <div class="card-loss">Loss of Origin</div>
+                    <div class="card-desc">Removed before birth — his existence owed to none, shaping an identity beyond lineage.</div>
+                </div>
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-home"></i></div>
+                    <div class="card-title">The Mother</div>
+                    <div class="card-loss">Loss of Shelter</div>
+                    <div class="card-desc">Removed at six — he learned compassion ultimately belongs to the Creator.</div>
+                </div>
+                <div class="analysis-card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="card-title">The Grandfather</div>
+                    <div class="card-loss">Loss of Support</div>
+                    <div class="card-desc">Removed at eight — social protection gone, reliance turned to the Guardian of all.</div>
+                </div>
+            </div>
+            <div class="arrow-container"><i class="fas fa-chevron-down"></i></div>
+            <div class="synthesis-box">
+                <div class="synthesis-title">The Divine Wisdom</div>
+                <div class="synthesis-text">"Allah cut off all created means (Asbāb) from him one by one, so his heart would attach solely to the Creator."</div>
+                <span class="arabic-concept">انْقِطَاعُ الأَسْبَاب</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 16px; /* keep top padding intact, reduced bottom */
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 80px 12px; /* reduced bottom padding */
+            flex-grow: 1;
+            z-index: 5;
+            gap: 16px; /* reduced gap */
+        }
+
+        /* Main Split Section */
+        .split-section {
+            display: flex;
+            gap: 20px; /* slightly reduced gap */
+            flex: 1;
+        }
+
+        /* Left Panel: The Title */
+        .title-panel {
+            flex: 1;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 16px; /* reduced padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 2px solid #C5A059;
+        }
+
+        .title-icon {
+            font-size: 3rem;
+            color: #C5A059;
+            margin-bottom: 18px;
+        }
+
+        .title-arabic-large {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            color: #FDFBF7;
+        }
+
+        .title-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(253, 251, 247, 0.9);
+        }
+
+        /* Right Panel: The Evidence */
+        .evidence-panel {
+            flex: 1.5;
+            display: grid; /* changed to grid to reduce vertical stack */
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 18px;
+            align-items: start;
+        }
+
+        .evidence-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px 14px; /* reduced padding */
+            border-left: 4px solid #C5A059;
+        }
+
+        .evidence-icon {
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-right: 12px;
+            margin-top: 4px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .evidence-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #1A3C40;
+            margin-bottom: 4px;
+        }
+
+        .evidence-content p {
+            font-size: 1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        /* Bottom Section: The Argument */
+        .argument-box {
+            background-color: rgba(197, 160, 89, 0.15);
+            border: 1px solid #C5A059;
+            padding: 14px; /* slightly reduced */
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        .argument-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #3E2723;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .argument-source {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-term {
+            text-align: center;
+            margin-top: 0; /* removed extra gap to fit under 720px */
+            z-index: 5;
+        }
+
+        .term-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            margin-right: 10px;
+        }
+
+        .term-english {
+            font-size: 1.2rem;
+            color: #5D4037;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Al-Amīn: Pre-Revelation Reputation</h1>
+            <div class="subtitle">The Foundation of Credibility</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Main Split Section -->
+            <div class="split-section">
+                <!-- Left: The Title -->
+                <div class="title-panel">
+                    <i class="fas fa-certificate title-icon"></i>
+                    <div class="title-arabic-large">الأَمِين</div>
+                    <div class="title-desc">
+                        A title unanimously bestowed by his society, not claimed by himself. It signified absolute integrity in an era of tribal partisanship.
+                    </div>
+                </div>
+
+                <!-- Right: The Evidence -->
+                <div class="evidence-panel">
+                    <div class="evidence-item">
+                        <div class="evidence-icon"><i class="fas fa-lock"></i></div>
+                        <div class="evidence-content">
+                            <h3>The Keeper of Trusts (Amānāt)</h3>
+                            <p>Even after he began preaching Islam, the pagans of Quraysh continued to deposit their valuables with him for safekeeping, trusting no one else.</p>
+                        </div>
+                    </div>
+
+                    <div class="evidence-item">
+                        <div class="evidence-icon"><i class="fas fa-comment-dots"></i></div>
+                        <div class="evidence-content">
+                            <h3>Truthful Speech (Al-Ṣādiq)</h3>
+                            <p>In 40 years, he was never known to tell a lie, neither in serious matters nor in jest. His tongue was known for purity.</p>
+                        </div>
+                    </div>
+
+                    <div class="evidence-item" style="grid-column: 1 / span 2;">
+                        <div class="evidence-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="evidence-content">
+                            <h3>Moral Consistency</h3>
+                            <p>His private life matched his public persona. There was no duality, no hidden vices, and no history of youthful indiscretions common to his peers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: The Argument -->
+            <div class="argument-box">
+                <div class="argument-text">
+                    "He would not refrain from lying about people and then go and lie about Allah."
+                </div>
+                <div class="argument-source">The Logic of Heraclius (Roman Emperor) questioning Abu Sufyan</div>
+            </div>
+        </div>
+
+        <div class="footer-term">
+            <span class="term-arabic">الصَّادِقُ الأَمِين</span>
+            <span class="term-english">Al-Ṣādiq al-Amīn (The Truthful, The Trustworthy)</span>
+        </div>
+    </div>
+</body>
+</html>

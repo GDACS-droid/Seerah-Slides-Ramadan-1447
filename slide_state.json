@@ -1,0 +1,3502 @@
+{
+  "project_info": {
+    "title": "Complete Seerah Curriculum (Sessions I-IV)",
+    "total_slides": 499,
+    "description": "Consolidated master deck of all Seerah modules."
+  },
+  "slides": [
+    {
+      "id": "seq_0001_m1_s01_title",
+      "state": "edited",
+      "pageNum": 1,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s01_title"
+    },
+    {
+      "id": "seq_0002_m1_s02_objectives",
+      "state": "edited",
+      "pageNum": 2,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s02_objectives"
+    },
+    {
+      "id": "seq_0003_m1_s03_thesis",
+      "state": "edited",
+      "pageNum": 3,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s03_thesis"
+    },
+    {
+      "id": "seq_0004_m1_s04_ibrahim_mission",
+      "state": "edited",
+      "pageNum": 4,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s04_ibrahim_mission"
+    },
+    {
+      "id": "seq_0005_m1_s05_institutions",
+      "state": "edited",
+      "pageNum": 5,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s05_institutions"
+    },
+    {
+      "id": "seq_0006_m1_s06_sanctity",
+      "state": "edited",
+      "pageNum": 6,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s06_sanctity"
+    },
+    {
+      "id": "seq_0007_m1_s07_sacred_months",
+      "state": "edited",
+      "pageNum": 7,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s07_sacred_months"
+    },
+    {
+      "id": "seq_0008_m1_s08_distinction",
+      "state": "edited",
+      "pageNum": 8,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s08_distinction"
+    },
+    {
+      "id": "seq_0009_m1_s09_amr_ibn_luhay",
+      "state": "edited",
+      "pageNum": 9,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s09_amr_ibn_luhay"
+    },
+    {
+      "id": "seq_0010_m1_s10_amr_journey",
+      "state": "edited",
+      "pageNum": 10,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s10_amr_journey"
+    },
+    {
+      "id": "seq_0011_m1_s11_success_factors",
+      "state": "edited",
+      "pageNum": 11,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s11_success_factors"
+    },
+    {
+      "id": "seq_0012_m1_s12_talbiyah",
+      "state": "edited",
+      "pageNum": 12,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s12_talbiyah"
+    },
+    {
+      "id": "seq_0013_m1_s13_mechanism",
+      "state": "edited",
+      "pageNum": 13,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s13_mechanism"
+    },
+    {
+      "id": "seq_0014_m1_s14_five_idols",
+      "state": "edited",
+      "pageNum": 14,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s14_five_idols"
+    },
+    {
+      "id": "seq_0015_m1_s15_spread",
+      "state": "edited",
+      "pageNum": 15,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s15_spread"
+    },
+    {
+      "id": "seq_0016_m1_s16_practices_chipping",
+      "state": "edited",
+      "pageNum": 16,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s16_practices_chipping"
+    },
+    {
+      "id": "seq_0017_m1_s17_practices_adhoc",
+      "state": "edited",
+      "pageNum": 17,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s17_practices_adhoc"
+    },
+    {
+      "id": "seq_0018_m1_s18_nailah_isaf",
+      "state": "edited",
+      "pageNum": 18,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s18_nailah_isaf"
+    },
+    {
+      "id": "seq_0019_m1_s19_animal_rites",
+      "state": "edited",
+      "pageNum": 19,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s19_animal_rites"
+    },
+    {
+      "id": "seq_0020_m1_s20_daughters",
+      "state": "edited",
+      "pageNum": 20,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s20_daughters"
+    },
+    {
+      "id": "seq_0021_m1_s21_no_creed",
+      "state": "edited",
+      "pageNum": 21,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s21_no_creed"
+    },
+    {
+      "id": "seq_0022_m1_s22_hunafa_intro",
+      "state": "edited",
+      "pageNum": 22,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s22_hunafa_intro"
+    },
+    {
+      "id": "seq_0023_m1_s23_four_hunafa",
+      "state": "edited",
+      "pageNum": 23,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s23_four_hunafa"
+    },
+    {
+      "id": "seq_0024_m1_s24_waraqah",
+      "state": "edited",
+      "pageNum": 24,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s24_waraqah"
+    },
+    {
+      "id": "seq_0025_m1_s25_zayd_ibn_amr",
+      "state": "edited",
+      "pageNum": 25,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s25_zayd_ibn_amr"
+    },
+    {
+      "id": "seq_0026_m1_s26_quss",
+      "state": "edited",
+      "pageNum": 26,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s26_quss"
+    },
+    {
+      "id": "seq_0027_m1_s27_trajectory",
+      "state": "edited",
+      "pageNum": 27,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s27_trajectory"
+    },
+    {
+      "id": "seq_0028_m1_s28_discussion",
+      "state": "edited",
+      "pageNum": 28,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s28_discussion"
+    },
+    {
+      "id": "seq_0029_m1_s29_takeaways",
+      "state": "edited",
+      "pageNum": 29,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s29_takeaways"
+    },
+    {
+      "id": "seq_0030_m1_s30_transition",
+      "state": "edited",
+      "pageNum": 30,
+      "original_project": "Session I - Module 1",
+      "original_id": "m1_s30_transition"
+    },
+    {
+      "id": "seq_0031_m2_s01_title",
+      "state": "edited",
+      "pageNum": 31,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s01_title"
+    },
+    {
+      "id": "seq_0032_m2_s02_objectives",
+      "state": "edited",
+      "pageNum": 32,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s02_objectives"
+    },
+    {
+      "id": "seq_0033_m2_s03_why_genealogy",
+      "state": "edited",
+      "pageNum": 33,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s03_why_genealogy"
+    },
+    {
+      "id": "seq_0034_m2_s04_two_branches",
+      "state": "edited",
+      "pageNum": 34,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s04_two_branches"
+    },
+    {
+      "id": "seq_0035_m2_s05_ismail_line",
+      "state": "edited",
+      "pageNum": 35,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s05_ismail_line"
+    },
+    {
+      "id": "seq_0036_m2_s06_adnan_to_fihr",
+      "state": "edited",
+      "pageNum": 36,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s06_adnan_to_fihr"
+    },
+    {
+      "id": "seq_0037_m2_s07_custodians",
+      "state": "edited",
+      "pageNum": 37,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s07_custodians"
+    },
+    {
+      "id": "seq_0038_m2_s08_qusay_founder",
+      "state": "edited",
+      "pageNum": 38,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s08_qusay_founder"
+    },
+    {
+      "id": "seq_0039_m2_s09_four_offices",
+      "state": "edited",
+      "pageNum": 39,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s09_four_offices"
+    },
+    {
+      "id": "seq_0040_m2_s10_dar_al_nadwah",
+      "state": "edited",
+      "pageNum": 40,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s10_dar_al_nadwah"
+    },
+    {
+      "id": "seq_0041_m2_s11_urbanization",
+      "state": "edited",
+      "pageNum": 41,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s11_urbanization"
+    },
+    {
+      "id": "seq_0042_m2_s12_succession",
+      "state": "edited",
+      "pageNum": 42,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s12_succession"
+    },
+    {
+      "id": "seq_0043_m2_s13_hashim_visionary",
+      "state": "edited",
+      "pageNum": 43,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s13_hashim_visionary"
+    },
+    {
+      "id": "seq_0044_m2_s14_ilaf_system",
+      "state": "edited",
+      "pageNum": 44,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s14_ilaf_system"
+    },
+    {
+      "id": "seq_0045_m2_s15_trade_routes",
+      "state": "edited",
+      "pageNum": 45,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s15_trade_routes"
+    },
+    {
+      "id": "seq_0046_m2_s16_brothers_division",
+      "state": "edited",
+      "pageNum": 46,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s16_brothers_division"
+    },
+    {
+      "id": "seq_0047_m2_s17_hashim_death",
+      "state": "edited",
+      "pageNum": 47,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s17_hashim_death"
+    },
+    {
+      "id": "seq_0048_m2_s18_retrieving_shaybah",
+      "state": "edited",
+      "pageNum": 48,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s18_retrieving_shaybah"
+    },
+    {
+      "id": "seq_0049_m2_s19_abd_al_muttalib",
+      "state": "edited",
+      "pageNum": 49,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s19_abd_al_muttalib"
+    },
+    {
+      "id": "seq_0050_m2_s20_dream_zamzam",
+      "state": "edited",
+      "pageNum": 50,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s20_dream_zamzam"
+    },
+    {
+      "id": "seq_0051_m2_s21_rediscovery",
+      "state": "edited",
+      "pageNum": 51,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s21_rediscovery"
+    },
+    {
+      "id": "seq_0052_m2_s22_vow_son",
+      "state": "edited",
+      "pageNum": 52,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s22_vow_son"
+    },
+    {
+      "id": "seq_0053_m2_s23_sharaf_system",
+      "state": "edited",
+      "pageNum": 53,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s23_sharaf_system"
+    },
+    {
+      "id": "seq_0054_m2_s24_clan_map",
+      "state": "edited",
+      "pageNum": 54,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s24_clan_map"
+    },
+    {
+      "id": "seq_0055_m2_s25_rivalry",
+      "state": "edited",
+      "pageNum": 55,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s25_rivalry"
+    },
+    {
+      "id": "seq_0056_m2_s26_political_structure",
+      "state": "edited",
+      "pageNum": 56,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s26_political_structure"
+    },
+    {
+      "id": "seq_0057_m2_s27_religious_economy",
+      "state": "edited",
+      "pageNum": 57,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s27_religious_economy"
+    },
+    {
+      "id": "seq_0058_m2_s28_hums_concept",
+      "state": "edited",
+      "pageNum": 58,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s28_hums_concept"
+    },
+    {
+      "id": "seq_0059_m2_s29_takeaways",
+      "state": "edited",
+      "pageNum": 59,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s29_takeaways"
+    },
+    {
+      "id": "seq_0060_m2_s30_transition",
+      "state": "edited",
+      "pageNum": 60,
+      "original_project": "Session I - Module 2",
+      "original_id": "m2_s30_transition"
+    },
+    {
+      "id": "seq_0061_m3_s01_title",
+      "state": "edited",
+      "pageNum": 61,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s01_title"
+    },
+    {
+      "id": "seq_0062_m3_s02_roadmap",
+      "state": "edited",
+      "pageNum": 62,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s02_roadmap"
+    },
+    {
+      "id": "seq_0063_m3_s03_vow_fulfillment",
+      "state": "edited",
+      "pageNum": 63,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s03_vow_fulfillment"
+    },
+    {
+      "id": "seq_0064_m3_s04_lottery_arrows",
+      "state": "edited",
+      "pageNum": 64,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s04_lottery_arrows"
+    },
+    {
+      "id": "seq_0065_m3_s05_abdullah_selected",
+      "state": "edited",
+      "pageNum": 65,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s05_abdullah_selected"
+    },
+    {
+      "id": "seq_0066_m3_s06_intervention",
+      "state": "edited",
+      "pageNum": 66,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s06_intervention"
+    },
+    {
+      "id": "seq_0067_m3_s07_ransom_formula",
+      "state": "edited",
+      "pageNum": 67,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s07_ransom_formula"
+    },
+    {
+      "id": "seq_0068_m3_s08_escalation",
+      "state": "edited",
+      "pageNum": 68,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s08_escalation"
+    },
+    {
+      "id": "seq_0069_m3_s09_theological_parallel",
+      "state": "edited",
+      "pageNum": 69,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s09_theological_parallel"
+    },
+    {
+      "id": "seq_0070_m3_s10_marriage_aminah",
+      "state": "edited",
+      "pageNum": 70,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s10_marriage_aminah"
+    },
+    {
+      "id": "seq_0071_m3_s11_nur_narrative",
+      "state": "edited",
+      "pageNum": 71,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s11_nur_narrative"
+    },
+    {
+      "id": "seq_0072_m3_s12_trade_journey",
+      "state": "edited",
+      "pageNum": 72,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s12_trade_journey"
+    },
+    {
+      "id": "seq_0073_m3_s13_death_abdullah",
+      "state": "edited",
+      "pageNum": 73,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s13_death_abdullah"
+    },
+    {
+      "id": "seq_0074_m3_s14_foreshadowing_yathrib",
+      "state": "edited",
+      "pageNum": 74,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s14_foreshadowing_yathrib"
+    },
+    {
+      "id": "seq_0075_m3_s15_transition_elephant",
+      "state": "edited",
+      "pageNum": 75,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s15_transition_elephant"
+    },
+    {
+      "id": "seq_0076_m3_s16_geopolitical_context",
+      "state": "edited",
+      "pageNum": 76,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s16_geopolitical_context"
+    },
+    {
+      "id": "seq_0077_m3_s17_abrahah_motive",
+      "state": "edited",
+      "pageNum": 77,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s17_abrahah_motive"
+    },
+    {
+      "id": "seq_0078_m3_s18_provocation",
+      "state": "edited",
+      "pageNum": 78,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s18_provocation"
+    },
+    {
+      "id": "seq_0079_m3_s19_march_makkah",
+      "state": "edited",
+      "pageNum": 79,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s19_march_makkah"
+    },
+    {
+      "id": "seq_0080_m3_s20_muttalib_response",
+      "state": "edited",
+      "pageNum": 80,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s20_muttalib_response"
+    },
+    {
+      "id": "seq_0081_m3_s21_evacuation",
+      "state": "edited",
+      "pageNum": 81,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s21_evacuation"
+    },
+    {
+      "id": "seq_0082_m3_s22_dua_muttalib",
+      "state": "edited",
+      "pageNum": 82,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s22_dua_muttalib"
+    },
+    {
+      "id": "seq_0083_m3_s23_miracle_refusal",
+      "state": "edited",
+      "pageNum": 83,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s23_miracle_refusal"
+    },
+    {
+      "id": "seq_0084_m3_s24_destruction_ababil",
+      "state": "edited",
+      "pageNum": 84,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s24_destruction_ababil"
+    },
+    {
+      "id": "seq_0085_m3_s25_quran_record",
+      "state": "edited",
+      "pageNum": 85,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s25_quran_record"
+    },
+    {
+      "id": "seq_0086_m3_s26_aftermath",
+      "state": "edited",
+      "pageNum": 86,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s26_aftermath"
+    },
+    {
+      "id": "seq_0087_m3_s27_timing_preparation",
+      "state": "edited",
+      "pageNum": 87,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s27_timing_preparation"
+    },
+    {
+      "id": "seq_0088_m3_s28_birth_context",
+      "state": "edited",
+      "pageNum": 88,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s28_birth_context"
+    },
+    {
+      "id": "seq_0089_m3_s29_takeaways",
+      "state": "edited",
+      "pageNum": 89,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s29_takeaways"
+    },
+    {
+      "id": "seq_0090_m3_s30_transition_module4",
+      "state": "edited",
+      "pageNum": 90,
+      "original_project": "Session I - Module 3",
+      "original_id": "m3_s30_transition_module4"
+    },
+    {
+      "id": "seq_0091_m4_s01_title",
+      "state": "edited",
+      "pageNum": 91,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s01_title"
+    },
+    {
+      "id": "seq_0092_m4_s02_roadmap",
+      "state": "edited",
+      "pageNum": 92,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s02_roadmap"
+    },
+    {
+      "id": "seq_0093_m4_s03_birth_date",
+      "state": "edited",
+      "pageNum": 93,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s03_birth_date"
+    },
+    {
+      "id": "seq_0094_m4_s04_naming",
+      "state": "edited",
+      "pageNum": 94,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s04_naming"
+    },
+    {
+      "id": "seq_0095_m4_s05_ridaah_custom",
+      "state": "edited",
+      "pageNum": 95,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s05_ridaah_custom"
+    },
+    {
+      "id": "seq_0096_m4_s06_halimah_choice",
+      "state": "edited",
+      "pageNum": 96,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s06_halimah_choice"
+    },
+    {
+      "id": "seq_0097_m4_s07_barakah_transformation",
+      "state": "edited",
+      "pageNum": 97,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s07_barakah_transformation"
+    },
+    {
+      "id": "seq_0098_m4_s08_desert_years",
+      "state": "edited",
+      "pageNum": 98,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s08_desert_years"
+    },
+    {
+      "id": "seq_0099_m4_s09_halimah_return",
+      "state": "edited",
+      "pageNum": 99,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s09_halimah_return"
+    },
+    {
+      "id": "seq_0100_m4_s10_shaqq_sadr",
+      "state": "edited",
+      "pageNum": 100,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s10_shaqq_sadr"
+    },
+    {
+      "id": "seq_0101_m4_s11_shaqq_authentication",
+      "state": "edited",
+      "pageNum": 101,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s11_shaqq_authentication"
+    },
+    {
+      "id": "seq_0102_m4_s12_shaqq_theology",
+      "state": "edited",
+      "pageNum": 102,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s12_shaqq_theology"
+    },
+    {
+      "id": "seq_0103_m4_s13_return_fear",
+      "state": "edited",
+      "pageNum": 103,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s13_return_fear"
+    },
+    {
+      "id": "seq_0104_m4_s14_foster_siblings",
+      "state": "edited",
+      "pageNum": 104,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s14_foster_siblings"
+    },
+    {
+      "id": "seq_0105_m4_s15_aminah_reunion",
+      "state": "edited",
+      "pageNum": 105,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s15_aminah_reunion"
+    },
+    {
+      "id": "seq_0106_m4_s16_yathrib_journey",
+      "state": "edited",
+      "pageNum": 106,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s16_yathrib_journey"
+    },
+    {
+      "id": "seq_0107_m4_s17_aminah_death",
+      "state": "edited",
+      "pageNum": 107,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s17_aminah_death"
+    },
+    {
+      "id": "seq_0108_m4_s18_umm_ayman",
+      "state": "edited",
+      "pageNum": 108,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s18_umm_ayman"
+    },
+    {
+      "id": "seq_0109_m4_s19_muttalib_care",
+      "state": "edited",
+      "pageNum": 109,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s19_muttalib_care"
+    },
+    {
+      "id": "seq_0110_m4_s20_special_treatment",
+      "state": "edited",
+      "pageNum": 110,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s20_special_treatment"
+    },
+    {
+      "id": "seq_0111_m4_s21_muttalib_death",
+      "state": "edited",
+      "pageNum": 111,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s21_muttalib_death"
+    },
+    {
+      "id": "seq_0112_m4_s22_transfer_abu_talib",
+      "state": "edited",
+      "pageNum": 112,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s22_transfer_abu_talib"
+    },
+    {
+      "id": "seq_0113_m4_s23_abu_talib_care",
+      "state": "edited",
+      "pageNum": 113,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s23_abu_talib_care"
+    },
+    {
+      "id": "seq_0114_m4_s24_abu_talib_paradox",
+      "state": "edited",
+      "pageNum": 114,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s24_abu_talib_paradox"
+    },
+    {
+      "id": "seq_0115_m4_s25_orphanhood_pattern",
+      "state": "edited",
+      "pageNum": 115,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s25_orphanhood_pattern"
+    },
+    {
+      "id": "seq_0116_m4_s26_quran_framework",
+      "state": "edited",
+      "pageNum": 116,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s26_quran_framework"
+    },
+    {
+      "id": "seq_0117_m4_s27_prophetic_preparation",
+      "state": "edited",
+      "pageNum": 117,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s27_prophetic_preparation"
+    },
+    {
+      "id": "seq_0118_m4_s28_caretakers_network",
+      "state": "edited",
+      "pageNum": 118,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s28_caretakers_network"
+    },
+    {
+      "id": "seq_0119_m4_s29_takeaways",
+      "state": "edited",
+      "pageNum": 119,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s29_takeaways"
+    },
+    {
+      "id": "seq_0120_m4_s30_transition_module5",
+      "state": "edited",
+      "pageNum": 120,
+      "original_project": "Session I - Module 4",
+      "original_id": "m4_s30_transition_module5"
+    },
+    {
+      "id": "seq_0121_m5_s01_title",
+      "state": "edited",
+      "pageNum": 121,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s01_title"
+    },
+    {
+      "id": "seq_0122_m5_s02_roadmap",
+      "state": "edited",
+      "pageNum": 122,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s02_roadmap"
+    },
+    {
+      "id": "seq_0123_m5_s03_bahira_context",
+      "state": "edited",
+      "pageNum": 123,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s03_bahira_context"
+    },
+    {
+      "id": "seq_0124_m5_s04_bahira_monk",
+      "state": "edited",
+      "pageNum": 124,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s04_bahira_monk"
+    },
+    {
+      "id": "seq_0125_m5_s05_bahira_recognition",
+      "state": "edited",
+      "pageNum": 125,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s05_bahira_recognition"
+    },
+    {
+      "id": "seq_0126_m5_s06_isnad_analysis",
+      "state": "edited",
+      "pageNum": 126,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s06_isnad_analysis"
+    },
+    {
+      "id": "seq_0127_m5_s07_shepherd_occupation",
+      "state": "edited",
+      "pageNum": 127,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s07_shepherd_occupation"
+    },
+    {
+      "id": "seq_0128_m5_s08_shepherding_lessons",
+      "state": "edited",
+      "pageNum": 128,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s08_shepherding_lessons"
+    },
+    {
+      "id": "seq_0129_m5_s09_harb_al_fijar",
+      "state": "edited",
+      "pageNum": 129,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s09_harb_al_fijar"
+    },
+    {
+      "id": "seq_0130_m5_s10_fijar_significance",
+      "state": "edited",
+      "pageNum": 130,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s10_fijar_significance"
+    },
+    {
+      "id": "seq_0131_m5_s11_hilf_fudul_context",
+      "state": "edited",
+      "pageNum": 131,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s11_hilf_fudul_context"
+    },
+    {
+      "id": "seq_0132_m5_s12_hilf_fudul_covenant",
+      "state": "edited",
+      "pageNum": 132,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s12_hilf_fudul_covenant"
+    },
+    {
+      "id": "seq_0133_m5_s13_hilf_endorsement",
+      "state": "edited",
+      "pageNum": 133,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s13_hilf_endorsement"
+    },
+    {
+      "id": "seq_0134_m5_s14_hermeneutical_principle",
+      "state": "edited",
+      "pageNum": 134,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s14_hermeneutical_principle"
+    },
+    {
+      "id": "seq_0135_m5_s15_khadijah_profile",
+      "state": "edited",
+      "pageNum": 135,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s15_khadijah_profile"
+    },
+    {
+      "id": "seq_0136_m5_s16_maysarah_report",
+      "state": "edited",
+      "pageNum": 136,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s16_maysarah_report"
+    },
+    {
+      "id": "seq_0137_m5_s17_marriage_proposal",
+      "state": "edited",
+      "pageNum": 137,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s17_marriage_proposal"
+    },
+    {
+      "id": "seq_0138_m5_s18_marriage_terms",
+      "state": "edited",
+      "pageNum": 138,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s18_marriage_terms"
+    },
+    {
+      "id": "seq_0139_m5_s19_children",
+      "state": "edited",
+      "pageNum": 139,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s19_children"
+    },
+    {
+      "id": "seq_0140_m5_s20_death_sons",
+      "state": "edited",
+      "pageNum": 140,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s20_death_sons"
+    },
+    {
+      "id": "seq_0141_m5_s21_zayd_adoption",
+      "state": "edited",
+      "pageNum": 141,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s21_zayd_adoption"
+    },
+    {
+      "id": "seq_0142_m5_s22_zayd_choice",
+      "state": "edited",
+      "pageNum": 142,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s22_zayd_choice"
+    },
+    {
+      "id": "seq_0143_m5_s23_zayd_implications",
+      "state": "edited",
+      "pageNum": 143,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s23_zayd_implications"
+    },
+    {
+      "id": "seq_0144_m5_s24_kabah_rebuilding",
+      "state": "edited",
+      "pageNum": 144,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s24_kabah_rebuilding"
+    },
+    {
+      "id": "seq_0145_m5_s25_black_stone_dispute",
+      "state": "edited",
+      "pageNum": 145,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s25_black_stone_dispute"
+    },
+    {
+      "id": "seq_0146_m5_s26_arbitration_amin",
+      "state": "edited",
+      "pageNum": 146,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s26_arbitration_amin"
+    },
+    {
+      "id": "seq_0147_m5_s27_amin_reputation",
+      "state": "edited",
+      "pageNum": 147,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s27_amin_reputation"
+    },
+    {
+      "id": "seq_0148_m5_s28_tahannuth_retreat",
+      "state": "edited",
+      "pageNum": 148,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s28_tahannuth_retreat"
+    },
+    {
+      "id": "seq_0149_m5_s29_pre_revelation_psychology",
+      "state": "edited",
+      "pageNum": 149,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s29_pre_revelation_psychology"
+    },
+    {
+      "id": "seq_0150_m5_s30_session_closure",
+      "state": "edited",
+      "pageNum": 150,
+      "original_project": "Session I - Module 5",
+      "original_id": "m5_s30_session_closure"
+    },
+    {
+      "id": "seq_0151_s2_m1_s01_title",
+      "state": "edited",
+      "pageNum": 151,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s01_title"
+    },
+    {
+      "id": "seq_0152_s2_m1_s02_overview",
+      "state": "edited",
+      "pageNum": 152,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s02_overview"
+    },
+    {
+      "id": "seq_0153_s2_m1_s03_roadmap",
+      "state": "edited",
+      "pageNum": 153,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s03_roadmap"
+    },
+    {
+      "id": "seq_0154_s2_m1_s04_setting",
+      "state": "edited",
+      "pageNum": 154,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s04_setting"
+    },
+    {
+      "id": "seq_0155_s2_m1_s05_first_encounter",
+      "state": "edited",
+      "pageNum": 155,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s05_first_encounter"
+    },
+    {
+      "id": "seq_0156_s2_m1_s06_compression",
+      "state": "edited",
+      "pageNum": 156,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s06_compression"
+    },
+    {
+      "id": "seq_0157_s2_m1_s07_first_verses",
+      "state": "edited",
+      "pageNum": 157,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s07_first_verses"
+    },
+    {
+      "id": "seq_0158_s2_m1_s08_analysis_iqra",
+      "state": "edited",
+      "pageNum": 158,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s08_analysis_iqra"
+    },
+    {
+      "id": "seq_0159_s2_m1_s09_terror",
+      "state": "edited",
+      "pageNum": 159,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s09_terror"
+    },
+    {
+      "id": "seq_0160_s2_m1_s10_zammaluni",
+      "state": "edited",
+      "pageNum": 160,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s10_zammaluni"
+    },
+    {
+      "id": "seq_0161_s2_m1_s11_khadijah_reasoning",
+      "state": "edited",
+      "pageNum": 161,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s11_khadijah_reasoning"
+    },
+    {
+      "id": "seq_0162_s2_m1_s12_khadijah_method",
+      "state": "edited",
+      "pageNum": 162,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s12_khadijah_method"
+    },
+    {
+      "id": "seq_0163_s2_m1_s13_waraqah_visit",
+      "state": "edited",
+      "pageNum": 163,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s13_waraqah_visit"
+    },
+    {
+      "id": "seq_0164_s2_m1_s14_waraqah_diagnosis",
+      "state": "edited",
+      "pageNum": 164,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s14_waraqah_diagnosis"
+    },
+    {
+      "id": "seq_0165_s2_m1_s15_waraqah_prophecy",
+      "state": "edited",
+      "pageNum": 165,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s15_waraqah_prophecy"
+    },
+    {
+      "id": "seq_0166_s2_m1_s16_waraqah_death",
+      "state": "edited",
+      "pageNum": 166,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s16_waraqah_death"
+    },
+    {
+      "id": "seq_0167_s2_m1_s17_fatrah_definition",
+      "state": "edited",
+      "pageNum": 167,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s17_fatrah_definition"
+    },
+    {
+      "id": "seq_0168_s2_m1_s18_fatrah_psychology",
+      "state": "edited",
+      "pageNum": 168,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s18_fatrah_psychology"
+    },
+    {
+      "id": "seq_0169_s2_m1_s19_fatrah_pedagogy",
+      "state": "edited",
+      "pageNum": 169,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s19_fatrah_pedagogy"
+    },
+    {
+      "id": "seq_0170_s2_m1_s20_surah_duha",
+      "state": "edited",
+      "pageNum": 170,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s20_surah_duha"
+    },
+    {
+      "id": "seq_0171_s2_m1_s21_second_revelation",
+      "state": "edited",
+      "pageNum": 171,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s21_second_revelation"
+    },
+    {
+      "id": "seq_0172_s2_m1_s22_muddaththir_commands",
+      "state": "edited",
+      "pageNum": 172,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s22_muddaththir_commands"
+    },
+    {
+      "id": "seq_0173_s2_m1_s23_nabi_rasul",
+      "state": "edited",
+      "pageNum": 173,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s23_nabi_rasul"
+    },
+    {
+      "id": "seq_0174_s2_m1_s24_modes_wahy",
+      "state": "edited",
+      "pageNum": 174,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s24_modes_wahy"
+    },
+    {
+      "id": "seq_0175_s2_m1_s25_bell_sound",
+      "state": "edited",
+      "pageNum": 175,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s25_bell_sound"
+    },
+    {
+      "id": "seq_0176_s2_m1_s26_wahy_distinction",
+      "state": "edited",
+      "pageNum": 176,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s26_wahy_distinction"
+    },
+    {
+      "id": "seq_0177_s2_m1_s27_khadijah_role",
+      "state": "edited",
+      "pageNum": 177,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s27_khadijah_role"
+    },
+    {
+      "id": "seq_0178_s2_m1_s28_analytical_pause",
+      "state": "edited",
+      "pageNum": 178,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s28_analytical_pause"
+    },
+    {
+      "id": "seq_0179_s2_m1_s29_takeaways",
+      "state": "edited",
+      "pageNum": 179,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s29_takeaways"
+    },
+    {
+      "id": "seq_0180_s2_m1_s30_transition",
+      "state": "edited",
+      "pageNum": 180,
+      "original_project": "Session II - Module 1",
+      "original_id": "s2_m1_s30_transition"
+    },
+    {
+      "id": "seq_0181_s2_m2_s01_title",
+      "state": "edited",
+      "pageNum": 181,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s01_title"
+    },
+    {
+      "id": "seq_0182_s2_m2_s02_roadmap",
+      "state": "edited",
+      "pageNum": 182,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s02_roadmap"
+    },
+    {
+      "id": "seq_0183_s2_m2_s03_secrecy_logic",
+      "state": "edited",
+      "pageNum": 183,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s03_secrecy_logic"
+    },
+    {
+      "id": "seq_0184_s2_m2_s04_khadijah_convert",
+      "state": "edited",
+      "pageNum": 184,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s04_khadijah_convert"
+    },
+    {
+      "id": "seq_0185_s2_m2_s05_ali_convert",
+      "state": "edited",
+      "pageNum": 185,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s05_ali_convert"
+    },
+    {
+      "id": "seq_0186_s2_m2_s06_zayd_convert",
+      "state": "edited",
+      "pageNum": 186,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s06_zayd_convert"
+    },
+    {
+      "id": "seq_0187_s2_m2_s07_abu_bakr_convert",
+      "state": "edited",
+      "pageNum": 187,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s07_abu_bakr_convert"
+    },
+    {
+      "id": "seq_0188_s2_m2_s08_sociology_first_four",
+      "state": "edited",
+      "pageNum": 188,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s08_sociology_first_four"
+    },
+    {
+      "id": "seq_0189_s2_m2_s09_abu_bakr_method",
+      "state": "edited",
+      "pageNum": 189,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s09_abu_bakr_method"
+    },
+    {
+      "id": "seq_0190_s2_m2_s10_elite_wave",
+      "state": "edited",
+      "pageNum": 190,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s10_elite_wave"
+    },
+    {
+      "id": "seq_0191_s2_m2_s11_demographics",
+      "state": "edited",
+      "pageNum": 191,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s11_demographics"
+    },
+    {
+      "id": "seq_0192_s2_m2_s12_female_converts",
+      "state": "edited",
+      "pageNum": 192,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s12_female_converts"
+    },
+    {
+      "id": "seq_0193_s2_m2_s13_slave_converts",
+      "state": "edited",
+      "pageNum": 193,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s13_slave_converts"
+    },
+    {
+      "id": "seq_0194_s2_m2_s14_total_count",
+      "state": "edited",
+      "pageNum": 194,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s14_total_count"
+    },
+    {
+      "id": "seq_0195_s2_m2_s15_dar_al_arqam",
+      "state": "edited",
+      "pageNum": 195,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s15_dar_al_arqam"
+    },
+    {
+      "id": "seq_0196_s2_m2_s16_arqam_activities",
+      "state": "edited",
+      "pageNum": 196,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s16_arqam_activities"
+    },
+    {
+      "id": "seq_0197_s2_m2_s17_curriculum",
+      "state": "edited",
+      "pageNum": 197,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s17_curriculum"
+    },
+    {
+      "id": "seq_0198_s2_m2_s18_cell_structure",
+      "state": "edited",
+      "pageNum": 198,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s18_cell_structure"
+    },
+    {
+      "id": "seq_0199_s2_m2_s19_prayer_secret",
+      "state": "edited",
+      "pageNum": 199,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s19_prayer_secret"
+    },
+    {
+      "id": "seq_0200_s2_m2_s20_prophet_style",
+      "state": "edited",
+      "pageNum": 200,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s20_prophet_style"
+    },
+    {
+      "id": "seq_0201_s2_m2_s21_why_three_years",
+      "state": "edited",
+      "pageNum": 201,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s21_why_three_years"
+    },
+    {
+      "id": "seq_0202_s2_m2_s22_transition_moment",
+      "state": "edited",
+      "pageNum": 202,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s22_transition_moment"
+    },
+    {
+      "id": "seq_0203_s2_m2_s23_analytical_secrecy",
+      "state": "edited",
+      "pageNum": 203,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s23_analytical_secrecy"
+    },
+    {
+      "id": "seq_0204_s2_m2_s24_analytical_sociology",
+      "state": "edited",
+      "pageNum": 204,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s24_analytical_sociology"
+    },
+    {
+      "id": "seq_0205_s2_m2_s25_quranic_status",
+      "state": "edited",
+      "pageNum": 205,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s25_quranic_status"
+    },
+    {
+      "id": "seq_0206_s2_m2_s26_lesson_patience",
+      "state": "edited",
+      "pageNum": 206,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s26_lesson_patience"
+    },
+    {
+      "id": "seq_0207_s2_m2_s27_lesson_relationships",
+      "state": "edited",
+      "pageNum": 207,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s27_lesson_relationships"
+    },
+    {
+      "id": "seq_0208_s2_m2_s28_lesson_community",
+      "state": "edited",
+      "pageNum": 208,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s28_lesson_community"
+    },
+    {
+      "id": "seq_0209_s2_m2_s29_takeaways",
+      "state": "edited",
+      "pageNum": 209,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s29_takeaways"
+    },
+    {
+      "id": "seq_0210_s2_m2_s30_transition_module3",
+      "state": "edited",
+      "pageNum": 210,
+      "original_project": "Session II - Module 2",
+      "original_id": "s2_m2_s30_transition_module3"
+    },
+    {
+      "id": "seq_0211_s2_m3_s01_title",
+      "state": "edited",
+      "pageNum": 211,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s01_title"
+    },
+    {
+      "id": "seq_0212_s2_m3_s02_overview",
+      "state": "edited",
+      "pageNum": 212,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s02_overview"
+    },
+    {
+      "id": "seq_0213_s2_m3_s03_objectives",
+      "state": "edited",
+      "pageNum": 213,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s03_objectives"
+    },
+    {
+      "id": "seq_0214_s2_m3_s04_divine_command",
+      "state": "edited",
+      "pageNum": 214,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s04_divine_command"
+    },
+    {
+      "id": "seq_0215_s2_m3_s05_safa_declaration",
+      "state": "edited",
+      "pageNum": 215,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s05_safa_declaration"
+    },
+    {
+      "id": "seq_0216_s2_m3_s06_warning_delivered",
+      "state": "edited",
+      "pageNum": 216,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s06_warning_delivered"
+    },
+    {
+      "id": "seq_0217_s2_m3_s07_abu_lahab_response",
+      "state": "edited",
+      "pageNum": 217,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s07_abu_lahab_response"
+    },
+    {
+      "id": "seq_0218_s2_m3_s08_surah_masad",
+      "state": "edited",
+      "pageNum": 218,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s08_surah_masad"
+    },
+    {
+      "id": "seq_0219_s2_m3_s09_banu_hashim_banquet",
+      "state": "edited",
+      "pageNum": 219,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s09_banu_hashim_banquet"
+    },
+    {
+      "id": "seq_0220_s2_m3_s10_opposition_phases",
+      "state": "edited",
+      "pageNum": 220,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s10_opposition_phases"
+    },
+    {
+      "id": "seq_0221_s2_m3_s11_phase1_mockery",
+      "state": "edited",
+      "pageNum": 221,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s11_phase1_mockery"
+    },
+    {
+      "id": "seq_0222_s2_m3_s12_phase2_propaganda",
+      "state": "edited",
+      "pageNum": 222,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s12_phase2_propaganda"
+    },
+    {
+      "id": "seq_0223_s2_m3_s13_walid_episode",
+      "state": "edited",
+      "pageNum": 223,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s13_walid_episode"
+    },
+    {
+      "id": "seq_0224_s2_m3_s14_phase3_pressure",
+      "state": "edited",
+      "pageNum": 224,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s14_phase3_pressure"
+    },
+    {
+      "id": "seq_0225_s2_m3_s15_sun_right_hand",
+      "state": "edited",
+      "pageNum": 225,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s15_sun_right_hand"
+    },
+    {
+      "id": "seq_0226_s2_m3_s16_amarah_exchange",
+      "state": "edited",
+      "pageNum": 226,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s16_amarah_exchange"
+    },
+    {
+      "id": "seq_0227_s2_m3_s17_abu_talib_logic",
+      "state": "edited",
+      "pageNum": 227,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s17_abu_talib_logic"
+    },
+    {
+      "id": "seq_0228_s2_m3_s18_phase4_bribery",
+      "state": "edited",
+      "pageNum": 228,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s18_phase4_bribery"
+    },
+    {
+      "id": "seq_0229_s2_m3_s19_response_utbah",
+      "state": "edited",
+      "pageNum": 229,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s19_response_utbah"
+    },
+    {
+      "id": "seq_0230_s2_m3_s20_quran_argument",
+      "state": "edited",
+      "pageNum": 230,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s20_quran_argument"
+    },
+    {
+      "id": "seq_0231_s2_m3_s21_recitation_ban",
+      "state": "edited",
+      "pageNum": 231,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s21_recitation_ban"
+    },
+    {
+      "id": "seq_0232_s2_m3_s22_miracles_demand",
+      "state": "edited",
+      "pageNum": 232,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s22_miracles_demand"
+    },
+    {
+      "id": "seq_0233_s2_m3_s23_jewish_quiz",
+      "state": "edited",
+      "pageNum": 233,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s23_jewish_quiz"
+    },
+    {
+      "id": "seq_0234_s2_m3_s24_revelation_delay",
+      "state": "edited",
+      "pageNum": 234,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s24_revelation_delay"
+    },
+    {
+      "id": "seq_0235_s2_m3_s25_analytical_opposition",
+      "state": "edited",
+      "pageNum": 235,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s25_analytical_opposition"
+    },
+    {
+      "id": "seq_0236_s2_m3_s26_analytical_abu_talib",
+      "state": "edited",
+      "pageNum": 236,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s26_analytical_abu_talib"
+    },
+    {
+      "id": "seq_0237_s2_m3_s27_theological_function",
+      "state": "edited",
+      "pageNum": 237,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s27_theological_function"
+    },
+    {
+      "id": "seq_0238_s2_m3_s28_discussion",
+      "state": "edited",
+      "pageNum": 238,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s28_discussion"
+    },
+    {
+      "id": "seq_0239_s2_m3_s29_takeaways",
+      "state": "edited",
+      "pageNum": 239,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s29_takeaways"
+    },
+    {
+      "id": "seq_0240_s2_m3_s30_transition_module4",
+      "state": "edited",
+      "pageNum": 240,
+      "original_project": "Session II - Module 3",
+      "original_id": "s2_m3_s30_transition_module4"
+    },
+    {
+      "id": "seq_0241_s2_m4_s01_title",
+      "state": "edited",
+      "pageNum": 241,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s01_title"
+    },
+    {
+      "id": "seq_0242_s2_m4_s02_overview",
+      "state": "edited",
+      "pageNum": 242,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s02_overview"
+    },
+    {
+      "id": "seq_0243_s2_m4_s03_objectives",
+      "state": "edited",
+      "pageNum": 243,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s03_objectives"
+    },
+    {
+      "id": "seq_0244_s2_m4_s04_logic_escalation",
+      "state": "edited",
+      "pageNum": 244,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s04_logic_escalation"
+    },
+    {
+      "id": "seq_0245_s2_m4_s05_two_tier_system",
+      "state": "edited",
+      "pageNum": 245,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s05_two_tier_system"
+    },
+    {
+      "id": "seq_0246_s2_m4_s06_bilal_steadfastness",
+      "state": "edited",
+      "pageNum": 246,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s06_bilal_steadfastness"
+    },
+    {
+      "id": "seq_0247_s2_m4_s07_abu_bakr_emancipation",
+      "state": "edited",
+      "pageNum": 247,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s07_abu_bakr_emancipation"
+    },
+    {
+      "id": "seq_0248_s2_m4_s08_khabbab_branded",
+      "state": "edited",
+      "pageNum": 248,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s08_khabbab_branded"
+    },
+    {
+      "id": "seq_0249_s2_m4_s09_family_yasir",
+      "state": "edited",
+      "pageNum": 249,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s09_family_yasir"
+    },
+    {
+      "id": "seq_0250_s2_m4_s10_sumayyah_martyr",
+      "state": "edited",
+      "pageNum": 250,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s10_sumayyah_martyr"
+    },
+    {
+      "id": "seq_0251_s2_m4_s11_yasir_martyr",
+      "state": "edited",
+      "pageNum": 251,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s11_yasir_martyr"
+    },
+    {
+      "id": "seq_0252_s2_m4_s12_ammar_dispensation",
+      "state": "edited",
+      "pageNum": 252,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s12_ammar_dispensation"
+    },
+    {
+      "id": "seq_0253_s2_m4_s13_legal_principle",
+      "state": "edited",
+      "pageNum": 253,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s13_legal_principle"
+    },
+    {
+      "id": "seq_0254_s2_m4_s14_suhayb_rumi",
+      "state": "edited",
+      "pageNum": 254,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s14_suhayb_rumi"
+    },
+    {
+      "id": "seq_0255_s2_m4_s15_prophet_abuse",
+      "state": "edited",
+      "pageNum": 255,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s15_prophet_abuse"
+    },
+    {
+      "id": "seq_0256_s2_m4_s16_camel_intestines",
+      "state": "edited",
+      "pageNum": 256,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s16_camel_intestines"
+    },
+    {
+      "id": "seq_0257_s2_m4_s17_abu_jahl_attempt",
+      "state": "edited",
+      "pageNum": 257,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s17_abu_jahl_attempt"
+    },
+    {
+      "id": "seq_0258_s2_m4_s18_taxonomy_persecution",
+      "state": "edited",
+      "pageNum": 258,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s18_taxonomy_persecution"
+    },
+    {
+      "id": "seq_0259_s2_m4_s19_response_khabbab",
+      "state": "edited",
+      "pageNum": 259,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s19_response_khabbab"
+    },
+    {
+      "id": "seq_0260_s2_m4_s20_quranic_framework",
+      "state": "edited",
+      "pageNum": 260,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s20_quranic_framework"
+    },
+    {
+      "id": "seq_0261_s2_m4_s21_no_fighting",
+      "state": "edited",
+      "pageNum": 261,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s21_no_fighting"
+    },
+    {
+      "id": "seq_0262_s2_m4_s22_strategic_failure",
+      "state": "edited",
+      "pageNum": 262,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s22_strategic_failure"
+    },
+    {
+      "id": "seq_0263_s2_m4_s23_convert_classification",
+      "state": "edited",
+      "pageNum": 263,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s23_convert_classification"
+    },
+    {
+      "id": "seq_0264_s2_m4_s24_role_women",
+      "state": "edited",
+      "pageNum": 264,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s24_role_women"
+    },
+    {
+      "id": "seq_0265_s2_m4_s25_prophet_suffering_doc",
+      "state": "edited",
+      "pageNum": 265,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s25_prophet_suffering_doc"
+    },
+    {
+      "id": "seq_0266_s2_m4_s26_sociology_persecution",
+      "state": "edited",
+      "pageNum": 266,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s26_sociology_persecution"
+    },
+    {
+      "id": "seq_0267_s2_m4_s27_patience_strategy",
+      "state": "edited",
+      "pageNum": 267,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s27_patience_strategy"
+    },
+    {
+      "id": "seq_0268_s2_m4_s28_discussion",
+      "state": "edited",
+      "pageNum": 268,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s28_discussion"
+    },
+    {
+      "id": "seq_0269_s2_m4_s29_takeaways",
+      "state": "edited",
+      "pageNum": 269,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s29_takeaways"
+    },
+    {
+      "id": "seq_0270_s2_m4_s30_transition_module5",
+      "state": "edited",
+      "pageNum": 270,
+      "original_project": "Session II - Module 4",
+      "original_id": "s2_m4_s30_transition_module5"
+    },
+    {
+      "id": "seq_0271_s2_m5_s01_title",
+      "state": "edited",
+      "pageNum": 271,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s01_title"
+    },
+    {
+      "id": "seq_0272_s2_m5_s02_overview",
+      "state": "edited",
+      "pageNum": 272,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s02_overview"
+    },
+    {
+      "id": "seq_0273_s2_m5_s03_objectives",
+      "state": "edited",
+      "pageNum": 273,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s03_objectives"
+    },
+    {
+      "id": "seq_0274_s2_m5_s04_strategic_decision",
+      "state": "edited",
+      "pageNum": 274,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s04_strategic_decision"
+    },
+    {
+      "id": "seq_0275_s2_m5_s05_why_abyssinia",
+      "state": "edited",
+      "pageNum": 275,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s05_why_abyssinia"
+    },
+    {
+      "id": "seq_0276_s2_m5_s06_first_group",
+      "state": "edited",
+      "pageNum": 276,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s06_first_group"
+    },
+    {
+      "id": "seq_0277_s2_m5_s07_satanic_verses",
+      "state": "edited",
+      "pageNum": 277,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s07_satanic_verses"
+    },
+    {
+      "id": "seq_0278_s2_m5_s08_return_persecution",
+      "state": "edited",
+      "pageNum": 278,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s08_return_persecution"
+    },
+    {
+      "id": "seq_0279_s2_m5_s09_second_emigration",
+      "state": "edited",
+      "pageNum": 279,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s09_second_emigration"
+    },
+    {
+      "id": "seq_0280_s2_m5_s10_extradition_attempt",
+      "state": "edited",
+      "pageNum": 280,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s10_extradition_attempt"
+    },
+    {
+      "id": "seq_0281_s2_m5_s11_najashi_justice",
+      "state": "edited",
+      "pageNum": 281,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s11_najashi_justice"
+    },
+    {
+      "id": "seq_0282_s2_m5_s12_jafar_speech_diagnosis",
+      "state": "edited",
+      "pageNum": 282,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s12_jafar_speech_diagnosis"
+    },
+    {
+      "id": "seq_0283_s2_m5_s13_jafar_speech_cure",
+      "state": "edited",
+      "pageNum": 283,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s13_jafar_speech_cure"
+    },
+    {
+      "id": "seq_0284_s2_m5_s14_jafar_speech_persecution",
+      "state": "edited",
+      "pageNum": 284,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s14_jafar_speech_persecution"
+    },
+    {
+      "id": "seq_0285_s2_m5_s15_analytical_jafar_method",
+      "state": "edited",
+      "pageNum": 285,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s15_analytical_jafar_method"
+    },
+    {
+      "id": "seq_0286_s2_m5_s16_quran_court",
+      "state": "edited",
+      "pageNum": 286,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s16_quran_court"
+    },
+    {
+      "id": "seq_0287_s2_m5_s17_jesus_question",
+      "state": "edited",
+      "pageNum": 287,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s17_jesus_question"
+    },
+    {
+      "id": "seq_0288_s2_m5_s18_najashi_verdict",
+      "state": "edited",
+      "pageNum": 288,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s18_najashi_verdict"
+    },
+    {
+      "id": "seq_0289_s2_m5_s19_hamzah_conversion",
+      "state": "edited",
+      "pageNum": 289,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s19_hamzah_conversion"
+    },
+    {
+      "id": "seq_0290_s2_m5_s20_hamzah_impact",
+      "state": "edited",
+      "pageNum": 290,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s20_hamzah_impact"
+    },
+    {
+      "id": "seq_0291_s2_m5_s21_umar_context",
+      "state": "edited",
+      "pageNum": 291,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s21_umar_context"
+    },
+    {
+      "id": "seq_0292_s2_m5_s22_umar_encounter",
+      "state": "edited",
+      "pageNum": 292,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s22_umar_encounter"
+    },
+    {
+      "id": "seq_0293_s2_m5_s23_umar_impact",
+      "state": "edited",
+      "pageNum": 293,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s23_umar_impact"
+    },
+    {
+      "id": "seq_0294_s2_m5_s24_analytical_turning_points",
+      "state": "edited",
+      "pageNum": 294,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s24_analytical_turning_points"
+    },
+    {
+      "id": "seq_0295_s2_m5_s25_prophetic_dua",
+      "state": "edited",
+      "pageNum": 295,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s25_prophetic_dua"
+    },
+    {
+      "id": "seq_0296_s2_m5_s26_comparative_analysis",
+      "state": "edited",
+      "pageNum": 296,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s26_comparative_analysis"
+    },
+    {
+      "id": "seq_0297_s2_m5_s27_hijrah_concept",
+      "state": "edited",
+      "pageNum": 297,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s27_hijrah_concept"
+    },
+    {
+      "id": "seq_0298_s2_m5_s28_discussion",
+      "state": "edited",
+      "pageNum": 298,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s28_discussion"
+    },
+    {
+      "id": "seq_0299_s2_m5_s29_takeaways",
+      "state": "edited",
+      "pageNum": 299,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s29_takeaways"
+    },
+    {
+      "id": "seq_0300_s2_m5_s30_transition_module6",
+      "state": "edited",
+      "pageNum": 300,
+      "original_project": "Session II - Module 5",
+      "original_id": "s2_m5_s30_transition_module6"
+    },
+    {
+      "id": "seq_0301_s3_m1_s01_title",
+      "state": "edited",
+      "pageNum": 301,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s01_title"
+    },
+    {
+      "id": "seq_0302_s3_m1_s02_overview",
+      "state": "edited",
+      "pageNum": 302,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s02_overview"
+    },
+    {
+      "id": "seq_0303_s3_m1_s03_objectives",
+      "state": "edited",
+      "pageNum": 303,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s03_objectives"
+    },
+    {
+      "id": "seq_0304_s3_m1_s04_arrival_quba",
+      "state": "edited",
+      "pageNum": 304,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s04_arrival_quba"
+    },
+    {
+      "id": "seq_0305_s3_m1_s05_reception",
+      "state": "edited",
+      "pageNum": 305,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s05_reception"
+    },
+    {
+      "id": "seq_0306_s3_m1_s06_masjid_quba",
+      "state": "edited",
+      "pageNum": 306,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s06_masjid_quba"
+    },
+    {
+      "id": "seq_0307_s3_m1_s07_why_mosque",
+      "state": "edited",
+      "pageNum": 307,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s07_why_mosque"
+    },
+    {
+      "id": "seq_0308_s3_m1_s08_ali_arrival",
+      "state": "edited",
+      "pageNum": 308,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s08_ali_arrival"
+    },
+    {
+      "id": "seq_0309_s3_m1_s09_departure_quba",
+      "state": "edited",
+      "pageNum": 309,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s09_departure_quba"
+    },
+    {
+      "id": "seq_0310_s3_m1_s10_first_jumuah",
+      "state": "edited",
+      "pageNum": 310,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s10_first_jumuah"
+    },
+    {
+      "id": "seq_0311_s3_m1_s11_entry_madinah",
+      "state": "edited",
+      "pageNum": 311,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s11_entry_madinah"
+    },
+    {
+      "id": "seq_0312_s3_m1_s12_qaswa_stops",
+      "state": "edited",
+      "pageNum": 312,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s12_qaswa_stops"
+    },
+    {
+      "id": "seq_0313_s3_m1_s13_land_purchase",
+      "state": "edited",
+      "pageNum": 313,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s13_land_purchase"
+    },
+    {
+      "id": "seq_0314_s3_m1_s14_abu_ayyub",
+      "state": "edited",
+      "pageNum": 314,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s14_abu_ayyub"
+    },
+    {
+      "id": "seq_0315_s3_m1_s15_building_masjid",
+      "state": "edited",
+      "pageNum": 315,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s15_building_masjid"
+    },
+    {
+      "id": "seq_0316_s3_m1_s16_mosque_functions",
+      "state": "edited",
+      "pageNum": 316,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s16_mosque_functions"
+    },
+    {
+      "id": "seq_0317_s3_m1_s17_ammar_prophecy",
+      "state": "edited",
+      "pageNum": 317,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s17_ammar_prophecy"
+    },
+    {
+      "id": "seq_0318_s3_m1_s18_prophet_houses",
+      "state": "edited",
+      "pageNum": 318,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s18_prophet_houses"
+    },
+    {
+      "id": "seq_0319_s3_m1_s19_renaming_yathrib",
+      "state": "edited",
+      "pageNum": 319,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s19_renaming_yathrib"
+    },
+    {
+      "id": "seq_0320_s3_m1_s20_demographics",
+      "state": "edited",
+      "pageNum": 320,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s20_demographics"
+    },
+    {
+      "id": "seq_0321_s3_m1_s21_muhajirun_condition",
+      "state": "edited",
+      "pageNum": 321,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s21_muhajirun_condition"
+    },
+    {
+      "id": "seq_0322_s3_m1_s22_ansar_generosity",
+      "state": "edited",
+      "pageNum": 322,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s22_ansar_generosity"
+    },
+    {
+      "id": "seq_0323_s3_m1_s23_aws_khazraj",
+      "state": "edited",
+      "pageNum": 323,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s23_aws_khazraj"
+    },
+    {
+      "id": "seq_0324_s3_m1_s24_abdullah_ibn_ubayy",
+      "state": "edited",
+      "pageNum": 324,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s24_abdullah_ibn_ubayy"
+    },
+    {
+      "id": "seq_0325_s3_m1_s25_nifaq_concept",
+      "state": "edited",
+      "pageNum": 325,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s25_nifaq_concept"
+    },
+    {
+      "id": "seq_0326_s3_m1_s26_economic_challenge",
+      "state": "edited",
+      "pageNum": 326,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s26_economic_challenge"
+    },
+    {
+      "id": "seq_0327_s3_m1_s27_analytical_state",
+      "state": "edited",
+      "pageNum": 327,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s27_analytical_state"
+    },
+    {
+      "id": "seq_0328_s3_m1_s28_discussion",
+      "state": "edited",
+      "pageNum": 328,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s28_discussion"
+    },
+    {
+      "id": "seq_0329_s3_m1_s29_takeaways",
+      "state": "edited",
+      "pageNum": 329,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s29_takeaways"
+    },
+    {
+      "id": "seq_0330_s3_m1_s30_transition",
+      "state": "edited",
+      "pageNum": 330,
+      "original_project": "Session III - Module 1",
+      "original_id": "s3_m1_s30_transition"
+    },
+    {
+      "id": "seq_0331_s3_m2_s01_title",
+      "state": "edited",
+      "pageNum": 331,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s01_title"
+    },
+    {
+      "id": "seq_0332_s3_m2_s02_overview",
+      "state": "edited",
+      "pageNum": 332,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s02_overview"
+    },
+    {
+      "id": "seq_0333_s3_m2_s03_objectives",
+      "state": "edited",
+      "pageNum": 333,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s03_objectives"
+    },
+    {
+      "id": "seq_0334_s3_m2_s04_refugee_crisis",
+      "state": "edited",
+      "pageNum": 334,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s04_refugee_crisis"
+    },
+    {
+      "id": "seq_0335_s3_m2_s05_muakhah_definition",
+      "state": "edited",
+      "pageNum": 335,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s05_muakhah_definition"
+    },
+    {
+      "id": "seq_0336_s3_m2_s06_key_pairings",
+      "state": "edited",
+      "pageNum": 336,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s06_key_pairings"
+    },
+    {
+      "id": "seq_0337_s3_m2_s07_paradigm_case",
+      "state": "edited",
+      "pageNum": 337,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s07_paradigm_case"
+    },
+    {
+      "id": "seq_0338_s3_m2_s08_legal_dimensions",
+      "state": "edited",
+      "pageNum": 338,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s08_legal_dimensions"
+    },
+    {
+      "id": "seq_0339_s3_m2_s09_analytical_social",
+      "state": "edited",
+      "pageNum": 339,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s09_analytical_social"
+    },
+    {
+      "id": "seq_0340_s3_m2_s10_ahl_al_suffah",
+      "state": "edited",
+      "pageNum": 340,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s10_ahl_al_suffah"
+    },
+    {
+      "id": "seq_0341_s3_m2_s11_sahifah_context",
+      "state": "edited",
+      "pageNum": 341,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s11_sahifah_context"
+    },
+    {
+      "id": "seq_0342_s3_m2_s12_sahifah_definition",
+      "state": "edited",
+      "pageNum": 342,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s12_sahifah_definition"
+    },
+    {
+      "id": "seq_0343_s3_m2_s13_clauses_muslim",
+      "state": "edited",
+      "pageNum": 343,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s13_clauses_muslim"
+    },
+    {
+      "id": "seq_0344_s3_m2_s14_clauses_jewish",
+      "state": "edited",
+      "pageNum": 344,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s14_clauses_jewish"
+    },
+    {
+      "id": "seq_0345_s3_m2_s15_clauses_general",
+      "state": "edited",
+      "pageNum": 345,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s15_clauses_general"
+    },
+    {
+      "id": "seq_0346_s3_m2_s16_analytical_constitutional",
+      "state": "edited",
+      "pageNum": 346,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s16_analytical_constitutional"
+    },
+    {
+      "id": "seq_0347_s3_m2_s17_analytical_pagans",
+      "state": "edited",
+      "pageNum": 347,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s17_analytical_pagans"
+    },
+    {
+      "id": "seq_0348_s3_m2_s18_marketplace",
+      "state": "edited",
+      "pageNum": 348,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s18_marketplace"
+    },
+    {
+      "id": "seq_0349_s3_m2_s19_qiblah_jerusalem",
+      "state": "edited",
+      "pageNum": 349,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s19_qiblah_jerusalem"
+    },
+    {
+      "id": "seq_0350_s3_m2_s20_qiblah_change",
+      "state": "edited",
+      "pageNum": 350,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s20_qiblah_change"
+    },
+    {
+      "id": "seq_0351_s3_m2_s21_jewish_reaction",
+      "state": "edited",
+      "pageNum": 351,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s21_jewish_reaction"
+    },
+    {
+      "id": "seq_0352_s3_m2_s22_analytical_timing",
+      "state": "edited",
+      "pageNum": 352,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s22_analytical_timing"
+    },
+    {
+      "id": "seq_0353_s3_m2_s23_adhan_significance",
+      "state": "edited",
+      "pageNum": 353,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s23_adhan_significance"
+    },
+    {
+      "id": "seq_0354_s3_m2_s24_legislation",
+      "state": "edited",
+      "pageNum": 354,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s24_legislation"
+    },
+    {
+      "id": "seq_0355_s3_m2_s25_analytical_state",
+      "state": "edited",
+      "pageNum": 355,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s25_analytical_state"
+    },
+    {
+      "id": "seq_0356_s3_m2_s26_suffah_model",
+      "state": "edited",
+      "pageNum": 356,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s26_suffah_model"
+    },
+    {
+      "id": "seq_0357_s3_m2_s27_discussion",
+      "state": "edited",
+      "pageNum": 357,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s27_discussion"
+    },
+    {
+      "id": "seq_0358_s3_m2_s28_takeaways",
+      "state": "edited",
+      "pageNum": 358,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s28_takeaways"
+    },
+    {
+      "id": "seq_0359_s3_m2_s29_transition",
+      "state": "edited",
+      "pageNum": 359,
+      "original_project": "Session III - Module 2",
+      "original_id": "s3_m2_s29_transition"
+    },
+    {
+      "id": "seq_0360_s3_m3_s01_title",
+      "state": "edited",
+      "pageNum": 360,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s01_title"
+    },
+    {
+      "id": "seq_0361_s3_m3_s02_roadmap",
+      "state": "edited",
+      "pageNum": 361,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s02_roadmap"
+    },
+    {
+      "id": "seq_0362_s3_m3_s03_context_caravan",
+      "state": "edited",
+      "pageNum": 362,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s03_context_caravan"
+    },
+    {
+      "id": "seq_0363_s3_m3_s04_intelligence",
+      "state": "edited",
+      "pageNum": 363,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s04_intelligence"
+    },
+    {
+      "id": "seq_0364_s3_m3_s05_escape_mobilization",
+      "state": "edited",
+      "pageNum": 364,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s05_escape_mobilization"
+    },
+    {
+      "id": "seq_0365_s3_m3_s06_council_war",
+      "state": "edited",
+      "pageNum": 365,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s06_council_war"
+    },
+    {
+      "id": "seq_0366_s3_m3_s07_terrain_strategy",
+      "state": "edited",
+      "pageNum": 366,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s07_terrain_strategy"
+    },
+    {
+      "id": "seq_0367_s3_m3_s08_night_before",
+      "state": "edited",
+      "pageNum": 367,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s08_night_before"
+    },
+    {
+      "id": "seq_0368_s3_m3_s09_prophetic_dua",
+      "state": "edited",
+      "pageNum": 368,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s09_prophetic_dua"
+    },
+    {
+      "id": "seq_0369_s3_m3_s10_mubarizah",
+      "state": "edited",
+      "pageNum": 369,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s10_mubarizah"
+    },
+    {
+      "id": "seq_0370_s3_m3_s11_battle_dynamics",
+      "state": "edited",
+      "pageNum": 370,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s11_battle_dynamics"
+    },
+    {
+      "id": "seq_0371_s3_m3_s12_fall_pharaohs",
+      "state": "edited",
+      "pageNum": 371,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s12_fall_pharaohs"
+    },
+    {
+      "id": "seq_0372_s3_m3_s13_outcome_stats",
+      "state": "edited",
+      "pageNum": 372,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s13_outcome_stats"
+    },
+    {
+      "id": "seq_0373_s3_m3_s14_analytical_furqan",
+      "state": "edited",
+      "pageNum": 373,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s14_analytical_furqan"
+    },
+    {
+      "id": "seq_0374_s3_m3_s15_discussion",
+      "state": "edited",
+      "pageNum": 374,
+      "original_project": "Session III - Module 3",
+      "original_id": "s3_m3_s15_discussion"
+    },
+    {
+      "id": "seq_0375_s3_m4_s01_title",
+      "state": "edited",
+      "pageNum": 375,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s01_title"
+    },
+    {
+      "id": "seq_0376_s3_m4_s02_roadmap",
+      "state": "edited",
+      "pageNum": 376,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s02_roadmap"
+    },
+    {
+      "id": "seq_0377_s3_m4_s03_badr_aftermath_qainuqa",
+      "state": "edited",
+      "pageNum": 377,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s03_badr_aftermath_qainuqa"
+    },
+    {
+      "id": "seq_0378_s3_m4_s04_badr_aftermath_threats",
+      "state": "edited",
+      "pageNum": 378,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s04_badr_aftermath_threats"
+    },
+    {
+      "id": "seq_0379_s3_m4_s05_uhud_causation",
+      "state": "edited",
+      "pageNum": 379,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s05_uhud_causation"
+    },
+    {
+      "id": "seq_0380_s3_m4_s06_uhud_council",
+      "state": "edited",
+      "pageNum": 380,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s06_uhud_council"
+    },
+    {
+      "id": "seq_0381_s3_m4_s07_uhud_deployment",
+      "state": "edited",
+      "pageNum": 381,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s07_uhud_deployment"
+    },
+    {
+      "id": "seq_0382_s3_m4_s08_uhud_phase1_victory",
+      "state": "edited",
+      "pageNum": 382,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s08_uhud_phase1_victory"
+    },
+    {
+      "id": "seq_0383_s3_m4_s09_uhud_turning_point",
+      "state": "edited",
+      "pageNum": 383,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s09_uhud_turning_point"
+    },
+    {
+      "id": "seq_0384_s3_m4_s10_uhud_phase2_chaos",
+      "state": "edited",
+      "pageNum": 384,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s10_uhud_phase2_chaos"
+    },
+    {
+      "id": "seq_0385_s3_m4_s11_uhud_defense_prophet",
+      "state": "edited",
+      "pageNum": 385,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s11_uhud_defense_prophet"
+    },
+    {
+      "id": "seq_0386_s3_m4_s12_uhud_martyrs",
+      "state": "edited",
+      "pageNum": 386,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s12_uhud_martyrs"
+    },
+    {
+      "id": "seq_0387_s3_m4_s13_uhud_aftermath_chase",
+      "state": "edited",
+      "pageNum": 387,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s13_uhud_aftermath_chase"
+    },
+    {
+      "id": "seq_0388_s3_m4_s14_analytical_defeat",
+      "state": "edited",
+      "pageNum": 388,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s14_analytical_defeat"
+    },
+    {
+      "id": "seq_0389_s3_m4_s15_discussion",
+      "state": "edited",
+      "pageNum": 389,
+      "original_project": "Session III - Module 4",
+      "original_id": "s3_m4_s15_discussion"
+    },
+    {
+      "id": "seq_0390_s3_m5_s01_title",
+      "state": "edited",
+      "pageNum": 390,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s01_title"
+    },
+    {
+      "id": "seq_0391_s3_m5_s02_roadmap",
+      "state": "edited",
+      "pageNum": 391,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s02_roadmap"
+    },
+    {
+      "id": "seq_0392_s3_m5_s03_context_confederates",
+      "state": "edited",
+      "pageNum": 392,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s03_context_confederates"
+    },
+    {
+      "id": "seq_0393_s3_m5_s04_salman_idea",
+      "state": "edited",
+      "pageNum": 393,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s04_salman_idea"
+    },
+    {
+      "id": "seq_0394_s3_m5_s05_digging_miracles",
+      "state": "edited",
+      "pageNum": 394,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s05_digging_miracles"
+    },
+    {
+      "id": "seq_0395_s3_m5_s06_siege_dynamics",
+      "state": "edited",
+      "pageNum": 395,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s06_siege_dynamics"
+    },
+    {
+      "id": "seq_0396_s3_m5_s07_betrayal_qurayzah",
+      "state": "edited",
+      "pageNum": 396,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s07_betrayal_qurayzah"
+    },
+    {
+      "id": "seq_0397_s3_m5_s08_psychological_terror",
+      "state": "edited",
+      "pageNum": 397,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s08_psychological_terror"
+    },
+    {
+      "id": "seq_0398_s3_m5_s09_nuaym_stratagem",
+      "state": "edited",
+      "pageNum": 398,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s09_nuaym_stratagem"
+    },
+    {
+      "id": "seq_0399_s3_m5_s10_divine_wind",
+      "state": "edited",
+      "pageNum": 399,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s10_divine_wind"
+    },
+    {
+      "id": "seq_0400_s3_m5_s11_siege_qurayzah",
+      "state": "edited",
+      "pageNum": 400,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s11_siege_qurayzah"
+    },
+    {
+      "id": "seq_0401_s3_m5_s12_judgment_sad",
+      "state": "edited",
+      "pageNum": 401,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s12_judgment_sad"
+    },
+    {
+      "id": "seq_0402_s3_m5_s13_marriage_zaynab",
+      "state": "edited",
+      "pageNum": 402,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s13_marriage_zaynab"
+    },
+    {
+      "id": "seq_0403_s3_m5_s14_analytical_turning_point",
+      "state": "edited",
+      "pageNum": 403,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s14_analytical_turning_point"
+    },
+    {
+      "id": "seq_0404_s3_m5_s15_discussion",
+      "state": "edited",
+      "pageNum": 404,
+      "original_project": "Session III - Module 5",
+      "original_id": "s3_m5_s15_discussion"
+    },
+    {
+      "id": "seq_0405_s3_m6_s01_title",
+      "state": "edited",
+      "pageNum": 405,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s01_title"
+    },
+    {
+      "id": "seq_0406_s3_m6_s02_roadmap",
+      "state": "edited",
+      "pageNum": 406,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s02_roadmap"
+    },
+    {
+      "id": "seq_0407_s3_m6_s03_vision_umrah",
+      "state": "edited",
+      "pageNum": 407,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s03_vision_umrah"
+    },
+    {
+      "id": "seq_0408_s3_m6_s04_journey_ihram",
+      "state": "edited",
+      "pageNum": 408,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s04_journey_ihram"
+    },
+    {
+      "id": "seq_0409_s3_m6_s05_quraysh_reaction",
+      "state": "edited",
+      "pageNum": 409,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s05_quraysh_reaction"
+    },
+    {
+      "id": "seq_0410_s3_m6_s06_kneeling_camel",
+      "state": "edited",
+      "pageNum": 410,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s06_kneeling_camel"
+    },
+    {
+      "id": "seq_0411_s3_m6_s07_negotiations",
+      "state": "edited",
+      "pageNum": 411,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s07_negotiations"
+    },
+    {
+      "id": "seq_0412_s3_m6_s08_bayat_ridwan",
+      "state": "edited",
+      "pageNum": 412,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s08_bayat_ridwan"
+    },
+    {
+      "id": "seq_0413_s3_m6_s09_treaty_terms",
+      "state": "edited",
+      "pageNum": 413,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s09_treaty_terms"
+    },
+    {
+      "id": "seq_0414_s3_m6_s10_crisis_acceptance",
+      "state": "edited",
+      "pageNum": 414,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s10_crisis_acceptance"
+    },
+    {
+      "id": "seq_0415_s3_m6_s11_umm_salamah_wisdom",
+      "state": "edited",
+      "pageNum": 415,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s11_umm_salamah_wisdom"
+    },
+    {
+      "id": "seq_0416_s3_m6_s12_abu_jandal_tragedy",
+      "state": "edited",
+      "pageNum": 416,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s12_abu_jandal_tragedy"
+    },
+    {
+      "id": "seq_0417_s3_m6_s13_fath_mubin",
+      "state": "edited",
+      "pageNum": 417,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s13_fath_mubin"
+    },
+    {
+      "id": "seq_0418_s3_m6_s14_khalid_amr_conversion",
+      "state": "edited",
+      "pageNum": 418,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s14_khalid_amr_conversion"
+    },
+    {
+      "id": "seq_0419_s3_m6_s15_discussion",
+      "state": "edited",
+      "pageNum": 419,
+      "original_project": "Session III - Module 6",
+      "original_id": "s3_m6_s15_discussion"
+    },
+    {
+      "id": "seq_0420_s4_m1_s01_title",
+      "state": "edited",
+      "pageNum": 420,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s01_title"
+    },
+    {
+      "id": "seq_0421_s4_m1_s02_roadmap",
+      "state": "edited",
+      "pageNum": 421,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s02_roadmap"
+    },
+    {
+      "id": "seq_0422_s4_m1_s03_strategic_shift",
+      "state": "edited",
+      "pageNum": 422,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s03_strategic_shift"
+    },
+    {
+      "id": "seq_0423_s4_m1_s04_letters_kings",
+      "state": "edited",
+      "pageNum": 423,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s04_letters_kings"
+    },
+    {
+      "id": "seq_0424_s4_m1_s05_reaction_empires",
+      "state": "edited",
+      "pageNum": 424,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s05_reaction_empires"
+    },
+    {
+      "id": "seq_0425_s4_m1_s06_threat_khaybar",
+      "state": "edited",
+      "pageNum": 425,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s06_threat_khaybar"
+    },
+    {
+      "id": "seq_0426_s4_m1_s07_siege_khaybar",
+      "state": "edited",
+      "pageNum": 426,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s07_siege_khaybar"
+    },
+    {
+      "id": "seq_0427_s4_m1_s08_role_ali",
+      "state": "edited",
+      "pageNum": 427,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s08_role_ali"
+    },
+    {
+      "id": "seq_0428_s4_m1_s09_outcome_treaty",
+      "state": "edited",
+      "pageNum": 428,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s09_outcome_treaty"
+    },
+    {
+      "id": "seq_0429_s4_m1_s10_safiyyah_marriage",
+      "state": "edited",
+      "pageNum": 429,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s10_safiyyah_marriage"
+    },
+    {
+      "id": "seq_0430_s4_m1_s11_jaafar_return",
+      "state": "edited",
+      "pageNum": 430,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s11_jaafar_return"
+    },
+    {
+      "id": "seq_0431_s4_m1_s12_analytical_economics",
+      "state": "edited",
+      "pageNum": 431,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s12_analytical_economics"
+    },
+    {
+      "id": "seq_0432_s4_m1_s13_poisoned_sheep",
+      "state": "edited",
+      "pageNum": 432,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s13_poisoned_sheep"
+    },
+    {
+      "id": "seq_0433_s4_m1_s14_discussion",
+      "state": "edited",
+      "pageNum": 433,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s14_discussion"
+    },
+    {
+      "id": "seq_0434_s4_m1_s15_takeaways",
+      "state": "edited",
+      "pageNum": 434,
+      "original_project": "Session IV - Module 1",
+      "original_id": "s4_m1_s15_takeaways"
+    },
+    {
+      "id": "seq_0435_s4_m2_s01_title",
+      "state": "edited",
+      "pageNum": 435,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s01_title"
+    },
+    {
+      "id": "seq_0436_s4_m2_s02_roadmap",
+      "state": "edited",
+      "pageNum": 436,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s02_roadmap"
+    },
+    {
+      "id": "seq_0437_s4_m2_s03_mutah_cause",
+      "state": "edited",
+      "pageNum": 437,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s03_mutah_cause"
+    },
+    {
+      "id": "seq_0438_s4_m2_s04_army_commanders",
+      "state": "edited",
+      "pageNum": 438,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s04_army_commanders"
+    },
+    {
+      "id": "seq_0439_s4_m2_s05_battle_dynamics",
+      "state": "edited",
+      "pageNum": 439,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s05_battle_dynamics"
+    },
+    {
+      "id": "seq_0440_s4_m2_s06_khalid_sword",
+      "state": "edited",
+      "pageNum": 440,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s06_khalid_sword"
+    },
+    {
+      "id": "seq_0441_s4_m2_s07_mutah_outcome",
+      "state": "edited",
+      "pageNum": 441,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s07_mutah_outcome"
+    },
+    {
+      "id": "seq_0442_s4_m2_s08_dhat_al_salasil",
+      "state": "edited",
+      "pageNum": 442,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s08_dhat_al_salasil"
+    },
+    {
+      "id": "seq_0443_s4_m2_s09_umrah_qada_entry",
+      "state": "edited",
+      "pageNum": 443,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s09_umrah_qada_entry"
+    },
+    {
+      "id": "seq_0444_s4_m2_s10_marriage_maymunah",
+      "state": "edited",
+      "pageNum": 444,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s10_marriage_maymunah"
+    },
+    {
+      "id": "seq_0445_s4_m2_s11_khalid_amr_conversion",
+      "state": "edited",
+      "pageNum": 445,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s11_khalid_amr_conversion"
+    },
+    {
+      "id": "seq_0446_s4_m2_s12_discussion",
+      "state": "edited",
+      "pageNum": 446,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s12_discussion"
+    },
+    {
+      "id": "seq_0447_s4_m2_s13_takeaways",
+      "state": "edited",
+      "pageNum": 447,
+      "original_project": "Session IV - Module 2",
+      "original_id": "s4_m2_s13_takeaways"
+    },
+    {
+      "id": "seq_0448_s4_m3_s01_title",
+      "state": "edited",
+      "pageNum": 448,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s01_title"
+    },
+    {
+      "id": "seq_0449_s4_m3_s02_roadmap",
+      "state": "edited",
+      "pageNum": 449,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s02_roadmap"
+    },
+    {
+      "id": "seq_0450_s4_m3_s03_treaty_broken",
+      "state": "edited",
+      "pageNum": 450,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s03_treaty_broken"
+    },
+    {
+      "id": "seq_0451_s4_m3_s04_abu_sufyan_failure",
+      "state": "edited",
+      "pageNum": 451,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s04_abu_sufyan_failure"
+    },
+    {
+      "id": "seq_0452_s4_m3_s05_mobilization_secrecy",
+      "state": "edited",
+      "pageNum": 452,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s05_mobilization_secrecy"
+    },
+    {
+      "id": "seq_0453_s4_m3_s06_ten_thousand_fires",
+      "state": "edited",
+      "pageNum": 453,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s06_ten_thousand_fires"
+    },
+    {
+      "id": "seq_0454_s4_m3_s07_entry_strategy",
+      "state": "edited",
+      "pageNum": 454,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s07_entry_strategy"
+    },
+    {
+      "id": "seq_0455_s4_m3_s08_prophetic_humility",
+      "state": "edited",
+      "pageNum": 455,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s08_prophetic_humility"
+    },
+    {
+      "id": "seq_0456_s4_m3_s09_cleansing_kaaba",
+      "state": "edited",
+      "pageNum": 456,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s09_cleansing_kaaba"
+    },
+    {
+      "id": "seq_0457_s4_m3_s10_general_amnesty",
+      "state": "edited",
+      "pageNum": 457,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s10_general_amnesty"
+    },
+    {
+      "id": "seq_0458_s4_m3_s11_bilal_adhan",
+      "state": "edited",
+      "pageNum": 458,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s11_bilal_adhan"
+    },
+    {
+      "id": "seq_0459_s4_m3_s12_discussion",
+      "state": "edited",
+      "pageNum": 459,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s12_discussion"
+    },
+    {
+      "id": "seq_0460_s4_m3_s13_takeaways",
+      "state": "edited",
+      "pageNum": 460,
+      "original_project": "Session IV - Module 3",
+      "original_id": "s4_m3_s13_takeaways"
+    },
+    {
+      "id": "seq_0461_s4_m4_s01_title",
+      "state": "edited",
+      "pageNum": 461,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s01_title"
+    },
+    {
+      "id": "seq_0462_s4_m4_s02_roadmap",
+      "state": "edited",
+      "pageNum": 462,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s02_roadmap"
+    },
+    {
+      "id": "seq_0463_s4_m4_s03_threat_hawazin",
+      "state": "edited",
+      "pageNum": 463,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s03_threat_hawazin"
+    },
+    {
+      "id": "seq_0464_s4_m4_s04_pride_numbers",
+      "state": "edited",
+      "pageNum": 464,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s04_pride_numbers"
+    },
+    {
+      "id": "seq_0465_s4_m4_s05_ambush_hunayn",
+      "state": "edited",
+      "pageNum": 465,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s05_ambush_hunayn"
+    },
+    {
+      "id": "seq_0466_s4_m4_s06_steadfastness_prophet",
+      "state": "edited",
+      "pageNum": 466,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s06_steadfastness_prophet"
+    },
+    {
+      "id": "seq_0467_s4_m4_s07_victory_spoils",
+      "state": "edited",
+      "pageNum": 467,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s07_victory_spoils"
+    },
+    {
+      "id": "seq_0468_s4_m4_s08_siege_taif",
+      "state": "edited",
+      "pageNum": 468,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s08_siege_taif"
+    },
+    {
+      "id": "seq_0469_s4_m4_s09_distribution_spoils",
+      "state": "edited",
+      "pageNum": 469,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s09_distribution_spoils"
+    },
+    {
+      "id": "seq_0470_s4_m4_s10_ansar_grievance",
+      "state": "edited",
+      "pageNum": 470,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s10_ansar_grievance"
+    },
+    {
+      "id": "seq_0471_s4_m4_s11_return_hawazin",
+      "state": "edited",
+      "pageNum": 471,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s11_return_hawazin"
+    },
+    {
+      "id": "seq_0472_s4_m4_s12_discussion",
+      "state": "edited",
+      "pageNum": 472,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s12_discussion"
+    },
+    {
+      "id": "seq_0473_s4_m4_s13_takeaways",
+      "state": "edited",
+      "pageNum": 473,
+      "original_project": "Session IV - Module 4",
+      "original_id": "s4_m4_s13_takeaways"
+    },
+    {
+      "id": "seq_0474_s4_m5_s01_title",
+      "state": "edited",
+      "pageNum": 474,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s01_title"
+    },
+    {
+      "id": "seq_0475_s4_m5_s02_roadmap",
+      "state": "edited",
+      "pageNum": 475,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s02_roadmap"
+    },
+    {
+      "id": "seq_0476_s4_m5_s03_call_tabuk",
+      "state": "edited",
+      "pageNum": 476,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s03_call_tabuk"
+    },
+    {
+      "id": "seq_0477_s4_m5_s04_funding_army",
+      "state": "edited",
+      "pageNum": 477,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s04_funding_army"
+    },
+    {
+      "id": "seq_0478_s4_m5_s05_hypocrites_excuses",
+      "state": "edited",
+      "pageNum": 478,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s05_hypocrites_excuses"
+    },
+    {
+      "id": "seq_0479_s4_m5_s06_journey_miracles",
+      "state": "edited",
+      "pageNum": 479,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s06_journey_miracles"
+    },
+    {
+      "id": "seq_0480_s4_m5_s07_arrival_tabuk",
+      "state": "edited",
+      "pageNum": 480,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s07_arrival_tabuk"
+    },
+    {
+      "id": "seq_0481_s4_m5_s08_masjid_dirar",
+      "state": "edited",
+      "pageNum": 481,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s08_masjid_dirar"
+    },
+    {
+      "id": "seq_0482_s4_m5_s09_kab_malik",
+      "state": "edited",
+      "pageNum": 482,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s09_kab_malik"
+    },
+    {
+      "id": "seq_0483_s4_m5_s10_year_delegations",
+      "state": "edited",
+      "pageNum": 483,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s10_year_delegations"
+    },
+    {
+      "id": "seq_0484_s4_m5_s11_false_prophets",
+      "state": "edited",
+      "pageNum": 484,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s11_false_prophets"
+    },
+    {
+      "id": "seq_0485_s4_m5_s12_discussion",
+      "state": "edited",
+      "pageNum": 485,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s12_discussion"
+    },
+    {
+      "id": "seq_0486_s4_m5_s13_takeaways",
+      "state": "edited",
+      "pageNum": 486,
+      "original_project": "Session IV - Module 5",
+      "original_id": "s4_m5_s13_takeaways"
+    },
+    {
+      "id": "seq_0487_s4_m6_s01_title",
+      "state": "edited",
+      "pageNum": 487,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s01_title"
+    },
+    {
+      "id": "seq_0488_s4_m6_s02_roadmap",
+      "state": "edited",
+      "pageNum": 488,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s02_roadmap"
+    },
+    {
+      "id": "seq_0489_s4_m6_s03_farewell_hajj_announcement",
+      "state": "edited",
+      "pageNum": 489,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s03_farewell_hajj_announcement"
+    },
+    {
+      "id": "seq_0490_s4_m6_s04_sermon_arafat",
+      "state": "edited",
+      "pageNum": 490,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s04_sermon_arafat"
+    },
+    {
+      "id": "seq_0491_s4_m6_s05_completion_religion",
+      "state": "edited",
+      "pageNum": 491,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s05_completion_religion"
+    },
+    {
+      "id": "seq_0492_s4_m6_s06_ghadir_khumm",
+      "state": "edited",
+      "pageNum": 492,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s06_ghadir_khumm"
+    },
+    {
+      "id": "seq_0493_s4_m6_s07_onset_illness",
+      "state": "edited",
+      "pageNum": 493,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s07_onset_illness"
+    },
+    {
+      "id": "seq_0494_s4_m6_s08_last_days_prayers",
+      "state": "edited",
+      "pageNum": 494,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s08_last_days_prayers"
+    },
+    {
+      "id": "seq_0495_s4_m6_s09_death_prophet",
+      "state": "edited",
+      "pageNum": 495,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s09_death_prophet"
+    },
+    {
+      "id": "seq_0496_s4_m6_s10_shock_madinah",
+      "state": "edited",
+      "pageNum": 496,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s10_shock_madinah"
+    },
+    {
+      "id": "seq_0497_s4_m6_s11_burial_succession",
+      "state": "edited",
+      "pageNum": 497,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s11_burial_succession"
+    },
+    {
+      "id": "seq_0498_s4_m6_s12_discussion",
+      "state": "edited",
+      "pageNum": 498,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s12_discussion"
+    },
+    {
+      "id": "seq_0499_s4_m6_s13_takeaways",
+      "state": "edited",
+      "pageNum": 499,
+      "original_project": "Session IV - Module 6",
+      "original_id": "s4_m6_s13_takeaways"
+    }
+  ]
+}

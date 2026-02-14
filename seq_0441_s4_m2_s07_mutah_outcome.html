@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #8D6E63;
+            font-style: italic;
+        }
+
+        .content-section {
+            padding: 20px 80px;
+            display: flex;
+            gap: 50px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .analysis-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .point-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .point-icon {
+            font-size: 1.4rem;
+            color: #C5A059;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .point-text {
+            font-size: 1.1rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+
+        .verdict-box {
+            margin: 0 80px 40px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 25px 40px;
+            border: 2px solid #C5A059;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .verdict-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #C5A059;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .verdict-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .stat-highlight {
+            font-weight: 700;
+            color: #1A3C40;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Strategic Analysis: Victory or Defeat?</h1>
+            <h2 class="subtitle">Breaking the Prestige of Rome</h2>
+        </div>
+
+        <div class="content-section">
+            <!-- Left: The Surface View -->
+            <div class="analysis-column">
+                <h3 class="column-header">The Surface View</h3>
+                <div class="point-item">
+                    <i class="fas fa-question-circle point-icon" style="color: #8D6E63;"></i>
+                    <p class="point-text">
+                        Some in Madīnah initially viewed the retreat as a failure, calling the returning army "Al-Furrār" (The Fleers) because they did not conquer the land or defeat the enemy army completely.
+                    </p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-times-circle point-icon" style="color: #8D6E63;"></i>
+                    <p class="point-text">
+                        The objective of avenging the envoy was not fully met in the traditional sense of occupation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: The Strategic Reality -->
+            <div class="analysis-column">
+                <h3 class="column-header">The Strategic Reality</h3>
+                <div class="point-item">
+                    <i class="fas fa-check-circle point-icon"></i>
+                    <p class="point-text">
+                        <span class="stat-highlight">Survival as Victory:</span> For 3,000 men to engage 200,000 and return with only <span class="stat-highlight">12 martyrs</span> is a military miracle and a tactical masterclass.
+                    </p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-check-circle point-icon"></i>
+                    <p class="point-text">
+                        <span class="stat-highlight">Shattering the Myth:</span> The battle proved to the Arab tribes that Rome was not invincible. It broke the psychological barrier of fighting a superpower.
+                    </p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-check-circle point-icon"></i>
+                    <p class="point-text">
+                        <span class="stat-highlight">Prestige:</span> The Romans were shocked by the ferocity of the Muslims, deterring them from immediate invasion.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="verdict-box">
+            <span class="verdict-label">The Prophetic Verdict</span>
+            <p class="verdict-text">
+                "They are not fleers (Al-Furrār), but they are the returners/attackers (Al-Kurrār), if Allāh wills."
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 20px 100px 40px;
+            gap: 60px;
+            flex-grow: 1;
+            z-index: 5;
+            align-items: center;
+        }
+
+        /* Left: Route Visualization */
+        .route-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .route-line {
+            position: absolute;
+            top: 40px;
+            bottom: 40px;
+            left: 50%;
+            width: 4px;
+            background-color: #C5A059;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .route-node {
+            background-color: #FDFBF7;
+            border: 2px solid #1A3C40;
+            padding: 15px 25px;
+            width: 200px;
+            text-align: center;
+            z-index: 2;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .node-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        .node-desc {
+            font-size: 0.9rem;
+            color: #5D4037;
+        }
+
+        .node-icon {
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #C5A059;
+            font-size: 1.5rem;
+        }
+
+        /* Right: The Event */
+        .event-col {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .event-card {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #C62828; /* Red for illness */
+            padding: 25px;
+        }
+
+        .event-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .event-text {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+
+        .term-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #C5A059;
+        }
+
+        .arabic-term {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #C5A059;
+            margin-bottom: 5px;
+        }
+
+        .english-term {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 30px;
+            font-size: 1rem;
+            color: #8D6E63;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">'Abdullāh's Final Journey</h1>
+            <div class="subtitle">The Trade Caravan to Syria</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Left: Route -->
+            <div class="route-col">
+                <div class="route-line"></div>
+                
+                <div class="route-node">
+                    <i class="fas fa-kaaba node-icon"></i>
+                    <div class="node-title">Makkah</div>
+                    <div class="node-desc">Departure</div>
+                </div>
+
+                <div class="route-node">
+                    <i class="fas fa-globe-asia node-icon"></i>
+                    <div class="node-title">Al-Shām (Syria)</div>
+                    <div class="node-desc">Trade Mission</div>
+                </div>
+
+                <div class="route-node" style="border-color: #C62828;">
+                    <i class="fas fa-bed node-icon" style="color: #C62828;"></i>
+                    <div class="node-title" style="color: #C62828;">Yathrib</div>
+                    <div class="node-desc">Illness on Return</div>
+                </div>
+            </div>
+
+            <!-- Right: Event -->
+            <div class="event-col">
+                <div class="event-card">
+                    <div class="event-title">The Illness</div>
+                    <p class="event-text">
+                        On the return journey, 'Abdullāh fell severely ill. He stopped in Yathrib to recover, staying with his maternal relatives.
+                    </p>
+                </div>
+
+                <div class="term-box">
+                    <div class="arabic-term">بَنُو النَّجَّار</div>
+                    <div class="english-term">Banū al-Najjār</div>
+                    <div style="margin-top: 10px; font-size: 0.9rem; color: #E0F2F1;">
+                        The maternal relatives of 'Abd al-Muṭṭalib (his mother was Salmā bint 'Amr from this clan).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "The Prophet ﷺ later migrated to this same city and was hosted by this same clan."
+        </div>
+    </div>
+</body>
+</html>

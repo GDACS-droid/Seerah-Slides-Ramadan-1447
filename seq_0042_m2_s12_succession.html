@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .conflict-container {
+            display: flex;
+            gap: 40px;
+            padding: 20px 80px 30px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .brother-col {
+            flex: 1;
+            border: 1px solid #C5A059;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #C5A059;
+        }
+
+        .header-abddar { background-color: rgba(141, 110, 99, 0.1); }
+        .header-abdmanaf { background-color: rgba(26, 60, 64, 0.1); }
+
+        .brother-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .brother-role {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8D6E63;
+            font-weight: 700;
+        }
+
+        .col-content {
+            padding: 25px;
+            flex-grow: 1;
+            background-color: rgba(255, 255, 255, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .desc-text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #5D4037;
+        }
+
+        .offices-box {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px dashed #C5A059;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .offices-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .office-badge {
+            display: inline-block;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 5px 10px;
+            margin: 3px;
+            font-size: 0.9rem;
+            border-radius: 0;
+        }
+
+        .compromise-banner {
+            margin: 0 80px 40px;
+            background-color: #C5A059;
+            color: #1A3C40;
+            padding: 15px;
+            text-align: center;
+            z-index: 5;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .prophetic-line-indicator {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Succession After Quṣayy</h1>
+            <div class="subtitle">The Struggle for Authority</div>
+        </div>
+
+        <div class="conflict-container">
+            <!-- Abd al-Dar -->
+            <div class="brother-col">
+                <div class="col-header header-abddar">
+                    <div class="brother-name">'Abd al-Dār</div>
+                    <div class="brother-role">The Eldest Son</div>
+                </div>
+                <div class="col-content">
+                    <p class="desc-text">
+                        Quṣayy bequeathed all authority to him to compensate for his lack of natural leadership qualities.
+                    </p>
+                    <div class="offices-box">
+                        <div class="offices-title">Retained Offices</div>
+                        <span class="office-badge">Ḥijābah (Keys)</span>
+                        <span class="office-badge">Dār al-Nadwah</span>
+                        <span class="office-badge">Liwā' (Flag)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abd Manaf -->
+            <div class="brother-col" style="position: relative;">
+                <div class="col-header header-abdmanaf">
+                    <div class="brother-name">'Abd Manāf</div>
+                    <div class="brother-role">The Capable Leader</div>
+                </div>
+                <div class="col-content">
+                    <p class="desc-text">
+                        Highly respected and influential. His descendants demanded a share of the authority matching their status.
+                    </p>
+                    <div class="offices-box">
+                        <div class="offices-title">Acquired Offices</div>
+                        <span class="office-badge">Siqāyah (Water)</span>
+                        <span class="office-badge">Rifādah (Food)</span>
+                    </div>
+                </div>
+                <div class="prophetic-line-indicator">Prophetic Lineage</div>
+            </div>
+        </div>
+
+        <div class="compromise-banner">
+            The Compromise: Power was split to prevent civil war.
+        </div>
+    </div>
+</body>
+</html>

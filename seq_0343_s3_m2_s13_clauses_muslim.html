@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Reduced vertical padding to avoid overflow while keeping font sizes intact */
+        .content-section {
+            padding: 10px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        /* Shrink inner padding and spacing of clause boxes */
+        .clause-box {
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 5px solid #1A3C40;
+            padding: 12px 30px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .clause-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .clause-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        .clause-note {
+            font-size: 1rem;
+            color: #5D4037;
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Key Clauses: The Muslim Community</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="clause-box">
+                <div class="clause-title">Clause 1: The Ummah</div>
+                <div class="clause-text">
+                    "They are a single community (Ummah) to the exclusion of all other people."
+                </div>
+                <div class="clause-note">
+                    Established faith, not lineage, as the primary political identity.
+                </div>
+            </div>
+
+            <div class="clause-box">
+                <div class="clause-title">Clause 12: Collective Responsibility</div>
+                <div class="clause-text">
+                    "A believer shall not leave a debtor among them heavy with debt without paying his share of blood money or ransom."
+                </div>
+                <div class="clause-note">
+                    Established a social welfare system and collective insurance.
+                </div>
+            </div>
+
+            <div class="clause-box">
+                <div class="clause-title">Clause 15: Universal Protection</div>
+                <div class="clause-text">
+                    "The protection of God is one; the least of them may give protection [to a stranger] that is binding on all."
+                </div>
+                <div class="clause-note">
+                    Democratized the right to grant asylum, previously a chief's privilege.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

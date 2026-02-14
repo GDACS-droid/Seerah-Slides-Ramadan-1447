@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 100px 40px;
+            gap: 25px;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        /* Section 1: The Excavation */
+        .excavation-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: #1A3C40;
+            color: #C5A059;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            border: 2px solid #C5A059;
+            flex-shrink: 0;
+        }
+
+        .text-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+        /* Section 2: The Treasure */
+        .treasure-container {
+            background-color: rgba(197, 160, 89, 0.1);
+            border: 1px solid #C5A059;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .treasure-list {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .treasure-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .treasure-icon {
+            color: #C5A059;
+            font-size: 1.8rem;
+        }
+
+        .treasure-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+        }
+
+        /* Section 3: The Resolution */
+        .resolution-row {
+            display: flex;
+            gap: 30px;
+            margin-top: auto;
+        }
+
+        .conflict-box {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-left: 4px solid #8D6E63;
+        }
+
+        .outcome-box {
+            flex: 1;
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 20px;
+            border-left: 4px solid #1A3C40;
+        }
+
+        .box-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .box-text {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 0 80px 30px;
+            font-size: 1.1rem;
+            color: #1A3C40;
+            font-style: italic;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Rediscovery of Zamzam</h1>
+            <div class="subtitle">Excavation, Dispute, and Vindication</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- The Excavation -->
+            <div class="excavation-row">
+                <div class="icon-box"><i class="fas fa-tools"></i></div>
+                <div class="text-content">
+                    <h3>The Lonely Excavation</h3>
+                    <p>
+                        'Abd al-Muṭṭalib dug for three days with only his son Al-Ḥārith to protect him. The Quraysh mocked them, refusing to help disturb the sacred enclosure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Treasure -->
+            <div class="treasure-container">
+                <div class="text-content" style="flex: 1;">
+                    <h3>The Treasure of Jurhum</h3>
+                    <p>Upon striking the well cover, he found the buried wealth of the ancient tribe:</p>
+                </div>
+                <ul class="treasure-list">
+                    <li class="treasure-item">
+                        <i class="fas fa-horse-head treasure-icon"></i>
+                        <span class="treasure-text">2 Gold Gazelles</span>
+                    </li>
+                    <li class="treasure-item">
+                        <i class="fas fa-shield-alt treasure-icon"></i>
+                        <span class="treasure-text">Ancient Armor</span>
+                    </li>
+                    <li class="treasure-item">
+                        <i class="fas fa-khanda treasure-icon"></i>
+                        <span class="treasure-text">Swords</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- The Resolution -->
+            <div class="resolution-row">
+                <div class="conflict-box">
+                    <div class="box-title">The Dispute</div>
+                    <p class="box-text">
+                        Quraysh demanded a share: "This is the well of our father Ismā'īl." They challenged his sole ownership of the water and the treasure.
+                    </p>
+                </div>
+                <div class="outcome-box">
+                    <div class="box-title">The Dedication</div>
+                    <p class="box-text">
+                        After divine vindication, 'Abd al-Muṭṭalib melted the gold and hung the swords on the Ka'bah door—the first to adorn the House with gold.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            "Takbīr! It is the well of Ismā'īl!" — 'Abd al-Muṭṭalib's cry upon finding water.
+        </div>
+    </div>
+</body>
+</html>

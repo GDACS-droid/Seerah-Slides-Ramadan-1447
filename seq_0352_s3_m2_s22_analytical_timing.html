@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: left;
+            z-index: 5;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            margin: 0 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-right: 20px;
+        }
+
+        .analytical-tag {
+            background-color: #C5A059;
+            color: #fff;
+            padding: 5px 15px;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .content-section {
+            padding: 40px 80px;
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            z-index: 5;
+        }
+
+        .reason-card {
+            width: 31%;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 25px;
+            border-top: 4px solid #1A3C40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .reason-icon {
+            font-size: 2.5rem;
+            color: #C5A059;
+            margin-bottom: 20px;
+        }
+
+        .reason-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+        }
+
+        .reason-text {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #3E2723;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <span class="analytical-tag">Analytical</span>
+            <h1 class="main-title">Why the Change?</h1>
+        </div>
+
+        <div class="content-section">
+            <div class="reason-card">
+                <i class="fas fa-fingerprint reason-icon"></i>
+                <h3 class="reason-title">Identity Formation (Tamayuz)</h3>
+                <p class="reason-text">
+                    Established the Muslim Ummah as a distinct community with its own spiritual center, separate from Jewish tradition.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <i class="fas fa-vial reason-icon"></i>
+                <h3 class="reason-title">The Test (Imtiḥān)</h3>
+                <p class="reason-text">
+                    "We did not make the Qiblah... except that We might make evident who follows the Messenger from who turns back on his heels." (2:143)
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <i class="fas fa-kaaba reason-icon"></i>
+                <h3 class="reason-title">Abrahamic Roots</h3>
+                <p class="reason-text">
+                    Reconnected the faith to Ibrāhīm (AS) and the Ka'bah, bypassing the corruption of later traditions and reclaiming the original monotheism.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
