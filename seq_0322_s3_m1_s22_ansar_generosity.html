@@ -146,6 +146,81 @@
             letter-spacing: 1px;
         }
 
+    
+        /* GLOBAL LAYOUT FIXES */
+        .slide-container {
+            /* Ensure sufficient padding at the bottom so content doesn't hit the border */
+            padding-bottom: 60px !important; 
+            /* Ensure content is stacked vertically and doesn't overflow */
+            overflow: hidden !important;
+            /* Use flexbox but allow content to take space */
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        /* Fix overlapping borders */
+        .border-frame {
+            z-index: 1 !important; /* Move border to back */
+            pointer-events: none !important;
+        }
+        
+        /* Ensure all content is above the border */
+        .header-section, .content-section, .footer-section, .inner-content, .slide-content, .pillars-container, .footer-quote {
+            z-index: 20 !important; /* Higher than border */
+            position: relative !important;
+        }
+
+        /* Fix text boxes covering other elements */
+        .text-box, .quote-box, .info-box {
+            height: auto !important; /* Allow expansion */
+            min-height: 0 !important;
+            overflow: visible !important;
+        }
+
+        /* Fix Quranic quotes being covered */
+        .quran-quote, .quran-text, .verse-container {
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+            padding: 20px !important;
+            background-color: rgba(255, 255, 255, 0.8) !important; /* Add background to ensure readability over borders */
+            border-radius: 8px !important;
+            position: relative !important;
+            z-index: 30 !important; /* Highest priority */
+        }
+        
+        /* Fix bottom obstruction */
+        .footer-quote, .footer-note, .citation {
+            margin-bottom: 40px !important; /* Lift up from bottom */
+        }
+        
+        /* Fix diagram overlaps */
+        .diagram-container, .chart-container {
+            margin: 20px 0 !important;
+            z-index: 15 !important;
+        }
+    
+    
+        /* GLOBAL OVERLAP PREVENTION */
+        
+        /* Ensure specific containers that might be absolute are checked */
+        .outcome-section, .result-box, .highlight-container {
+            /* If they are absolute, we try to make them relative if they are main content */
+            /* This is a bit risky globally, so we target specific classes if known */
+        }
+        
+        /* Ensure all text containers have backgrounds to prevent transparent text overlap */
+        .text-box, .info-card, .step-item, .outcome-card {
+            background-color: rgba(253, 251, 247, 0.95) !important; /* Cream background */
+            position: relative !important;
+            z-index: 20 !important;
+        }
+        
+        /* Fix z-index for all content wrappers */
+        .content-wrapper, .main-content {
+            position: relative !important;
+            z-index: 15 !important;
+        }
+            
     </style>
 </head>
 <body>
