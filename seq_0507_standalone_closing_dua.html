@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 20px 80px;
+            z-index: 20;
+            gap: 30px;
+        }
+
+        .dua-block {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px 30px;
+            border-radius: 8px;
+            border-left: 4px solid #C5A059;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            line-height: 2.0;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            direction: rtl;
+        }
+
+        .translation-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #3E2723;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background-color: #C5A059;
+            opacity: 0.5;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">Supplication at the Conclusion</h1>
+            <div class="subtitle">Seal of the Gathering</div>
+        </div>
+
+        <div class="content-section">
+            <!-- First Dua: Rabbana Anfa'na -->
+            <div class="dua-block">
+                <div class="arabic-text">
+                    رَبَّنَا انْفَعْنَا بِمَا عَلَّمْتَنَا، رَبِّ عَلِّمْنَا الَّذِي يَنْفَعُنَا، رَبِّ فَقِّهْنَا وَفَقِّهْ أَهْلَنَا، وَقَرَابَاتٍ لَنَا فِي دِينِنَا
+                </div>
+                <div class="translation-text">
+                    "Our Lord, benefit us with what You have taught us. Lord, teach us what is beneficial for us. Lord, grant us, our family, and our relatives, deep understanding in our religion."
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Second Dua: Subhana Rabbika (Seal) -->
+            <div class="dua-block">
+                <div class="arabic-text">
+                    سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ ۝ وَسَلَامٌ عَلَى الْمُرْسَلِينَ ۝ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+                </div>
+                <div class="translation-text">
+                    "Glory be to your Lord, the Lord of Honor, above what they describe. And peace be upon the messengers. And praise be to Allah, Lord of the worlds." (Surah As-Saffat 37:180-182)
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

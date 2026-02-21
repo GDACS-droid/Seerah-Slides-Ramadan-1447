@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 20px 100px;
+            z-index: 20;
+        }
+
+        .quote-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #C5A059;
+            padding: 30px;
+            margin-bottom: 40px;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #1A3C40;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .quote-source {
+            text-align: right;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #8D6E63;
+            font-weight: 700;
+        }
+
+        .points-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .point-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .point-icon {
+            font-size: 1.5rem;
+            color: #C5A059;
+            margin-top: 5px;
+        }
+
+        .point-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .point-content p {
+            font-size: 1.1rem;
+            color: #3E2723;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Blessings of Studying Seerah in Ramadan</h1>
+            <div class="subtitle">Connecting with the Best of Creation in the Best of Months</div>
+        </div>
+
+        <div class="content-section">
+            <div class="quote-box">
+                <div class="quote-text">
+                    "Whoever sends blessings upon me once, Allah will send blessings upon him tenfold."
+                </div>
+                <div class="quote-source">— Sahih Muslim</div>
+            </div>
+
+            <div class="points-grid">
+                <div class="point-item">
+                    <i class="fas fa-moon point-icon"></i>
+                    <div class="point-content">
+                        <h3>Historical Connection</h3>
+                        <p>Many pivotal events in the Seerah, such as the Battle of Badr and the Conquest of Makkah, took place during the month of Ramadan.</p>
+                    </div>
+                </div>
+
+                <div class="point-item">
+                    <i class="fas fa-heart point-icon"></i>
+                    <div class="point-content">
+                        <h3>Emotional Resonance</h3>
+                        <p>Fasting softens the heart, making us more receptive to the struggles, sacrifices, and character of the Prophet ﷺ.</p>
+                    </div>
+                </div>
+
+                <div class="point-item">
+                    <i class="fas fa-book-open point-icon"></i>
+                    <div class="point-content">
+                        <h3>Living the Quran</h3>
+                        <p>The Seerah is the practical application of the Quran. Studying it alongside your recitation deepens your understanding of the verses revealed.</p>
+                    </div>
+                </div>
+
+                <div class="point-item">
+                    <i class="fas fa-praying-hands point-icon"></i>
+                    <div class="point-content">
+                        <h3>Spiritual Role Model</h3>
+                        <p>By learning how the Prophet ﷺ spent his Ramadan—in generosity, prayer, and recitation—we can better emulate his example.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

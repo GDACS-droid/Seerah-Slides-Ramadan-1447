@@ -1,7 +1,7 @@
 {
   "project_info": {
     "title": "Complete Seerah Curriculum (Sessions I-IV)",
-    "total_slides": 507,
+    "total_slides": 499,
     "description": "Consolidated master deck of all Seerah modules."
   },
   "slides": [
@@ -3497,62 +3497,6 @@
       "pageNum": 499,
       "original_project": "Session IV - Module 6",
       "original_id": "s4_m6_s13_takeaways"
-    },
-    {
-      "id": "seq_0500_standalone_opening_dua",
-      "state": "edited",
-      "pageNum": 500,
-      "original_project": "Standalone Slides",
-      "original_id": "opening_dua"
-    },
-    {
-      "id": "seq_0501_standalone_ramadan_blessings",
-      "state": "edited",
-      "pageNum": 501,
-      "original_project": "Standalone Slides",
-      "original_id": "ramadan_blessings"
-    },
-    {
-      "id": "seq_0502_standalone_science_of_seerah",
-      "state": "edited",
-      "pageNum": 502,
-      "original_project": "Standalone Slides",
-      "original_id": "science_of_seerah"
-    },
-    {
-      "id": "seq_0503_standalone_session_i_overview",
-      "state": "edited",
-      "pageNum": 503,
-      "original_project": "Standalone Slides",
-      "original_id": "session_i_overview"
-    },
-    {
-      "id": "seq_0504_standalone_session_ii_overview",
-      "state": "edited",
-      "pageNum": 504,
-      "original_project": "Standalone Slides",
-      "original_id": "session_ii_overview"
-    },
-    {
-      "id": "seq_0505_standalone_session_iii_overview",
-      "state": "edited",
-      "pageNum": 505,
-      "original_project": "Standalone Slides",
-      "original_id": "session_iii_overview"
-    },
-    {
-      "id": "seq_0506_standalone_session_iv_overview",
-      "state": "edited",
-      "pageNum": 506,
-      "original_project": "Standalone Slides",
-      "original_id": "session_iv_overview"
-    },
-    {
-      "id": "seq_0507_standalone_closing_dua",
-      "state": "edited",
-      "pageNum": 507,
-      "original_project": "Standalone Slides",
-      "original_id": "closing_dua"
     }
   ]
 }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header-section {
+            padding: 50px 80px 20px;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1A3C40;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .content-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 60px;
+            gap: 40px;
+            z-index: 20;
+        }
+
+        .column {
+            flex: 1;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #C5A059;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .source-list {
+            list-style: none;
+        }
+
+        .source-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .source-icon {
+            color: #C5A059;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 4px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .source-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #3E2723;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .source-content p {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header-section">
+            <h1 class="main-title">The Science of Seerah</h1>
+            <div class="subtitle">Sources & Methodology of Prophetic Biography</div>
+        </div>
+
+        <div class="content-section">
+            <div class="column">
+                <h2 class="col-title">Primary Sources</h2>
+                <ul class="source-list">
+                    <li class="source-item">
+                        <i class="fas fa-quran source-icon"></i>
+                        <div class="source-content">
+                            <h4>The Noble Qur'an</h4>
+                            <p>The most authentic and primary source, referencing key events (Badr, Uhud, Hunayn) and the Prophet's character.</p>
+                        </div>
+                    </li>
+                    <li class="source-item">
+                        <i class="fas fa-scroll source-icon"></i>
+                        <div class="source-content">
+                            <h4>Authentic Hadith (Sunnah)</h4>
+                            <p>Narrations recorded in Sahih al-Bukhari, Muslim, and other canonical collections detailing specific incidents and sayings.</p>
+                        </div>
+                    </li>
+                    <li class="source-item">
+                        <i class="fas fa-book source-icon"></i>
+                        <div class="source-content">
+                            <h4>Early Biographies (Maghazi/Siyar)</h4>
+                            <p>Specialized works by early scholars like Ibn Ishaq (d. 151 AH), Ibn Hisham, and Al-Waqidi focused on historical chronology.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h2 class="col-title">Supporting Evidence</h2>
+                <ul class="source-list">
+                    <li class="source-item">
+                        <i class="fas fa-feather-alt source-icon"></i>
+                        <div class="source-content">
+                            <h4>Pre-Islamic Poetry</h4>
+                            <p>The "Diwan of the Arabs"—poetry preserved the history, lineage, and cultural context of the tribes of Arabia.</p>
+                        </div>
+                    </li>
+                    <li class="source-item">
+                        <i class="fas fa-map-marked-alt source-icon"></i>
+                        <div class="source-content">
+                            <h4>Genealogy (Nasab)</h4>
+                            <p>Detailed records of tribal lineages essential for understanding social dynamics and alliances.</p>
+                        </div>
+                    </li>
+                    <li class="source-item">
+                        <i class="fas fa-landmark source-icon"></i>
+                        <div class="source-content">
+                            <h4>Archaeological Evidence</h4>
+                            <p>Physical remnants and inscriptions that corroborate historical accounts of places and peoples.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
