@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 40px 80px 10px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hadith-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 80px 30px;
+            gap: 15px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .arabic-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1A3C40;
+            direction: rtl;
+            text-align: right;
+            padding: 15px 20px;
+            background-color: rgba(26, 60, 64, 0.04);
+            border-right: 4px solid #C5A059;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .english-text {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: #3E2723;
+            padding: 15px 20px;
+            border-left: 4px solid #C5A059;
+            background-color: rgba(197, 160, 89, 0.05);
+        }
+
+        .reference {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #8D6E63;
+            font-style: italic;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+
+        <div class="header">
+            <h1 class="main-title">The Full Narration: Beginning of Revelation</h1>
+            <div class="subtitle">Ḥadīth — Ṣaḥīḥ Muslim 160a</div>
+        </div>
+
+        <div class="hadith-container">
+            <div class="arabic-text">
+                كَانَ أَوَّلُ مَا بُدِئَ بِهِ رَسُولُ اللَّهِ ﷺ مِنَ الْوَحْىِ الرُّؤْيَا الصَّادِقَةَ فِي النَّوْمِ فَكَانَ لاَ يَرَى رُؤْيَا إِلاَّ جَاءَتْ مِثْلَ فَلَقِ الصُّبْحِ ثُمَّ حُبِّبَ إِلَيْهِ الْخَلاَءُ فَكَانَ يَخْلُو بِغَارِ حِرَاءٍ يَتَحَنَّثُ فِيهِ ... فَجَاءَهُ الْمَلَكُ فَقَالَ اقْرَأْ قَالَ مَا أَنَا بِقَارِئٍ فَأَخَذَنِي فَغَطَّنِي حَتَّى بَلَغَ مِنِّي الْجَهْدَ ثُمَّ أَرْسَلَنِي فَقَالَ اقْرَأْ ... فَأَخَذَنِي فَغَطَّنِي الثَّالِثَةَ ... ثُمَّ أَرْسَلَنِي فَقَالَ ‏{‏ اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ‏}‏
+            </div>
+
+            <div class="english-text">
+                'Ā'ishah, the wife of the Messenger of Allah ﷺ, reported: "The first form with which revelation was started was the true vision in sleep. He did not see any vision but it came like the bright gleam of dawn. Thenceforth solitude became dear to him and he used to seclude himself in the cave of Ḥirā', where he would engage in taḥannuth (worship for a number of nights)... till Truth came upon him while he was in the cave of Ḥirā'. There came to him the angel and said: <strong>Recite</strong>, to which he replied: <strong>I am not lettered</strong>. He took hold of me and pressed me, till I was hard pressed; thereafter he let me off and said: Recite... He took hold of me and pressed me for the third time, till I was hard pressed and then let me go and said: <strong>Recite in the name of your Lord Who created, created man from a clot of blood. Recite. And your most bountiful Lord is He Who taught the use of pen, taught man what he knew not</strong> (Q 96:1–5). Then the Prophet ﷺ returned therewith, his heart was trembling, and he went to Khadījah and said: <strong>Wrap me up, wrap me up!</strong> ... He then said: O Khadījah! what has happened to me? ... She replied: It can't be. Be happy. I swear by Allah that He shall never humiliate you. By Allah, you join ties of relationship, you speak the truth, you bear people's burden, you help the destitute, you entertain guests, and you help against the vicissitudes which affect people."
+            </div>
+
+            <div class="reference">Ṣaḥīḥ Muslim, Book 1, Ḥadīth 308 — Narrated by 'Ā'ishah (ra)</div>
+        </div>
+    </div>
+</body>
+</html>

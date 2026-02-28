@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 0 80px;
+            gap: 50px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .dua-container {
+            flex: 1.2;
+            background-color: #fff;
+            border: 1px solid #C5A059;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dua-container::before {
+            content: "\f10d"; /* quote-left */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 2rem;
+            color: #1A3C40;
+            background-color: #FDFBF7;
+            padding: 0 10px;
+        }
+
+        .dua-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #3E2723;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .dua-arabic {
+            font-family: 'Playfair Display', serif;
+            color: #C5A059;
+            font-size: 1.1rem;
+            text-align: right;
+            margin-bottom: 10px;
+            direction: rtl;
+        }
+
+        .analysis-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .analysis-point {
+            margin-bottom: 25px;
+            border-left: 3px solid #1A3C40;
+            padding-left: 20px;
+        }
+
+        .analysis-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .analysis-desc {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+
+        .angel-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .angel-box i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #C5A059;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Dua of Ṭā'if</h1>
+            <div class="subtitle">"To You I Complain of My Weakness..."</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="dua-container">
+                <div class="dua-text">
+                    "O Allah, to You I complain of my weakness, my lack of resources, and my humiliation before the people. O Most Merciful of those who show mercy! You are the Lord of the weak, and You are my Lord... If You are not angry with me, then I do not care; but Your protection is more encompassing for me."
+                </div>
+                <div class="dua-text">
+                    "I seek refuge in the Light of Your Face by which darkness is illuminated... that Your anger should descend upon me... I seek Your forgiveness until You are pleased."
+                </div>
+            </div>
+
+            <div class="analysis-container">
+                <div class="analysis-point">
+                    <div class="analysis-title">Complaint To Allah, Not Of Allah</div>
+                    <div class="analysis-desc">The Prophet ﷺ expresses his vulnerability ("Ashku...") to his Creator, not questioning Allah's decree but seeking His strength.</div>
+                </div>
+
+                <div class="analysis-point">
+                    <div class="analysis-title">The Ultimate Concern</div>
+                    <div class="analysis-desc">"If You are not angry with me, I do not care." His only fear was that this trial might be a sign of Divine displeasure.</div>
+                </div>
+
+                <div class="angel-box">
+                    <i class="fas fa-mountain"></i>
+                    <div>
+                        <strong>The Angel of Mountains:</strong> Offered to crush Ṭā'if between two mountains. The Prophet ﷺ refused: "No, I hope that Allah will bring forth from their loins those who worship Allah alone."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 20px; /* keep upper padding intact */
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 0 80px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .definitions-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 10px; /* reduced */
+        }
+
+        .def-box {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #C5A059;
+            padding: 18px; /* reduced */
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .def-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #C5A059;
+            padding-bottom: 4px;
+            display: inline-block;
+        }
+
+        .def-desc {
+            font-size: 1rem;
+            line-height: 1.45; /* slightly tighter */
+            color: #5D4037;
+        }
+
+        .icon-overlay {
+            position: absolute;
+            top: 14px; /* slightly reduced */
+            right: 14px;
+            font-size: 3rem;
+            color: rgba(197, 160, 89, 0.2);
+        }
+
+        .trajectory-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; /* reduced */
+            position: relative;
+            height: 110px; /* reduced from 150 */
+        }
+
+        .node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            width: 120px;
+        }
+
+        .node-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem; /* keep font size */
+            border: 3px solid #C5A059;
+            margin-bottom: 8px;
+        }
+
+        .node-label {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #3E2723;
+        }
+
+        .path-line {
+            height: 3px;
+            background-color: #C5A059;
+            flex: 1;
+            position: relative;
+            top: 0; /* removed upward offset */
+            margin: 0 10px;
+        }
+
+        .path-label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #8D6E63;
+            background-color: #FDFBF7;
+            padding: 0 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .purpose-box {
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 12px; /* reduced */
+            border-left: 4px solid #1A3C40;
+            text-align: center;
+            font-style: italic;
+            color: #3E2723;
+            font-size: 1.1rem;
+            line-height: 1.45;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">Al-Isrā' wa al-Mi'rāj: Context</h1>
+            <div class="subtitle">Divine Comfort After Earthly Rejection</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="definitions-container">
+                <div class="def-box">
+                    <i class="fas fa-horse-head icon-overlay"></i>
+                    <h3 class="def-title">Al-Isrā' (The Night Journey)</h3>
+                    <p class="def-desc">The miraculous horizontal journey by night from Al-Masjid Al-Haram in Makkah to Al-Masjid Al-Aqsa in Jerusalem.</p>
+                </div>
+                <div class="def-box">
+                    <i class="fas fa-cloud-moon icon-overlay"></i>
+                    <h3 class="def-title">Al-Mi'rāj (The Ascension)</h3>
+                    <p class="def-desc">The vertical ascension from Jerusalem through the seven heavens to the Sidrat al-Muntaha (Lote Tree of the Utmost Boundary).</p>
+                </div>
+            </div>
+
+            <div class="trajectory-diagram">
+                <div class="node">
+                    <div class="node-icon"><i class="fas fa-kaaba"></i></div>
+                    <div class="node-label">Makkah</div>
+                </div>
+                <div class="path-line">
+                    <div class="path-label">Al-Isrā'</div>
+                </div>
+                <div class="node">
+                    <div class="node-icon"><i class="fas fa-mosque"></i></div>
+                    <div class="node-label">Jerusalem</div>
+                </div>
+                <div class="path-line" style="flex: 0 0 90px;">
+                    <div class="path-label" style="top: -18px;">Al-Mi'rāj</div>
+                </div>
+                <div class="node">
+                    <div class="node-icon"><i class="fas fa-star"></i></div>
+                    <div class="node-label">Heavens</div>
+                </div>
+            </div>
+
+            <div class="purpose-box">
+                "Exalted is He who took His Servant by night from al-Masjid al-Haram to al-Masjid al-Aqsa... to show him of Our signs." (Surah Al-Isra 17:1)
+                <br>
+                <strong>Theological Purpose:</strong> A personal gift to honor the Prophet ﷺ after the "Year of Sorrow" and the rejection at Ṭā'if, confirming his high status with Allah.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

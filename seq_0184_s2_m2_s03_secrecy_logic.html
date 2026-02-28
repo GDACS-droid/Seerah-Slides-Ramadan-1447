@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <title>The Strategic Logic of Secrecy</title>
+    <style>
+/* Session II Common Styles */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; }
+
+.slide-container {
+    width: 1280px;
+    min-height: 720px;
+    background-color: #FDFBF7;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    color: #3E2723;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #FDFBF7; /* Inner spacing before border */
+}
+
+/* Islamic Geometric Border Construction */
+.border-frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid #C5A059;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.corner-decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #C5A059;
+    z-index: 11;
+}
+
+.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+.bottom-right { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+/* Content Layouts */
+.inner-content {
+    text-align: center;
+    z-index: 5;
+    padding: 40px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 60px 80px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Typography */
+h1.arabic-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #3E2723;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+h2.english-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #3E2723;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2.slide-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #3E2723;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #C5A059;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+h3.slide-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: #8D6E63;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.module-tag {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #1A3C40;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.module-tag::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #C5A059;
+    margin: 10px auto 0;
+}
+
+/* Content Elements */
+.bullet-points {
+    list-style-type: none;
+    margin-left: 0;
+    width: 100%;
+}
+
+.bullet-points li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.bullet-points li::before {
+    content: '•';
+    color: #C5A059;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.arabic-term {
+    font-family: 'Playfair Display', serif;
+    color: #1A3C40;
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: #C5A059;
+    font-weight: 700;
+}
+
+.quote-box {
+    background-color: rgba(197, 160, 89, 0.1);
+    border-left: 4px solid #C5A059;
+    padding: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.verse-box {
+    text-align: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.verse-arabic {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1A3C40;
+    margin-bottom: 1rem;
+    direction: rtl;
+}
+
+.verse-translation {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    color: #5D4037;
+    font-style: italic;
+}
+
+/* Two Column Layout */
+.two-columns {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* Footer */
+.slide-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8D6E63;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+        .logic-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .logic-col {
+            flex: 1;
+            padding: 20px;
+            border-left: 2px solid #C5A059;
+            background-color: rgba(253, 251, 247, 0.5);
+        }
+        .logic-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .logic-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.3rem;
+            color: #5D4037;
+            line-height: 1.4;
+        }
+        .duration-box {
+            margin-top: 40px;
+            text-align: center;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            width: 100%;
+        }
+    
+        /* Layout fixes */
+        .slide-container {
+            overflow: visible !important;
+        }
+        .border-frame {
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+        .header-section, .content-section, .footer-section, .inner-content, .slide-content, .pillars-container, .footer-quote {
+            z-index: 10 !important;
+            position: relative !important;
+        }
+        .content-wrapper, .main-content {
+            position: relative !important;
+            z-index: 10 !important;
+        }
+    
+            
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Border Elements -->
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="content-wrapper">
+            <h2 class="slide-title">The Strategic Logic of Privacy</h2>
+            <h3 class="slide-subtitle">Why Three Years?</h3>
+
+            <div class="logic-container">
+                <!-- Reason 1 -->
+                <div class="logic-col">
+                    <div class="logic-title">1. Asymmetric Power</div>
+                    <div class="logic-text">
+                        Quraysh controlled Makkah's economy, religion, and politics. The Muslims were few and vulnerable. An immediate public challenge would have led to instant suppression.
+                    </div>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="logic-col">
+                    <div class="logic-title">2. Formation First</div>
+                    <div class="logic-text">
+                        The Prophet ﷺ needed to build a core group (<em>Jamā'ah</em>) of committed believers before confronting the establishment. A movement cannot survive on a single leader alone.
+                    </div>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="logic-col">
+                    <div class="logic-title">3. Internalization</div>
+                    <div class="logic-text">
+                        New converts needed time to internalize the radical new creed of Tawḥīd and purify their character (Tazkiyah) away from the public gaze.
+                    </div>
+                </div>
+            </div>
+
+            <div class="duration-box">
+                Duration: Approximately 3 Years (c. 610–613 CE)
+            </div>
+
+            <div style="margin-top: 20px; text-align: center; width: 100%;">
+                <h1 class="arabic-title">المَرْحَلَةُ السِّرِّيَّة</h1>
+                <div style="font-family: 'Lato', sans-serif; font-size: 1.6rem; color: #8D6E63;">Al-Marḥalah al-Sirriyyah — The Private Phase</div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">Session II | Module 2 | Slide 3</div>
+    </div>
+</body>
+</html>

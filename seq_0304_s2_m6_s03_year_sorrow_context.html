@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 100px;
+            z-index: 10;
+        }
+
+        .context-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-left: 5px solid #1A3C40;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .context-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .context-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #3E2723;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .event-card {
+            background-color: #FDFBF7;
+            border: 1px solid #C5A059;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .event-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .event-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .event-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #5D4037;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Year of Sorrow ('Ām al-Ḥuzn)</h1>
+            <div class="subtitle">Context: The 10th Year of Prophethood</div>
+        </div>
+
+        <div class="content-container">
+            <div class="context-box">
+                <div class="context-title">The End of the Boycott</div>
+                <div class="context-text">
+                    Just as the grueling three-year boycott of Banū Hāshim ended, bringing hope for relief, the Prophet ﷺ faced his greatest personal trials. The lifting of the siege did not bring ease, but rather preceded a double tragedy that would shake the foundations of his support in Makkah.
+                </div>
+            </div>
+
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="event-content">
+                        <h3>Loss of External Protection</h3>
+                        <p>The death of his uncle, Abū Ṭālib, stripped the Prophet ﷺ of his political and tribal immunity. The leadership of Banū Hāshim passed to Abū Lahab, an avowed enemy.</p>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-icon"><i class="fas fa-heart"></i></div>
+                    <div class="event-content">
+                        <h3>Loss of Internal Comfort</h3>
+                        <p>The death of his beloved wife, Khadījah (ra), removed his emotional anchor and primary source of reassurance. She had been his confidante since the very first revelation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

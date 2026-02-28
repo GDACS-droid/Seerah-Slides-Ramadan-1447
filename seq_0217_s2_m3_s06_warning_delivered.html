@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <title>The Warning Delivered</title>
+    <style>
+/* Session II Common Styles */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; }
+
+.slide-container {
+    width: 1280px;
+    min-height: 720px;
+    background-color: #FDFBF7;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    color: #3E2723;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #FDFBF7; /* Inner spacing before border */
+}
+
+/* Islamic Geometric Border Construction */
+.border-frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid #C5A059;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.corner-decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #C5A059;
+    z-index: 11;
+}
+
+.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+.bottom-right { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+/* Content Layouts */
+.inner-content {
+    text-align: center;
+    z-index: 5;
+    padding: 40px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 60px 80px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Typography */
+h1.arabic-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #3E2723;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+h2.english-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #3E2723;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2.slide-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #3E2723;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #C5A059;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+h3.slide-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: #8D6E63;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.module-tag {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #1A3C40;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.module-tag::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #C5A059;
+    margin: 10px auto 0;
+}
+
+/* Content Elements */
+.bullet-points {
+    list-style-type: none;
+    margin-left: 0;
+    width: 100%;
+}
+
+.bullet-points li {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.bullet-points li::before {
+    content: '•';
+    color: #C5A059;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.arabic-term {
+    font-family: 'Playfair Display', serif;
+    color: #1A3C40;
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: #C5A059;
+    font-weight: 700;
+}
+
+.quote-box {
+    background-color: rgba(197, 160, 89, 0.1);
+    border-left: 4px solid #C5A059;
+    padding: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.verse-box {
+    text-align: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.verse-arabic {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1A3C40;
+    margin-bottom: 1rem;
+    direction: rtl;
+}
+
+.verse-translation {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    color: #5D4037;
+    font-style: italic;
+}
+
+/* Two Column Layout */
+.two-columns {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* Footer */
+.slide-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8D6E63;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+        /* Reduced inner paddings and vertical gaps to bring total height under 720px */
+        .warning-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 15px; /* reduced from 25 */
+            text-align: center;
+            border: 2px solid #C5A059;
+            margin-top: 15px; /* reduced from 30 */
+            position: relative;
+        }
+        .warning-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .warning-arabic {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #C5A059;
+            margin-top: 8px; /* reduced from 10 */
+        }
+        .address-container {
+            display: flex;
+            gap: 18px; /* reduced gap */
+            margin-top: 12px; /* reduced from 30 */
+        }
+        .address-col {
+            flex: 1;
+            background-color: rgba(253, 251, 247, 0.8);
+            border-top: 4px solid #1A3C40;
+            padding: 12px; /* reduced from 20 */
+        }
+        .col-icon {
+            font-size: 1.8rem; /* slightly smaller visual icon but not font-size of content */
+            color: #C5A059;
+            margin-bottom: 10px; /* reduced */
+            text-align: center;
+        }
+        .col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-weight: 700;
+            margin-bottom: 8px; /* reduced */
+            text-align: center;
+        }
+        .col-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .col-list li {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            color: #5D4037;
+            margin-bottom: 6px; /* reduced from 8 */
+            padding-bottom: 6px; /* reduced from 8 */
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .col-list li:last-child {
+            border-bottom: none;
+        }
+        .principle-box {
+            margin-top: 12px; /* reduced from 30 */
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-style: italic;
+            border-top: 1px solid #C5A059;
+            padding-top: 10px; /* reduced from 15 */
+        }
+        .arabic-term-container {
+            margin-top: 12px; /* reduced from 20 */
+            text-align: center;
+        }
+        /* Minor tweak: compact footer spacing */
+        .slide-footer { padding: 6px 0; }
+    
+        /* Layout fixes */
+        .slide-container {
+            overflow: visible !important;
+        }
+        .border-frame {
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+        .header-section, .content-section, .footer-section, .inner-content, .slide-content, .pillars-container, .footer-quote {
+            z-index: 10 !important;
+            position: relative !important;
+        }
+        .content-wrapper, .main-content {
+            position: relative !important;
+            z-index: 10 !important;
+        }
+    
+            
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Border Elements -->
+        <div class="border-frame"></div>
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="content-wrapper">
+            <h2 class="slide-title">The Warning Delivered</h2>
+            <h3 class="slide-subtitle">The Content of the Message</h3>
+
+            <div class="warning-box">
+                <div class="warning-text">"I am a warner to you before a severe punishment."</div>
+                <div class="warning-arabic">إِنِّي نَذِيرٌ لَكُمْ بَيْنَ يَدَيْ عَذَابٍ شَدِيدٍ</div>
+            </div>
+
+            <div class="address-container">
+                <!-- Column 1: The Clans -->
+                <div class="address-col">
+                    <div class="col-icon"><i class="fas fa-users"></i></div>
+                    <div class="col-title">The Public Roll Call</div>
+                    <ul class="col-list">
+                        <li>"O Banū 'Abd Manāf!"</li>
+                        <li>"O Banū 'Abd al-Muṭṭalib!"</li>
+                        <li>"Save yourselves from the Fire!"</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: The Family -->
+                <div class="address-col">
+                    <div class="col-icon"><i class="fas fa-child"></i></div>
+                    <div class="col-title">The Personal Appeal</div>
+                    <ul class="col-list">
+                        <li>"O Ṣafiyyah, aunt of the Messenger!"</li>
+                        <li>"O Fāṭimah, daughter of Muḥammad!"</li>
+                        <li>"I cannot avail you against Allah at all."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-box">
+                "Lineage provides no exemption. Salvation is by faith and deed alone."
+            </div>
+
+            <div class="arabic-term-container">
+                <h1 class="arabic-title">‏وَأَنذِرْ عَشِيرَتَكَ الأَقْرَبِينَ</h1>
+                <div style="font-family: 'Lato', sans-serif; font-size: 1.3rem; color: #8D6E63;">"And warn your closest kindred" — Q 26:214 (al-Shu‘arā’)</div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">Session II | Module 3 | Slide 6</div>
+    </div>
+</body>
+</html>

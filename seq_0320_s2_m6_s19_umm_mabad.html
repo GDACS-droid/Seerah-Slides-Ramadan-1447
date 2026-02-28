@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 30px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 0 80px;
+            gap: 50px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .column-miracle {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .miracle-card {
+            background-color: #fff;
+            border: 1px solid #C5A059;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .miracle-icon {
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+        }
+
+        .miracle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 15px;
+        }
+
+        .miracle-text {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.6;
+        }
+
+        .column-desc {
+            flex: 1.4;
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 30px;
+            border-left: 4px solid #1A3C40;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .desc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 10px;
+        }
+
+        .desc-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #3E2723;
+            line-height: 1.8;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .desc-source {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            text-align: right;
+            margin-top: 15px;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Tent of Umm Ma'bad</h1>
+            <div class="subtitle">The Blessed Guest</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="column-miracle">
+                <div class="miracle-card">
+                    <div class="miracle-icon"><i class="fas fa-hand-holding-water"></i></div>
+                    <h3 class="miracle-title">The Miracle of Milk</h3>
+                    <p class="miracle-text">
+                        The travelers stopped at her tent seeking provisions. She had nothing but a weak, emaciated sheep that had dried up. The Prophet ﷺ asked permission to milk it. He touched its udder, mentioned Allah's name, and milk flowed abundantly until every vessel was full.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column-desc">
+                <h3 class="desc-title">The Description (Shamā'il)</h3>
+                <div class="desc-text">
+                    "I saw a man of evident splendor... His face was radiant... In his eyes was a deep blackness... His neck was shining... When he was silent, dignity covered him, and when he spoke, he was eminent and graceful... He was like a branch between two branches, the most beautiful of the three to look at."
+                </div>
+                <div class="desc-source">— Umm Ma'bad describing the Prophet ﷺ to her husband</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

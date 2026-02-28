@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep required min-height */
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 30px; /* keep top padding (60px) as required */
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Reduce side padding slightly and reduce gaps to save vertical space */
+        .content-wrapper {
+            display: flex;
+            padding: 0 60px;
+            gap: 40px;
+            flex: 1;
+            z-index: 10;
+            align-items: center;
+        }
+
+        .center-graphic {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .mosque-icon {
+            font-size: 8rem;
+            color: #1A3C40;
+            margin-bottom: 12px; /* shrink inner spacing slightly */
+            text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .graphic-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #C5A059;
+            font-weight: 700;
+        }
+
+        .info-cards {
+            flex: 1.5;
+            display: grid; /* reorganize into two columns to cut vertical height */
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 16px; /* smaller gaps */
+        }
+
+        .info-card {
+            background-color: #fff;
+            border-left: 5px solid #1A3C40;
+            padding: 12px; /* reduced padding to save height */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-title i {
+            margin-right: 10px;
+            color: #C5A059;
+            font-size: 1.1rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+
+        .highlight-text {
+            color: #C5A059;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">Al-Isrā': The Night Journey</h1>
+            <div class="subtitle">From Makkah to Jerusalem</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="center-graphic">
+                <i class="fas fa-mosque mosque-icon"></i>
+                <div class="graphic-label">Bayt al-Maqdis</div>
+                <div style="font-size: 1rem; color: #8D6E63; margin-top: 5px;">(Jerusalem)</div>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3 class="card-title"><i class="fas fa-horse"></i> Al-Burāq</h3>
+                    <p class="card-text">The Prophet ﷺ was transported on <span class="highlight-text">Al-Burāq</span>, a white beast smaller than a mule but larger than a donkey, whose single stride reached the horizon.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="card-title"><i class="fas fa-users"></i> The Gathering of Prophets</h3>
+                    <p class="card-text">Upon arriving at Al-Masjid Al-Aqsa, he found all previous Prophets (124,000 in some narrations) gathered, waiting for him.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="card-title"><i class="fas fa-pray"></i> Imam of the Messengers</h3>
+                    <p class="card-text">Jibrīl (as) motioned for him to lead the prayer. This signified the transfer of spiritual leadership (Imāmah) to him and his Ummah, sealing the legacy of all previous revelations.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="card-title"><i class="fas fa-wine-glass-alt"></i> The Test of Fitrah</h3>
+                    <p class="card-text">He was offered milk and wine. He chose the milk. Jibrīl said: "You have chosen the <span class="highlight-text">Fitrah</span> (natural disposition). Had you chosen the wine, your Ummah would have gone astray."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

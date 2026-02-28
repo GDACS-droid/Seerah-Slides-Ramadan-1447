@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 30px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 0 100px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .verse-box {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 25px 40px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            border: 1px solid #C5A059;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .verse-ref {
+            font-size: 0.9rem;
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dialogue-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-left: 5px solid #C5A059;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #5D4037;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .support-card {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #C5A059;
+            text-align: center;
+        }
+
+        .support-icon {
+            font-size: 1.5rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .support-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+
+        .support-role {
+            font-size: 0.9rem;
+            color: #5D4037;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Cave of Thawr</h1>
+            <div class="subtitle">Three Days of Silence</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="verse-box">
+                <div class="verse-text">
+                    "...when they were in the cave and he said to his companion, 'Do not grieve; indeed Allah is with us.'"
+                </div>
+                <div class="verse-ref">Surah At-Tawbah (9:40)</div>
+            </div>
+
+            <div class="dialogue-box">
+                <strong>Abū Bakr (ra):</strong> "O Messenger of Allah, if one of them looks down at his feet, he will see us."
+                <br><br>
+                <strong>The Prophet ﷺ:</strong> "O Abū Bakr, what do you think of two, of whom Allah is the third?"
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon"><i class="fas fa-moon"></i></div>
+                    <div class="support-name">'Abdullah b. Abī Bakr</div>
+                    <div class="support-role">Intelligence Gatherer<br>Spent the day in Makkah listening to plots, reported at night.</div>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="support-name">Asmā' bint Abī Bakr</div>
+                    <div class="support-role">The Provider<br>Brought food daily. Known as <em>Dhāt al-Niṭāqayn</em> (She of the Two Waistbands).</div>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon"><i class="fas fa-paw"></i></div>
+                    <div class="support-name">'Āmir b. Fuhayrah</div>
+                    <div class="support-role">The Cover<br>Herded sheep over their tracks to hide footprints.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            /* keep top padding (upper padding) as required; reduce bottom padding to save height */
+            padding: 60px 80px 10px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 100px;
+            z-index: 10;
+        }
+
+        .hadith-container {
+            background-color: #fff;
+            border: 1px solid #C5A059;
+            /* reduced vertical padding to save space */
+            padding: 20px 30px;
+            margin-bottom: 10px; /* shrink gap to columns */
+            max-width: 900px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .hadith-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .hadith-source {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .columns-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border: 2px solid #C5A059;
+        }
+
+        .column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #3E2723;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 1rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Death of Khadījah (ra)</h1>
+            <div class="subtitle">The Loss of Internal Comfort</div>
+        </div>
+
+        <div class="content-container">
+            <div class="hadith-container">
+                <div class="hadith-text">
+                    "She believed in me when people rejected me, she shared her wealth with me when people denied me, and Allah blessed me with children through her when He denied me children through others."
+                </div>
+                <div class="hadith-source">— Prophet Muḥammad ﷺ (Musnad Aḥmad)</div>
+            </div>
+
+            <div class="columns-container">
+                <div class="column">
+                    <div class="icon-circle"><i class="fas fa-heart"></i></div>
+                    <h3>Emotional Sanctuary</h3>
+                    <p>Khadījah was the Prophet's ﷺ refuge. When the world outside was hostile, his home was a place of peace, validation, and unconditional love.</p>
+                </div>
+                <div class="column">
+                    <div class="icon-circle"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Unwavering Support</h3>
+                    <p>She exhausted her vast wealth to support the Muslims during the boycott, sacrificing her comfort for the sake of the message.</p>
+                </div>
+                <div class="column">
+                    <div class="icon-circle"><i class="fas fa-infinity"></i></div>
+                    <h3>Eternal Love</h3>
+                    <p>Even years after her death, the Prophet ﷺ would honor her memory, sending gifts to her friends and speaking of her with deep affection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

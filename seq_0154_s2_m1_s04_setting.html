@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,77 +23,103 @@
 
         .border-frame {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
             border: 2px solid #C5A059;
             pointer-events: none;
-            z-index: 10;
+            z-index: 1;
         }
 
-        .header-section {
-            padding: 50px 80px 20px;
+        .header {
+            padding: 60px 80px 20px;
             text-align: center;
-            z-index: 5;
+            z-index: 10;
         }
 
         .main-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
             color: #1A3C40;
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #8D6E63;
             font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .content-section {
-            flex-grow: 1;
+        .content-wrapper {
             display: flex;
-            padding: 20px 80px 40px;
+            padding: 10px 80px 40px;
             gap: 40px;
-            z-index: 5;
+            flex: 1;
+            z-index: 10;
             align-items: center;
         }
 
-        .text-col {
-            flex: 1.5;
-        }
-
-        .visual-col {
+        .image-col {
             flex: 1;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-col img {
+            width: 420px;
+            height: 300px;
+            object-fit: contain;
+            border: 2px solid #C5A059;
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #8D6E63;
+            margin-top: 8px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .details-col {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            border-radius: 50%;
+            display: flex;
             justify-content: center;
             align-items: center;
-            border-left: 2px solid #C5A059;
-            padding-left: 40px;
-            height: 80%;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 3px;
         }
 
-        .bullet-list {
-            list-style: none;
+        .detail-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #1A3C40;
+            margin-bottom: 4px;
         }
 
-        .bullet-list li {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            padding-left: 30px;
-            position: relative;
-            line-height: 1.4;
-        }
-
-        .bullet-list li::before {
-            content: "•";
-            color: #C5A059;
-            font-size: 2rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
+        .detail-content p {
+            font-size: 0.95rem;
+            color: #5D4037;
+            line-height: 1.5;
         }
 
         .highlight {
@@ -103,132 +127,62 @@
             color: #1A3C40;
         }
 
-        .arabic-big {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            color: #1A3C40;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .arabic-sub {
-            font-size: 1.8rem;
-            color: #8D6E63;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .concept-box {
+        .arabic-label {
             text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #C5A059;
+            margin-top: 10px;
         }
-
-    
-        /* GLOBAL LAYOUT FIXES */
-        .slide-container {
-            /* Ensure sufficient padding at the bottom so content doesn't hit the border */
-            padding-bottom: 60px !important; 
-            /* Ensure content is stacked vertically and doesn't overflow */
-            overflow: hidden !important;
-            /* Use flexbox but allow content to take space */
-            display: flex !important;
-            flex-direction: column !important;
-        }
-
-        /* Fix overlapping borders */
-        .border-frame {
-            z-index: 1 !important; /* Move border to back */
-            pointer-events: none !important;
-        }
-        
-        /* Ensure all content is above the border */
-        .header-section, .content-section, .footer-section, .inner-content, .slide-content, .pillars-container, .footer-quote {
-            z-index: 20 !important; /* Higher than border */
-            position: relative !important;
-        }
-
-        /* Fix text boxes covering other elements */
-        .text-box, .quote-box, .info-box {
-            height: auto !important; /* Allow expansion */
-            min-height: 0 !important;
-            overflow: visible !important;
-        }
-
-        /* Fix Quranic quotes being covered */
-        .quran-quote, .quran-text, .verse-container {
-            margin-top: 20px !important;
-            margin-bottom: 20px !important;
-            padding: 20px !important;
-            background-color: rgba(255, 255, 255, 0.8) !important; /* Add background to ensure readability over borders */
-            border-radius: 8px !important;
-            position: relative !important;
-            z-index: 30 !important; /* Highest priority */
-        }
-        
-        /* Fix bottom obstruction */
-        .footer-quote, .footer-note, .citation {
-            margin-bottom: 40px !important; /* Lift up from bottom */
-        }
-        
-        /* Fix diagram overlaps */
-        .diagram-container, .chart-container {
-            margin: 20px 0 !important;
-            z-index: 15 !important;
-        }
-    
-    
-        /* GLOBAL OVERLAP PREVENTION */
-        
-        /* Ensure specific containers that might be absolute are checked */
-        .outcome-section, .result-box, .highlight-container {
-            /* If they are absolute, we try to make them relative if they are main content */
-            /* This is a bit risky globally, so we target specific classes if known */
-        }
-        
-        /* Ensure all text containers have backgrounds to prevent transparent text overlap */
-        .text-box, .info-card, .step-item, .outcome-card {
-            background-color: rgba(253, 251, 247, 0.95) !important; /* Cream background */
-            position: relative !important;
-            z-index: 20 !important;
-        }
-        
-        /* Fix z-index for all content wrappers */
-        .content-wrapper, .main-content {
-            position: relative !important;
-            z-index: 15 !important;
-        }
-            
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="border-frame"></div>
-        
-        <div class="header-section">
-            <h1 class="main-title">The Setting: Ghār Ḥirā' Revisited</h1>
-            <div class="subtitle">Recap from Session I</div>
+
+        <div class="header">
+            <h1 class="main-title">The Setting: Ghār Ḥirā'</h1>
+            <div class="subtitle">Geography of the First Revelation</div>
         </div>
 
-        <div class="content-section">
-            <div class="text-col">
-                <ul class="bullet-list">
-                    <li>The Prophet ﷺ at <span class="highlight">age 40</span>, in the month of Ramadan</li>
-                    <li>Engaged in <span class="highlight">Taḥannuth</span> (devotional seclusion)</li>
-                    <li>Located in a cave on <strong>Jabal al-Nūr</strong>, facing the Ka'bah</li>
-                    <li>Alone, with provisions prepared by Khadījah</li>
-                    <li>A heart spiritually prepared but unaware of the magnitude of what was coming</li>
-                </ul>
+        <div class="content-wrapper">
+            <div class="image-col">
+                <img src="img_hira_map.webp" alt="Map showing location of Cave Hira relative to Makkah" />
+                <div class="image-caption">Location of Ghār Ḥirā' on Jabal al-Nūr, northeast of Makkah</div>
+                <div class="arabic-label">غار حراء</div>
             </div>
 
-            <div class="visual-col">
-                <div class="concept-box">
-                    <div class="arabic-big">غار حراء</div>
-                    <div class="arabic-sub">Ghār Ḥirā'</div>
+            <div class="details-col">
+                <div class="detail-row">
+                    <div class="detail-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="detail-content">
+                        <h3>Elevation</h3>
+                        <p>The cave sits near the summit of <span class="highlight">Jabal al-Nūr</span> (Mountain of Light) at approximately <span class="highlight">634 metres</span> above sea level. The climb from the base takes roughly 1.5–2 hours on foot.</p>
+                    </div>
                 </div>
-                
-                <div class="concept-box">
-                    <div class="arabic-big" style="color: #3E2723; font-size: 3.5rem;">التحنث</div>
-                    <div class="arabic-sub">Al-Taḥannuth</div>
-                    <div style="font-size: 1.2rem; color: #8D6E63; font-style: italic;">(Devotional Seclusion)</div>
+
+                <div class="detail-row">
+                    <div class="detail-icon"><i class="fas fa-route"></i></div>
+                    <div class="detail-content">
+                        <h3>Distance from the Ka'bah</h3>
+                        <p>Approximately <span class="highlight">4 km</span> (2.5 miles) northeast of the Ka'bah in a direct line. The cave opening faces the Ka'bah.</p>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-icon"><i class="fas fa-ruler-combined"></i></div>
+                    <div class="detail-content">
+                        <h3>The Cave Itself</h3>
+                        <p>A small opening roughly <span class="highlight">3.7 m long and 1.6 m wide</span>, just large enough for one person to sit and reflect in seclusion (Taḥannuth).</p>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="detail-content">
+                        <h3>The Moment</h3>
+                        <p>The Prophet ﷺ at <span class="highlight">age 40</span>, in the month of <span class="highlight">Ramaḍān</span>, alone with provisions prepared by Khadījah (ra). A heart spiritually prepared but unaware of what was coming.</p>
+                    </div>
                 </div>
             </div>
         </div>
