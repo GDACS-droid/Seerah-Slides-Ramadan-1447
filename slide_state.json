@@ -1,7 +1,7 @@
 {
   "project_info": {
     "title": "Complete Seerah Curriculum (Sessions I-IV)",
-    "total_slides": 528,
+    "total_slides": 527,
     "description": "Consolidated master deck of all Seerah modules."
   },
   "slides": [
@@ -1180,13 +1180,6 @@
       "pageNum": 168,
       "original_project": "Seerah Deck",
       "original_id": "s2_m1_s17_fatrah_definition"
-    },
-    {
-      "id": "seq_0169_s2_m1_s18_fatrah_psychology",
-      "state": "edited",
-      "pageNum": 169,
-      "original_project": "Seerah Deck",
-      "original_id": "s2_m1_s18_fatrah_psychology"
     },
     {
       "id": "seq_0170_s2_m1_s19_fatrah_pedagogy",
