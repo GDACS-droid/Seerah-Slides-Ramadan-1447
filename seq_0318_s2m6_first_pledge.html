@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+        .border-frame {
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .header-section {
+            padding: 40px 80px 15px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #1A3C40;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.15rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 80px 30px;
+            gap: 12px;
+            z-index: 10;
+            position: relative;
+            justify-content: center;
+        }
+        .slide-footer {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8D6E63;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .pledge-content {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+        }
+        .pledge-main {
+            flex: 1;
+        }
+        .pledge-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+        .pledge-meta {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            margin-bottom: 15px;
+        }
+        .terms-list {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        .terms-list li {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+            color: #3E2723;
+        }
+        .terms-list li::before {
+            content: "•";
+            color: #C5A059;
+            position: absolute;
+            left: 0;
+        }
+        .outcome-box {
+            background: rgba(26,60,64,0.05);
+            padding: 15px 20px;
+            border-left: 3px solid #1A3C40;
+        }
+        .outcome-title {
+            font-weight: 700;
+            color: #1A3C40;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .outcome-text {
+            font-size: 1rem;
+            color: #3E2723;
+            line-height: 1.5;
+        }
+        .note-text {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            font-style: italic;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">The First Pledge of 'Aqabah</h1>
+            <div class="subtitle">بَيْعَة العَقَبَة الأُولَى — Year 12 of Prophethood (621 CE)</div>
+        </div>
+        <div class="content-section">
+            <div class="pledge-content">
+                <div class="pledge-main">
+                    <div class="pledge-title">Bay'at al-Nisā' (The Women's Pledge)</div>
+                    <div class="pledge-meta">12 men — 10 from Khazraj, 2 from Aws</div>
+                    <ul class="terms-list">
+                        <li>To worship Allah alone (Tawḥīd) and associate nothing with Him</li>
+                        <li>To refrain from theft, adultery, and the killing of children</li>
+                        <li>To refrain from slander and false accusation</li>
+                        <li>To obey the Prophet ﷺ in all that is good (ma'rūf)</li>
+                    </ul>
+                    <div class="note-text">Called "Bay'at al-Nisā'" because it contained no military clause — the same terms later given to women at the Conquest of Makkah.</div>
+                </div>
+                <div class="pledge-main">
+                    <div class="outcome-box">
+                        <div class="outcome-title">Strategic Outcome</div>
+                        <div class="outcome-text">The Prophet ﷺ sent <strong>Muṣ'ab ibn 'Umayr</strong> to Yathrib as the first Muslim ambassador and teacher. He was to recite the Qur'ān, teach the faith, and prepare the ground for what would come next.</div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <div class="outcome-box" style="border-left-color: #C5A059;">
+                            <div class="outcome-title">Significance</div>
+                            <div class="outcome-text">For the first time, the Prophet ﷺ had a <strong>formal political alliance</strong> outside of Makkah. The da'wah was no longer confined to Quraysh territory.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">Session II | Module 6</div>
+    </div>
+</body>
+</html>

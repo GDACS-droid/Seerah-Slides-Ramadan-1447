@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+        .border-frame {
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .header-section {
+            padding: 40px 80px 15px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #1A3C40;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.15rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 80px 30px;
+            gap: 12px;
+            z-index: 10;
+            position: relative;
+            justify-content: center;
+        }
+        .slide-footer {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8D6E63;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            align-items: flex-start;
+        }
+        .contact-main {
+            flex: 2;
+        }
+        .contact-side {
+            flex: 1;
+            background: rgba(26,60,64,0.04);
+            padding: 20px;
+            border-top: 3px solid #C5A059;
+        }
+        .narrative {
+            font-size: 1.1rem;
+            line-height: 1.65;
+            color: #3E2723;
+            margin-bottom: 15px;
+        }
+        .side-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+        .side-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #5D4037;
+        }
+        .highlight-box {
+            background: rgba(197,160,89,0.1);
+            border-left: 3px solid #C5A059;
+            padding: 12px 18px;
+            font-size: 1rem;
+            color: #1A3C40;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">First Contact: Six Men from Khazraj</h1>
+            <div class="subtitle">Year 11 of Prophethood (620 CE) — Hajj Season at 'Aqabah</div>
+        </div>
+        <div class="content-section">
+            <div class="contact-content">
+                <div class="contact-main">
+                    <div class="narrative">During the Hajj season, the Prophet ﷺ continued his practice of approaching visiting tribes. At the ravine of 'Aqabah near Minā, he met <strong>six men from the Khazraj</strong> of Yathrib.</div>
+                    <div class="narrative">When they heard his message, they recognized the description of the prophet that the <strong>Jewish tribes had long warned them about</strong>. They said to one another:</div>
+                    <div class="highlight-box">
+                        "By Allah, this is the prophet the Jews have been threatening us with. Let us not allow them to get to him before us!"
+                    </div>
+                    <div class="narrative" style="margin-top: 12px;">They accepted Islam on the spot and returned to Yathrib, spreading the message. By the next Hajj season, Islam had reached every major clan in the city.</div>
+                </div>
+                <div class="contact-side">
+                    <div class="side-title">The Jewish Factor</div>
+                    <div class="side-text">The Jewish tribes of Yathrib had spoken of a coming prophet from their scriptures. When the Arabs of Yathrib heard Muḥammad's message, they connected it immediately to what the Jews had described — and they wanted to be first to follow him.</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-footer">Session II | Module 6</div>
+    </div>
+</body>
+</html>

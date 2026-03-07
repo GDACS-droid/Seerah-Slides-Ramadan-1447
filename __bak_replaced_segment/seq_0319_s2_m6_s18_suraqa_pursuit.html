@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 30px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 0 100px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .bounty-banner {
+            background-color: #3E2723;
+            color: #FDFBF7;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            border: 2px solid #C5A059;
+        }
+
+        .narrative-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .step-card {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-top: 4px solid #1A3C40;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            color: #C5A059;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .step-desc {
+            font-size: 0.95rem;
+            color: #5D4037;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .prophecy-box {
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 25px;
+            border-left: 5px solid #1A3C40;
+            display: flex;
+            align-items: center;
+        }
+
+        .prophecy-icon {
+            font-size: 2.5rem;
+            color: #1A3C40;
+            margin-right: 25px;
+        }
+
+        .prophecy-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #3E2723;
+            font-style: italic;
+        }
+
+        .prophecy-note {
+            font-size: 0.85rem;
+            color: #8D6E63;
+            margin-top: 5px;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Pursuit of Surāqah</h1>
+            <div class="subtitle">The Hunter Becomes the Guardian</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="bounty-banner">
+                <i class="fas fa-coins"></i> Wanted: Dead or Alive — Reward: 100 Camels
+            </div>
+
+            <div class="narrative-steps">
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-horse-head"></i></div>
+                    <div class="step-title">The Chase</div>
+                    <div class="step-desc">Surāqah b. Mālik, a skilled tracker, spotted them. Driven by greed, he galloped towards them, spear in hand.</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="step-title">The Miracle</div>
+                    <div class="step-desc">As he approached, his horse's legs sank into the solid earth up to its knees. He tried three times, failing each time, until he realized this was divine protection.</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="step-title">The Reversal</div>
+                    <div class="step-desc">He begged for safety. The Prophet ﷺ granted it. Surāqah then turned back other pursuers, saying "I have checked this path for you."</div>
+                </div>
+            </div>
+
+            <div class="prophecy-box">
+                <div class="prophecy-icon"><i class="fas fa-ring"></i></div>
+                <div>
+                    <div class="prophecy-text">
+                        "O Surāqah, how will you feel when you wear the bracelets of Kisrā (Chosroes)?"
+                    </div>
+                    <div class="prophecy-note">
+                        (Fulfilled years later during the Caliphate of 'Umar b. Al-Khaṭṭāb when the Persian Empire fell.)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

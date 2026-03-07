@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+            padding-bottom: 60px;
+        }
+
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            padding: 60px 80px 30px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1A3C40;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8D6E63;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .content-wrapper {
+            display: flex;
+            padding: 0 80px;
+            gap: 40px;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .pledge-column {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #C5A059;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .pledge-header {
+            background-color: #1A3C40;
+            color: #FDFBF7;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #C5A059;
+        }
+
+        .pledge-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .pledge-year {
+            font-size: 0.9rem;
+            color: #C5A059;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pledge-body {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .stat-label {
+            font-weight: 700;
+            color: #1A3C40;
+        }
+
+        .stat-value {
+            color: #5D4037;
+        }
+
+        .terms-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .terms-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+
+        .terms-list li::before {
+            content: "•";
+            color: #C5A059;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .key-figure-box {
+            background-color: rgba(26, 60, 64, 0.05);
+            padding: 15px;
+            margin-top: auto;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .key-figure-title {
+            font-weight: 700;
+            color: #1A3C40;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        
+        <div class="header">
+            <h1 class="main-title">The Pledges of 'Aqabah</h1>
+            <div class="subtitle">The Seeds of the State</div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- First Pledge -->
+            <div class="pledge-column">
+                <div class="pledge-header">
+                    <h3 class="pledge-title">The First Pledge</h3>
+                    <div class="pledge-year">12th Year of Prophethood</div>
+                </div>
+                <div class="pledge-body">
+                    <div class="stat-row">
+                        <span class="stat-label">Attendees</span>
+                        <span class="stat-value">12 Men</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Nature</span>
+                        <span class="stat-value">Ethical & Religious</span>
+                    </div>
+                    <ul class="terms-list">
+                        <li>To worship Allah alone (Tawḥīd).</li>
+                        <li>To refrain from theft, adultery, and killing children.</li>
+                        <li>To obey the Prophet ﷺ in all that is good.</li>
+                    </ul>
+                    <div class="key-figure-box">
+                        <div class="key-figure-title">Outcome</div>
+                        Muṣ'ab b. 'Umayr sent to Yathrib as the first ambassador/teacher.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Pledge -->
+            <div class="pledge-column">
+                <div class="pledge-header">
+                    <h3 class="pledge-title">The Second Pledge</h3>
+                    <div class="pledge-year">13th Year of Prophethood</div>
+                </div>
+                <div class="pledge-body">
+                    <div class="stat-row">
+                        <span class="stat-label">Attendees</span>
+                        <span class="stat-value">73 Men, 2 Women</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Nature</span>
+                        <span class="stat-value">Political & Defensive</span>
+                    </div>
+                    <ul class="terms-list">
+                        <li>To listen and obey in ease and hardship.</li>
+                        <li>To protect the Prophet ﷺ as they protect their own families.</li>
+                        <li>"Blood is blood, and destruction is destruction."</li>
+                    </ul>
+                    <div class="key-figure-box">
+                        <div class="key-figure-title">Outcome</div>
+                        The migration (Hijrah) to Yathrib became mandated.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

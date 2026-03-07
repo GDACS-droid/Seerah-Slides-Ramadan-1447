@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+        .border-frame {
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .header-section {
+            padding: 40px 80px 15px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #1A3C40;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.15rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 80px 30px;
+            gap: 12px;
+            z-index: 10;
+            position: relative;
+            justify-content: center;
+        }
+        .slide-footer {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8D6E63;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .pressure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+        }
+        .pressure-card {
+            padding: 18px;
+            border-top: 3px solid #C5A059;
+        }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+        }
+        .card-text {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #3E2723;
+        }
+        .assassination-bar {
+            background: rgba(26,60,64,0.06);
+            padding: 15px 25px;
+            text-align: center;
+            border: 1px solid #C5A059;
+        }
+        .assassination-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 5px;
+        }
+        .assassination-text {
+            font-size: 0.95rem;
+            color: #5D4037;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">Time Running Out in Makkah</h1>
+            <div class="subtitle">دَار النَّدْوَة — Quraysh's Final Council</div>
+        </div>
+        <div class="content-section">
+            <div class="pressure-grid">
+                <div class="pressure-card">
+                    <div class="card-title">The Exodus Noticed</div>
+                    <div class="card-text">As Muslims left in small groups, Quraysh realized their community was emptying. Homes stood abandoned. The economic and social fabric of Makkah was being disrupted. Some families were forcibly separated — Umm Salamah was prevented from leaving with her husband and child.</div>
+                </div>
+                <div class="pressure-card">
+                    <div class="card-title">Quraysh's Desperation</div>
+                    <div class="card-text">With the Second Pledge of 'Aqabah, Quraysh understood that the Prophet ﷺ now had a <strong>military alliance</strong> and a safe haven. If he reached Yathrib, he would be beyond their control. The threat was existential — to their trade, their religion, and their political order.</div>
+                </div>
+            </div>
+            <div class="assassination-bar">
+                <div class="assassination-title">The Assassination Plot — Dār al-Nadwah</div>
+                <div class="assassination-text">Quraysh convened an emergency council. Abū Jahl proposed that <strong>one young man from each clan</strong> strike the Prophet ﷺ simultaneously, so that no single tribe could be held responsible and Banū Hāshim could not seek blood revenge against all of Quraysh. Allah revealed the plot: <em>"And when those who disbelieved plotted against you..."</em> (Q 8:30)</div>
+            </div>
+        </div>
+        <div class="slide-footer">Session II | Module 6</div>
+    </div>
+</body>
+</html>

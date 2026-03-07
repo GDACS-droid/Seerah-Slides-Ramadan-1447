@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #3E2723;
+            display: flex;
+            flex-direction: column;
+            border: 20px solid #FDFBF7;
+        }
+        .border-frame {
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 2px solid #C5A059;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .header-section {
+            padding: 40px 80px 15px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: #1A3C40;
+            margin-bottom: 0.3rem;
+        }
+        .subtitle {
+            font-size: 1.15rem;
+            color: #8D6E63;
+            font-weight: 300;
+        }
+        .content-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 80px 30px;
+            gap: 12px;
+            z-index: 10;
+            position: relative;
+            justify-content: center;
+        }
+        .slide-footer {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8D6E63;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .pledge-layout {
+            display: flex;
+            gap: 25px;
+            width: 100%;
+        }
+        .pledge-col {
+            flex: 1;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #1A3C40;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #C5A059;
+            padding-bottom: 5px;
+        }
+        .section-text {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #3E2723;
+            margin-bottom: 10px;
+        }
+        .terms-box {
+            background: rgba(197,160,89,0.08);
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .terms-box .term {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #3E2723;
+            margin-bottom: 6px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .terms-box .term::before {
+            content: "•";
+            color: #C5A059;
+            position: absolute;
+            left: 0;
+        }
+        .naqib-bar {
+            text-align: center;
+            padding: 10px 20px;
+            border: 1px solid #C5A059;
+            font-size: 0.95rem;
+            color: #5D4037;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="border-frame"></div>
+        <div class="header-section">
+            <h1 class="main-title">The Second Pledge of 'Aqabah</h1>
+            <div class="subtitle">بَيْعَة العَقَبَة الثَّانِيَة — Dhul Ḥijjah, Year 13 (622 CE)</div>
+        </div>
+        <div class="content-section">
+            <div class="pledge-layout">
+                <div class="pledge-col">
+                    <div class="section-title">The Setting</div>
+                    <div class="section-text"><strong>73 men and 2 women</strong> came secretly at night during Hajj to the ravine of 'Aqabah. Al-'Abbās ibn 'Abd al-Muṭṭalib (the Prophet's uncle, not yet Muslim) attended as a witness and guarantor of the seriousness of the commitment.</div>
+                    <div class="section-title">The Terms (Bay'at al-Ḥarb)</div>
+                    <div class="terms-box">
+                        <div class="term">To hear and obey in ease and hardship</div>
+                        <div class="term">To spend in plenty and in want</div>
+                        <div class="term">To enjoin good and forbid evil</div>
+                        <div class="term">To fear no blame in Allah's cause</div>
+                        <div class="term">To protect the Prophet ﷺ as they protect their own families and children</div>
+                    </div>
+                </div>
+                <div class="pledge-col">
+                    <div class="section-title">Key Figures</div>
+                    <div class="section-text"><strong>Al-Barā' ibn Ma'rūr</strong> was the first to extend his hand. The 2 women were <strong>Nusaybah bint Ka'b</strong> (later fought at Uḥud) and <strong>Asmā' bint 'Amr</strong>.</div>
+                    <div class="section-title">12 Naqībs Appointed</div>
+                    <div class="section-text">The Prophet ﷺ appointed <strong>12 representatives</strong> (Naqībs) — 9 from Khazraj, 3 from Aws — as tribal guarantors, modeled on the 12 chiefs of the Israelites (Q 5:12).</div>
+                    <div class="section-title">Outcome</div>
+                    <div class="section-text">This was a <strong>political and military alliance</strong>. The Hijrah to Yathrib was now mandated. Quraysh discovered the pledge and attempted to stop the delegates, but they escaped.</div>
+                </div>
+            </div>
+            <div class="naqib-bar">
+                "Blood is blood, and destruction is destruction. You are of me and I am of you." — Prophet Muḥammad ﷺ to the Anṣār
+            </div>
+        </div>
+        <div class="slide-footer">Session II | Module 6</div>
+    </div>
+</body>
+</html>
